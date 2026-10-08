@@ -13,10 +13,10 @@ This log tracks assignments, drafts, reviews, integration gates, and commits for
 
 - Corpus plan: `corpus/corpus.yml` defines 20 documents and the staged workflow.
 - Fictional staff registry: `corpus/staff.yml` defines eight author profiles.
-- Current stage: First-document-per-staff checkpoint complete; remaining corpus documents proceed by dependency.
+- Current stage: all 20 Markdown drafts received; corpus-wide consistency reconciliation and draft review are underway. The next phase is source metadata/relationship reconciliation, followed by PDF rendering and release packaging.
 - Stage 1 assignments: NU-OPS-001, NU-OPS-007, NU-OPS-010 (complete).
 - Stage 1 gate: passed after coordinator reconciliation and independent continuity/quality review.
-- Stage 1 drafts NU-OPS-001, NU-OPS-007, and NU-OPS-010 are accepted at the foundation gate. The fictional corpus snapshot is 2024-10-01. Independent continuity and quality/style reviews found no remaining high- or medium-severity blockers.
+- Stage 1 drafting and review gate passed. Subsequent full-corpus review identified draft-status/date wording in NU-OPS-007 and NU-OPS-010; authors have corrected those drafts. All source documents remain drafts pending final corpus approval.
 - First-document checkpoint: all eight staff authors have at least one draft (NU-OPS-001, 002, 003, 005, 007, 010, 011, 018). Independent continuity and quality reviews found no high/medium blocker for this checkpoint. These remain draft artifacts; proposed facts require later corpus approval and ledger integration.
 - Last content checkpoint: `e91f500` — Draft first clinic documents across staff profiles.
 
@@ -26,24 +26,24 @@ This log tracks assignments, drafts, reviews, integration gates, and commits for
 | --- | --- | --- | --- | --- |
 | NU-OPS-001 | EMP-001 Mara Venn | complete | Stage 1 foundation | Draft accepted at foundation gate; 2024-01-15 effective, annual review, Director/site-lead approval boundaries |
 | NU-OPS-002 | EMP-003 Tessa Quill | in progress | Stage 2; Stage 1 gate passed | First draft for Tessa; independent review clear; proposed handoff rules and dates await corpus integration |
-| NU-OPS-003 | EMP-002 Ilan Rook | in progress | Stage 2; Stage 1 gate passed | First draft for Ilan; independent review clear; proposed priorities/closure and dates await corpus integration |
-| NU-OPS-004 | EMP-003 Tessa Quill | blocked | Stage 3; depends on NU-OPS-002 | Harbor Point-only access exception |
+| NU-OPS-003 | EMP-002 Ilan Rook | in progress | Stage 2; foundation accepted | Proposed issue/effective dates aligned to 2024-09-21 handoff; updated draft review pending |
+| NU-OPS-004 | EMP-003 Tessa Quill | in progress | Stage 3; depends on NU-OPS-002 | Re-review clear; task performer limited to Harbor Point Site Lead; expiration structured; conditional draft |
 | NU-OPS-005 | EMP-004 Ren Solis | in progress | Stage 2; Stage 1 gate passed | First draft for Ren; independent review clear; proposal reconciled with historical NU-OPS-017 draft |
-| NU-OPS-006 | EMP-001 Mara Venn | blocked | Stage 2; Stage 1 gate | Service interruption response |
-| NU-OPS-007 | EMP-007 Oren Pike | complete | Stage 1 foundation | Draft accepted at foundation gate; fictional role routes, no-response-SLA limit, Alder Creek role-only mailbox |
+| NU-OPS-006 | EMP-001 Mara Venn | in progress | Stage 2; bounded NU-OPS-013 context available | Draft reviewed; audience now exact `site_operations` set; proposed interruption mechanics under review |
+| NU-OPS-007 | EMP-007 Oren Pike | in progress | Stage 1 foundation; final status review | Draft dates/routes now explicitly proposed pending Director approval; role routes and Alder Creek role-only mailbox retained |
 | NU-OPS-008 | EMP-002 Ilan Rook | in progress | Stage 2; Stage 1 gate passed | Draft reviewed; Director of Operations is required approver; conditional base for NU-OPS-018 |
-| NU-OPS-009 | EMP-005 Dev Arlen | blocked | Stage 2; Stage 1 gate | Records handling and misdelivery |
-| NU-OPS-010 | EMP-005 Dev Arlen | complete | Stage 1 foundation | Draft accepted at foundation gate; exact scope mapping by employee ID; effective before NU-OPS-001 |
+| NU-OPS-009 | EMP-005 Dev Arlen | in progress | Stage 2; foundation accepted | Draft reviewed with no blocker; administrative records only, patient/clinical records excluded |
+| NU-OPS-010 | EMP-005 Dev Arlen | in progress | Stage 1 foundation; final status review | Exact scope mapping retained; dates explicitly labeled proposed fixture dates pending approval |
 | NU-OPS-011 | EMP-006 Niko Fen | in progress | Stage 2; Stage 1 gate passed | First draft for Niko; independent review clear; administrative reporting rules await corpus integration |
-| NU-OPS-012 | EMP-003 Tessa Quill | blocked | Stage 4; core documents stable | September quality huddle notes |
-| NU-OPS-013 | EMP-006 Niko Fen | blocked | Stage 2; Stage 1 gate | Severe-weather coordination card |
-| NU-OPS-014 | EMP-002 Ilan Rook | blocked | Stage 2; Stage 1 gate | Vendor visit and sign-in |
-| NU-OPS-015 | EMP-001 Mara Venn | blocked | Stage 3; depends on NU-OPS-001 | Limited document-governance amendment |
-| NU-OPS-016 | EMP-002 Ilan Rook | blocked | Stage 2; Stage 1 gate | Historical facilities routing, superseded by NU-OPS-003 |
+| NU-OPS-012 | EMP-003 Tessa Quill | in progress | Stage 4; core references drafted | Draft received; independent review underway; no metric totals or unresolved answers invented |
+| NU-OPS-013 | EMP-006 Niko Fen | in progress | Stage 2; foundation accepted | Draft reviewed; audience and site-lead ownership match exact scope; bounded context for NU-OPS-006 |
+| NU-OPS-014 | EMP-002 Ilan Rook | in progress | Stage 2; foundation accepted | Draft reviewed; audience narrowed to site operations staff/site leads; contractors excluded from retrieval |
+| NU-OPS-015 | EMP-001 Mara Venn | in progress | Stage 3; depends on NU-OPS-001 | Draft received; limited amendment pending Director approval; independent review underway |
+| NU-OPS-016 | EMP-002 Ilan Rook | in progress | Stage 2; depends on NU-OPS-003 | Draft reviewed; proposed period ends 2024-09-20, NU-OPS-003 begins 2024-09-21 |
 | NU-OPS-017 | EMP-004 Ren Solis | in progress | Stage 2; Stage 1 gate passed | Draft reviewed; historical rule differs intentionally from NU-OPS-005 proposal; conditional status clear |
 | NU-OPS-018 | EMP-008 Lio Marr | in progress | Stage 3 draft; NU-OPS-008 is draft-only prerequisite | First draft for Lio; independent re-review clear; location must be designated before use; conditional on both approvals |
-| NU-OPS-019 | EMP-006 Niko Fen | blocked | Stage 2; Stage 1 gate | Operations metrics definitions |
-| NU-OPS-020 | EMP-007 Oren Pike | blocked | Stage 4; core documents stable | Unresolved service desk questions log |
+| NU-OPS-019 | EMP-006 Niko Fen | in progress | Stage 2; NU-OPS-013 complete | Definitions draft received; NU-OPS-012 references it without establishing results or approving definitions |
+| NU-OPS-020 | EMP-007 Oren Pike | in progress | Stage 4; depends on NU-OPS-012 and core references | Draft received; both open unknowns supported by cited drafts; plan graph synchronized, full final gate pending |
 
 ## Event log
 
@@ -60,3 +60,10 @@ This log tracks assignments, drafts, reviews, integration gates, and commits for
 - Independent continuity and quality/style reviewers found no high/medium blockers in the Stage 2 first wave after the authors clarified draft precedence, marked new workflows as proposed, narrowed NU-OPS-011 audience to its access scope, and added a dual-record rule.
 - Dispatched NU-OPS-008 (Ilan’s second document) to establish the prerequisite for Lio’s first document, NU-OPS-018. Dispatched NU-OPS-017 (Ren’s second document) to establish the history needed to reconcile NU-OPS-005. The NU-OPS-002 and NU-OPS-008 plan relationships now use `has_exception` to point from each base procedure to its exception notice. Independent review found NU-OPS-017 and NU-OPS-008 coherent as draft proposals; NU-OPS-008 was revised to identify Director of Operations as required approver and make the workflow pending approval. NU-OPS-018 is received as a conditional draft against the unapproved base; independent review found no approval or scope expansion, and requested clarification of its exact eligible audience and proposed holding-location arrangement; author is revising.
 - First document coverage: Mara (001), Oren (007), Dev (010), Tessa (002), Ilan (003), Ren (005), and Niko (011) have drafts. Lio’s first document (018) is drafted conditionally against NU-OPS-008; it cannot be approved or activated until both documents pass their gates. Thus every staff profile now has at least one assigned document draft.
+
+- Completed the 12-document Stage 2 core set as drafts. Independent quality review found no high/medium blockers; continuity review gave a conditional pass to continue dependent drafting after audience/approval reconciliation. The plan now matches front-matter audiences for 006, 009, 011, 013, and 014; 011/013 name Director of Operations approval as pending under governance.
+- Received Stage 3 drafts NU-OPS-004 (Tessa) and NU-OPS-015 (Mara). Independent review found NU-OPS-015 clear; NU-OPS-004 was revised to limit the task performer to the Harbor Point Site Lead, align its `operations_leads` audience, and add a structured expiration date. Re-review is underway; both remain conditional on their base documents and approvals.
+- Received Stage 4 draft NU-OPS-012 (Tessa), using NU-OPS-019 as proposed context and preserving the unresolved service-desk item. Independent review is underway; NU-OPS-020 remains to be drafted.
+- Received NU-OPS-020 (Oren), completing the 20-document Markdown set. It records the unresolved Alder Creek Site Lead backup question from NU-OPS-012 and a second deliberate unknown: NU-OPS-014 gives no vendor visit-log retention period. Independent review confirmed both unknowns are supported and no answer, deputy, or retention schedule was invented.
+- Full-corpus review checked all 20 authors against `corpus/staff.yml`, scope/audience alignment, exception and historical date boundaries, and unresolved-question evidence. It found no additional factual contradictions. Authors corrected the draft-status/date language in NU-OPS-007 and NU-OPS-010; the coordinator aligned relationships in `corpus/corpus.yml`. A final focused review of plan/document metadata remains pending.
+- No Markdown-to-PDF renderer, dependency declaration, or run instructions are present yet. Once source review and plan reconciliation pass, the next phase is to establish a reproducible PDF rendering process, render the 20 files, visually inspect output and text extraction, then build the manifest and evaluation materials.

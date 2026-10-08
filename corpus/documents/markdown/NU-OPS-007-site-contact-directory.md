@@ -11,6 +11,7 @@ intended_audience: Site operations staff; site leads; operations leads
 access_scope: site_operations
 status: draft
 planned_status: current
+date_status: proposed
 version: 1.0
 issued_date: 2024-09-15
 effective_date: 2024-09-21
@@ -33,15 +34,17 @@ relationships:
 # NU-OPS-007 — Site Contact and Escalation Directory
 
 **Northstar Urgent Care Cooperative (NUCC)**  
-**Status:** Draft (planned status: current) · **Version:** 1.0  
-**Effective:** 21 September 2024 · **Review by:** 21 March 2025  
+**Status:** Draft (proposed future status: current) · **Version:** 1.0
+**Proposed issue date:** 15 September 2024 · **Proposed effective date:** 21 September 2024, upon approval · **Proposed review date:** 21 March 2025
 **Scope:** All sites · **Access label:** `site_operations`
 
 > Fictional training material. Names, roles, and contact routes in this document are invented for a RAG test corpus. This directory covers administrative and facilities coordination only; it is not a clinical escalation directory.
 
+> **Draft notice:** This directory and all listed routes are proposed. It is not effective or a current routing source unless and until the Director of Operations approves it and its effective date is reached.
+
 ## How to use this directory
 
-Start with the role responsible for the issue. Use the listed shared mailbox for routine written routing; include the site, a short issue description, when it began, and the record or ticket identifier if one exists. Do not include unnecessary personal or sensitive information in a general operations message.
+If approved, staff should start with the role responsible for the issue and use the listed shared mailbox for routine written routing; include the site, a short issue description, when it began, and the record or ticket identifier if one exists. Do not include unnecessary personal or sensitive information in a general operations message.
 
 For a time-sensitive facilities or site interruption, notify the local site lead as well as the central role listed for that topic. The directory gives destinations, not a promise of response time or service restoration. If a route is unavailable, use the after-hours path below and record the attempted contact in the applicable issue record.
 
@@ -105,4 +108,4 @@ The Operations Desk Coordinator maintains this directory. Send proposed correcti
 
 ---
 
-**Drafting note for coordinator:** This Stage 1 draft proposes the role labels, fictional mailbox routes, directory owner, and chronology shown above. Reconcile shared role names and routes with NU-OPS-001 and the access labels in NU-OPS-010 before approving dependent documents.
+**Drafting note for coordinator:** This Stage 1 draft proposes the role labels, fictional mailbox routes, directory owner, and chronology shown above. All front-matter dates are proposed scenario dates, not an approval record; the effective date and review schedule apply only if the Director of Operations approves the directory and the proposed effective date is reached. Reconcile shared role names and routes with NU-OPS-001 and the access labels in NU-OPS-010 before approving dependent documents.

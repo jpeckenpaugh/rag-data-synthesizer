@@ -7,7 +7,7 @@ site_scope: all_sites
 owner_role: Quality and Continuity Analyst
 author: Niko Fen
 author_employee_id: EMP-006
-intended_audience: Staff with site_operations eligibility; site leads; operations leads
+intended_audience: Employees eligible for site_operations in NU-OPS-010 (EMP-001, EMP-002, EMP-003, EMP-006, EMP-007, EMP-008)
 access_scope: site_operations
 status: draft
 planned_status: current
@@ -91,7 +91,7 @@ Questions about immediate response, clinical reporting, or patient records are o
 
 | Version | Issued | Effective | Change | Approval |
 | --- | --- | --- | --- | --- |
-| 1.0 | Proposed: 2024-10-01 | Proposed: 2024-10-01 | Initial administrative reporting guide | Quality and Continuity Analyst (approval pending) |
+| 1.0 | Proposed: 2024-10-01 | Proposed: 2024-10-01 | Initial administrative reporting guide | Director of Operations (required approval pending) |
 
 **Next review:** proposed 2025-10-01.  
 **Owner:** Quality and Continuity Analyst, Northstar Urgent Care Cooperative.

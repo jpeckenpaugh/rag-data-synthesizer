@@ -13,9 +13,9 @@ status: draft
 planned_status: current
 date_status: proposed
 version: 2.0
-issued_date: 2024-09-23
-effective_date: 2024-10-01
-review_date: 2025-10-01
+issued_date: 2024-09-15
+effective_date: 2024-09-21
+review_date: 2025-09-21
 relationships:
   - type: supersedes
     document_id: NU-OPS-016
@@ -29,7 +29,7 @@ relationships:
 
 **Northstar Urgent Care Cooperative (NUCC)**  
 **Status:** Draft (planned status: current) · **Version:** 2.0  
-**Proposed effective date:** 1 October 2024, upon approval · **Review by:** 1 October 2025  
+**Proposed issue date:** 15 September 2024 · **Proposed effective date:** 21 September 2024, upon approval · **Review by:** 21 September 2025  
 **Applies to:** Harbor Point, Alder Creek, and Northgate · **Access scope:** `site_operations`
 
 > Fictional educational test material. This procedure covers non-clinical facilities and workspace issues only. It does not provide clinical, emergency-response, or patient-care guidance.
@@ -110,11 +110,11 @@ Use NU-OPS-007, *Site Contact and Escalation Directory*, as the planned current 
 
 | Version | Issued | Effective | Change | Approval |
 | --- | --- | --- | --- | --- |
-| 2.0 | 2024-09-23 (proposed) | 2024-10-01 (proposed; effective only upon approval) | Proposed replacement for the prior facilities issue routing procedure; adds defined intake fields, priority categories, and role-based escalation through NU-OPS-007. | Director of Operations approval pending |
+| 2.0 | 2024-09-15 (proposed) | 2024-09-21 (proposed; effective only upon approval) | Proposed replacement for the prior facilities issue routing procedure; adds defined intake fields, priority categories, and role-based escalation through NU-OPS-007. | Director of Operations approval pending |
 
 **Owner:** Facilities Coordinator, Northstar Urgent Care Cooperative.  
-**Planned review:** 1 October 2025.
+**Planned review:** 21 September 2025.
 
 ---
 
-**Drafting note for coordinator:** New proposed facts requiring review: the three priority labels and their definitions; who opens and maintains the issue log; minimum intake fields; the Facilities Coordinator acknowledgment/assignment role; “open,” “awaiting confirmation,” and “monitoring” status conventions; closure evidence; and the proposed dates/version. Route addresses and role names follow the accepted NU-OPS-007 draft. Confirm these choices against the fact ledger and coordinate the explicit supersession date/details with NU-OPS-016 before approval.
+**Drafting note for coordinator:** New proposed facts requiring review: the three priority labels and their definitions; who opens and maintains the issue log; minimum intake fields; the Facilities Coordinator acknowledgment/assignment role; “open,” “awaiting confirmation,” and “monitoring” status conventions; closure evidence; and the proposed dates/version. Route addresses and role names follow the accepted NU-OPS-007 draft. If approved, the proposed handoff from NU-OPS-016 is effective 21 September 2024; confirm the matching historical end date and approvals before treating either status as final.

@@ -69,6 +69,15 @@ documents:
       - type: has_exception
         document_id: NU-OPS-004
         scope: After-hours access at Harbor Point during the stated exception window
+      - type: references
+        document_id: NU-OPS-007
+        scope: Role-based routing for site coordination and facilities issues
+      - type: governed_by
+        document_id: NU-OPS-001
+        scope: Document ownership, controlled copies, and review
+      - type: governed_by
+        document_id: NU-OPS-010
+        scope: Corpus access-scope label
     rag_coverage:
       - Site-specific exception scope
       - Direct procedural lookup
@@ -102,6 +111,9 @@ documents:
       - type: references
         document_id: NU-OPS-007
         scope: Fictional role-based escalation destinations
+      - type: references
+        document_id: NU-OPS-001
+        scope: Document status and approval conventions
     rag_coverage:
       - Current versus superseded routing
       - Direct lookup and role-based routing
@@ -237,6 +249,12 @@ documents:
         document_id: NU-OPS-009
       - type: referenced_by
         document_id: NU-OPS-011
+      - type: referenced_by
+        document_id: NU-OPS-002
+      - type: referenced_by
+        document_id: NU-OPS-014
+      - type: referenced_by
+        document_id: NU-OPS-020
     rag_coverage:
       - Role-based contact retrieval
       - Metadata access filtering
@@ -270,6 +288,12 @@ documents:
       - type: references
         document_id: NU-OPS-007
         scope: Fictional supply routing role
+      - type: governed_by
+        document_id: NU-OPS-010
+        scope: Corpus access labels and retrieval eligibility
+      - type: references
+        document_id: NU-OPS-001
+        scope: Document status and approval conventions
     rag_coverage:
       - Routine process lookup
       - Site/date-specific exception
@@ -302,6 +326,7 @@ documents:
         scope: Role-based escalation destinations
       - type: governed_by
         document_id: NU-OPS-010
+        scope: Corpus access labels and retrieval eligibility
     rag_coverage:
       - Role/access filtering
       - Procedure retrieval with citation
@@ -363,6 +388,7 @@ documents:
         scope: Fictional reporting destinations
       - type: governed_by
         document_id: NU-OPS-010
+        scope: Corpus access labels and retrieval eligibility
     rag_coverage:
       - Procedural retrieval
       - Access filter
@@ -392,6 +418,9 @@ documents:
       - type: references
         document_id: NU-OPS-020
         scope: Unresolved service desk item
+      - type: references
+        document_id: NU-OPS-019
+        scope: Proposed operations metric definitions reviewed at the huddle; no metric values reported
     rag_coverage:
       - Status and date retrieval
       - Distinguishing pending from complete
@@ -425,6 +454,9 @@ documents:
       - type: references
         document_id: NU-OPS-007
         scope: Role-based contacts
+      - type: governed_by
+        document_id: NU-OPS-010
+        scope: Exact access-scope eligibility mapping
     rag_coverage:
       - Cross-document coordination
       - Current site and date filter
@@ -603,6 +635,9 @@ documents:
       - type: references
         document_id: NU-OPS-012
         scope: Huddle follow-up context
+      - type: referenced_by
+        document_id: NU-OPS-012
+        scope: Proposed metric definitions reviewed at the huddle; no values reported
     rag_coverage:
       - Precise definition retrieval
       - Multi-document status interpretation
@@ -632,6 +667,12 @@ documents:
       - type: referenced_by
         document_id: NU-OPS-012
         scope: Huddle follow-up context
+      - type: references
+        document_id: NU-OPS-007
+        scope: Planned role directory and missing backup detail
+      - type: references
+        document_id: NU-OPS-014
+        scope: Vendor visit records; retention period not established
     rag_coverage:
       - Unanswerable questions
       - Abstention and uncertainty handling
