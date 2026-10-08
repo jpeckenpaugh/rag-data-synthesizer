@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/illustrations.schema.json",
+  "title": "Synthetic corpus illustration plan",
+  "description": "Scenario-specific plan and registry for expressive, reproducible, fact-grounded visual assets.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "corpus_id", "fiction_notice", "brand", "visuals"],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0" },
+    "corpus_id": { "type": "string", "minLength": 1 },
+    "fiction_notice": { "type": "string", "minLength": 1 },
+    "brand": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["config_path", "status"],
+      "properties": {
+        "config_path": { "type": "string", "minLength": 1 },
+        "status": { "$ref": "#/$defs/status" }
+      }
+    },
+    "visuals": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/visual" }
+    }
+  },
+  "$defs": {
+    "status": {
+      "type": "string",
+      "enum": ["proposed", "approved", "generated", "reviewed", "deferred"]
+    },
+    "locator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "value"],
+      "properties": {
+        "kind": { "type": "string", "enum": ["section", "field", "data_path", "table", "paragraph", "document_metadata"] },
+        "value": { "type": "string", "minLength": 1 }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["locator", "claim_supported"],
+      "anyOf": [
+        { "required": ["document_id"] },
+        { "required": ["source_path"] }
+      ],
+      "properties": {
+        "document_id": { "type": "string", "minLength": 1 },
+        "source_path": { "type": "string", "minLength": 1 },
+        "locator": { "$ref": "#/$defs/locator" },
+        "claim_supported": { "type": "string", "minLength": 1 }
+      }
+    },
+    "visual": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "target_document_id", "kind", "category", "purpose", "placement", "caption", "alt_text", "generation", "status"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9_-]*$" },
+        "target_document_id": { "type": "string", "minLength": 1 },
+        "kind": { "type": "string", "enum": ["logo", "letterhead", "portrait", "icon", "illustration", "diagram", "chart", "timeline", "map", "table_visual", "callout"] },
+        "category": { "type": "string", "enum": ["decorative", "evidence_bearing"] },
+        "purpose": { "type": "string", "minLength": 1 },
+        "placement": { "type": "string", "minLength": 1 },
+        "caption": { "type": "string" },
+        "alt_text": { "type": "string", "minLength": 1 },
+        "asset_path": { "type": ["string", "null"] },
+        "sources": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/source" }
+        },
+        "generation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["approach", "input", "seed"],
+          "properties": {
+            "approach": { "type": "string", "minLength": 1 },
+            "input": { "type": ["string", "object", "null"] },
+            "seed": { "type": ["integer", "null"] },
+            "tool": { "type": ["string", "null"] },
+            "tool_version": { "type": ["string", "null"] },
+            "prompt_or_config": { "type": ["string", "null"] },
+            "preserve_output": { "type": "boolean", "default": true }
+          }
+        },
+        "review_notes": { "type": "array", "items": { "type": "string" } },
+        "status": { "$ref": "#/$defs/status" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "category": { "const": "evidence_bearing" } }, "required": ["category"] },
+          "then": { "properties": { "sources": { "minItems": 1 } }, "required": ["sources"] }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "chart" } }, "required": ["kind"] },
+          "then": { "properties": { "generation": { "properties": { "input": { "type": "string", "minLength": 1 } } } } }
+        }
+      ]
+    }
+  }
+}

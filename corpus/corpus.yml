@@ -255,6 +255,9 @@ documents:
         document_id: NU-OPS-014
       - type: referenced_by
         document_id: NU-OPS-020
+      - type: referenced_by
+        document_id: NU-OPS-021
+        scope: Role-based operational routing; the staff directory does not establish contact routes or authority
     rag_coverage:
       - Role-based contact retrieval
       - Metadata access filtering
@@ -678,6 +681,37 @@ documents:
       - Abstention and uncertainty handling
       - Distinguishing assigned follow-up from a confirmed answer
 
+  - id: NU-OPS-021
+    title: Staff and Site Directory
+    filename: NU-OPS-021-staff-site-directory.md
+    intended_author: EMP-004
+    type: reference_directory
+    audience: All staff
+    access_scope: all_staff
+    site_scope: organization_wide
+    purpose: Provide a registry-backed reference to fictional employee IDs, names, roles, departments, and recorded home sites.
+    proposed_sections:
+      - Directory purpose and limits
+      - Employee roster from the staff registry
+      - Registry entries grouped by recorded home site
+      - Site-role note and directory limitations
+      - Source and update note
+    key_facts_to_establish:
+      - Staff identity and home-site fields match corpus/staff.yml
+      - Directory entries do not establish availability, shift coverage, reporting lines, or contact routes
+      - Alder Creek has no named incumbent in the staff registry
+    relationships:
+      - type: derived_from
+        source_path: corpus/staff.yml
+        scope: Employee ID, name, role, department, and home_site fields
+      - type: references
+        document_id: NU-OPS-007
+        scope: Role-based operational routing; this directory does not establish routes or authority
+    rag_coverage:
+      - All-staff directory retrieval
+      - Staff-registry fact consistency
+      - Distinguishing home site from staffing or shift coverage
+
 drafting_workflow:
   coordinator_role: primary-agent
   coordinator_constraints:
@@ -762,5 +796,5 @@ drafting_workflow:
         - domain-reviewer
         - continuity-reviewer
         - style-reviewer
-      rationale: Reviewers who did not author the affected documents check scope, internal consistency, intended voice variation, fiction boundaries, and planned RAG behavior.
+      rationale: Reviewers who did not author the affected documents check scope, internal consistency, intended voice variation, fiction boundaries, and planned RAG behavior. NU-OPS-021 is included here for independent review and integration; it depends on the staff registry and NU-OPS-007 for routing context, not on the operational drafting stages.
       gate: Primary-agent resolves findings, coordinates targeted revisions, confirms the ledger and relationships, then approves sources for rendering.

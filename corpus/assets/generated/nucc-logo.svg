@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" role="img" aria-labelledby="title desc">
+  <title id="title">Northstar Urgent Care Cooperative mark</title>
+  <desc id="desc">Fictional north-star motif joined to a rounded three-point path with one endpoint for each fictional site.</desc>
+  <circle cx="96" cy="96" r="88" fill="#FFFDF8"/>
+  <g fill="none" stroke="#2D8C8C" stroke-width="7" stroke-linecap="round">
+    <path d="M96 96 C115 78 135 64 157 51"/>
+    <path d="M96 96 C119 104 139 117 158 135"/>
+    <path d="M96 96 C77 108 60 125 43 143"/>
+  </g>
+  <circle cx="157" cy="51" r="9" fill="#E77D63"/>
+  <circle cx="158" cy="135" r="9" fill="#18324B"/>
+  <circle cx="43" cy="143" r="9" fill="#E77D63"/>
+  <path d="M96 23 L112 76 L166 96 L112 114 L96 169 L79 114 L25 96 L79 76 Z" fill="#2D8C8C" stroke="#18324B" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M96 23 L112 76 L96 96 Z" fill="#E77D63"/>
+  <circle cx="96" cy="96" r="9" fill="#18324B"/>
+</svg>

@@ -1,0 +1,35 @@
+schema_version: "1.0"
+corpus_id: nucc-ops-v1
+status: proposed
+fiction_notice: Fictional identity for educational RAG corpus materials; not associated with a real clinic.
+organization:
+  display_name: Northstar Urgent Care Cooperative
+  short_name: NUCC
+  descriptor: Fictional urgent care network · Westmere
+visual_identity:
+  mood: Friendly, practical, community-oriented, and visibly fictional.
+  palette:
+    deep_navy: "#18324B"
+    harbor_teal: "#2D8C8C"
+    warm_coral: "#E77D63"
+    pale_sky: "#E8F2F4"
+    paper: "#FFFDF8"
+    ink: "#263238"
+  typography:
+    body: "Bundled or locally installed sans-serif with broad Unicode coverage; renderer must record exact font files and versions."
+    heading: "Same family in a heavier weight; avoid font downloads at render time."
+  logo:
+    asset_path: assets/generated/nucc-logo.svg
+    proposed_concept: A compact north-star motif paired with a rounded three-point path representing the three fictional sites; no medical cross or clinical symbol.
+    preferred_format: SVG
+  document_treatment:
+    shared_elements:
+      - Small logo and organization name in the header or title area.
+      - Document ID, draft/current status, site scope, and access scope remain readable as text.
+      - Fiction notice in a quiet footer or introductory note.
+      - Use one or two brand colors as accents, not full-page fills.
+    variation: Use a small set of layouts suited to policy, procedure, quick-reference, working-record, historical, and directory forms; do not force one uniform page template.
+  constraints:
+    - Do not add real contact information, claims of accreditation, or real medical-service marks.
+    - Keep all important text selectable and searchable in generated PDFs.
+    - Decorative visuals must not imply unsupported demographics, qualifications, site conditions, or events.

@@ -1,0 +1,11 @@
+# Explicit display domain for the home-site chart. Counts are computed only
+# from corpus/staff.yml; this file supplies category labels/order, not values.
+categories:
+  - id: central_office
+    label: Central office
+  - id: harbor_point
+    label: Harbor Point
+  - id: alder_creek
+    label: Alder Creek
+  - id: northgate
+    label: Northgate

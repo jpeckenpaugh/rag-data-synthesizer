@@ -1,0 +1,825 @@
+schema_version: "1.0"
+corpus_id: nucc-ops-v1
+fiction_notice: All listed organizations, sites, employees, events, and operational content are fictional educational test material.
+brand:
+  config_path: corpus/brand.yml
+  status: proposed
+visuals:
+  - id: nucc-logo
+    target_document_id: shared
+    kind: logo
+    category: decorative
+    purpose: Provide a recognizable fictional organization identity and compact letterhead mark.
+    placement: Small header/title-area mark across PDFs; omit if it competes with quick-reference content.
+    caption: ""
+    alt_text: "Proposed Northstar Urgent Care Cooperative mark: a north-star motif with three rounded points for its fictional sites."
+    asset_path: assets/generated/nucc-logo.svg
+    sources: []
+    generation:
+      approach: Deterministic local SVG generated from the brand palette and concept; preserve editable source and canonical output.
+      input: corpus/brand.yml:visual_identity.logo
+      seed: null
+      tool: scripts/generate_visuals.py
+      tool_version: "0.1.0; Python 3.14.7; PyYAML 6.0.3"
+      prompt_or_config: No medical cross, caduceus, real-world mark, or claim of accreditation.
+      preserve_output: true
+    review_notes: ["Generated from the proposed fictional brand concept; visual review pending.", "Visual checked against cited source/brand facts; PDF layout and extracted text checked."]
+    status: reviewed
+  - id: letterhead
+    target_document_id: shared
+    kind: letterhead
+    category: decorative
+    purpose: Visually identify the fictional publisher while keeping reader-relevant metadata in text.
+    placement: Reusable header component in renderer, with document-specific title and metadata beneath it.
+    caption: ""
+    alt_text: Northstar Urgent Care Cooperative fictional letterhead with document identity and status shown as selectable text.
+    asset_path: null
+    sources: []
+    generation:
+      approach: HTML/CSS print component using local logo SVG and brand.yml colors; no document content baked into an image.
+      input: corpus/brand.yml
+      seed: null
+      tool: HTML/CSS renderer
+      tool_version: null
+      prompt_or_config: Keep title, ID, status, scope, and dates as PDF text; vary page families by document type.
+      preserve_output: true
+    review_notes: ["Renderer implementation pending."]
+    status: proposed
+
+  - id: opening-closing-check-flow
+    target_document_id: NU-OPS-002
+    kind: diagram
+    category: evidence_bearing
+    purpose: Show the checklist handoff sequence and distinguish routine steps from the Harbor Point-only exception reference.
+    placement: After the opening/closing workflow overview, before detailed checklist steps.
+    caption: Proposed opening decision flow distinguishes a routine handoff with a follow-up from a blocking condition that is held and routed; the closing record and Harbor Point exception are shown separately.
+    alt_text: "Draft flow branches on whether routine opening handoff can proceed. A handoff may proceed with a proposed Complete with open item outcome; a blocking condition uses the proposed Hold for site lead outcome and routes the facilities issue through NU-OPS-007. A separate closing record lists site, time, follow-up, and next owner; Harbor Point after-hours access remains conditional on NU-OPS-004 and both documents being approved/effective."
+    asset_path: assets/generated/opening-closing-check-flow.svg
+    sources:
+      - document_id: NU-OPS-002
+        locator: {kind: section, value: "Before opening; Opening handoff and readiness record; During-day issue logging; Closing handoff; After-hours access boundary"}
+        claim_supported: Routine handoff includes checks, issue logging, site-lead coordination, and closeout; after-hours access is separately governed.
+      - document_id: NU-OPS-004
+        locator: {kind: document_metadata, value: "site_scope, effective_date, expiration_date; exception scope"}
+        claim_supported: The exception applies only at Harbor Point for its stated administrative-storage work and proposed date window.
+    generation:
+      approach: Deterministic SVG flow generated from a declarative step/exception-note YAML file and checked against cited sections.
+      input: corpus/data/visuals/opening-flow.yml
+      seed: null
+      tool: scripts/generate_visuals.py
+      tool_version: "0.1.0; Python 3.14.7; PyYAML 6.0.3"
+      prompt_or_config: Do not add an emergency, clinical, or unlisted alternate route; visually label all details as draft/proposed.
+      preserve_output: true
+    review_notes: ["Do not draw approval as complete while source remains draft.", "Visual checked against cited source/brand facts; PDF layout and extracted text checked."]
+    status: reviewed
+  - id: facilities-routing-flow
+    target_document_id: NU-OPS-003
+    kind: diagram
+    category: evidence_bearing
+    purpose: Make intake ownership, priority routing, and follow-up easier to scan.
+    placement: Beside or immediately before the priority-to-routing section.
+    caption: Proposed facilities intake and escalation path; use the source's priority categories and role routes exactly.
+    alt_text: Facilities workflow from observed issue to intake record, priority classification, role-based routing, status update, and owner-confirmed closure.
+    asset_path: null
+    sources:
+      - document_id: NU-OPS-003
+        locator: {kind: section, value: "Intake fields and issue record; Priority definitions; Routine routing path; Urgent site coordination; Status updates and closure"}
+        claim_supported: Intake, priority, routing, and closure stages and their described ownership.
+      - document_id: NU-OPS-007
+        locator: {kind: section, value: "Facilities issue routing; After-hours path"}
+        claim_supported: Only named fictional role-based destinations and the documented after-hours route may appear.
+    generation:
+      approach: Hand-authored SVG from a declarative flow specification checked against both procedures.
+      input: corpus/data/visuals/facilities-routing.yml (to be created only after source approval)
+      seed: null
+      tool: Python standard library SVG emitter
+      tool_version: null
+      prompt_or_config: Historical NU-OPS-016 route must not appear as current; no new response-time guarantee.
+      preserve_output: true
+    review_notes: ["Cross-check every destination against current draft and mark unapproved workflow as proposed."]
+    status: proposed
+
+  - id: access-scope-bands
+    target_document_id: NU-OPS-010
+    kind: diagram
+    category: evidence_bearing
+    purpose: Explain the three exact access-scope labels and the rule that scope inheritance is not implied.
+    placement: After the scope definitions and before the employee-ID eligibility table.
+    caption: Fictional corpus access labels; the matrix remains authoritative for the exact employee IDs.
+    alt_text: Three separate access bands— all_staff, site_operations, operations_leads—with no implied inheritance; an adjacent text table lists exact employee eligibility.
+    asset_path: null
+    sources:
+      - document_id: NU-OPS-010
+        locator: {kind: section, value: "Scope labels; Employee eligibility by scope; No inheritance"}
+        claim_supported: Exact scope labels, employee membership, and absence of automatic inheritance.
+    generation:
+      approach: SVG labels and nested-free bands; include adjacent selectable-text table rather than encoding IDs only in the image.
+      input: corpus/documents/markdown/NU-OPS-010-information-access-matrix.md front matter and employee eligibility table
+      seed: null
+      tool: Python standard library SVG emitter
+      tool_version: null
+      prompt_or_config: Preserve exact capitalization/identifiers and do not imply a hierarchy or inheritance.
+      preserve_output: true
+    review_notes: ["The graphic is explanatory only; the exact list remains text."]
+    status: proposed
+
+  - id: weather-status-card-art
+    target_document_id: NU-OPS-013
+    kind: illustration
+    category: decorative
+    purpose: Add a friendly visual cue to the quick-reference card without forecasting weather or depicting a real site condition.
+    placement: Small title-area illustration; status fields stay prominent.
+    caption: ""
+    alt_text: Simple umbrella-and-cloud illustration used as a decorative cue for the severe-weather coordination card.
+    asset_path: null
+    sources: []
+    generation:
+      approach: Hand-drawn local SVG icon with no forecast, hazard level, or site-specific weather depiction.
+      input: corpus/brand.yml visual palette
+      seed: null
+      tool: SVG
+      tool_version: null
+      prompt_or_config: Decorative only; no safety instruction encoded in the icon.
+      preserve_output: true
+    review_notes: ["Must not suggest a real forecast or safety assessment."]
+    status: proposed
+
+  - id: weather-update-steps
+    target_document_id: NU-OPS-013
+    kind: diagram
+    category: evidence_bearing
+    purpose: Visually organize the status-update sequence and separate unknown status from confirmed status.
+    placement: Below Coordination steps.
+    caption: Proposed administrative update sequence; unknowns stay marked unconfirmed.
+    alt_text: Site status is recorded with its basis and last-confirmed time, routed to central operations, shared through locally approved channel, then updated on material change or shift handoff; unknown owners remain unconfirmed.
+    asset_path: null
+    sources:
+      - document_id: NU-OPS-013
+        locator: {kind: section, value: "Coordination steps; Site status update fields; Central and role-based routes"}
+        claim_supported: The stated status fields, notification sequence, material-change/handoff triggers, and no-substitute rule.
+      - document_id: NU-OPS-007
+        locator: {kind: section, value: "Role-based central routes"}
+        claim_supported: Role destinations used for site and central coordination.
+    generation:
+      approach: Compact SVG sequence with an explicit “unconfirmed” state and no timed SLA.
+      input: corpus/data/visuals/weather-update-flow.yml (to be created only after source approval)
+      seed: null
+      tool: Python standard library SVG emitter
+      tool_version: null
+      prompt_or_config: No forecast icons connected to site status; no inferred deputy or reopening route.
+      preserve_output: true
+    review_notes: ["Procedure details remain proposed in the draft source."]
+    status: proposed
+
+  - id: historical-copy-stamp
+    target_document_id: NU-OPS-016
+    kind: callout
+    category: evidence_bearing
+    purpose: Make historical/superseded status visible without visually presenting the old route as current.
+    placement: Prominent text banner below the title; repeat status as text in header metadata.
+    caption: Historical copy — superseded by NU-OPS-003 for the stated facilities-routing scope.
+    alt_text: Text callout stating NU-OPS-016 is a historical draft planned as superseded by NU-OPS-003; it is not current routing guidance.
+    asset_path: null
+    sources:
+      - document_id: NU-OPS-016
+        locator: {kind: document_metadata, value: "planned_status; relationships"}
+        claim_supported: NU-OPS-016 is planned as superseded and points to NU-OPS-003.
+      - document_id: NU-OPS-003
+        locator: {kind: document_metadata, value: "relationships: supersedes NU-OPS-016"}
+        claim_supported: NU-OPS-003 is the proposed successor for facilities issue intake and routing.
+    generation:
+      approach: Renderer text callout, not an image-only stamp; preserve status as searchable PDF text.
+      input: Markdown front matter relationships and planned_status
+      seed: null
+      tool: HTML/CSS renderer
+      tool_version: null
+      prompt_or_config: Do not imply approval; source documents are currently drafts.
+      preserve_output: true
+    review_notes: ["Use “planned as superseded” or equivalent while source approvals are pending."]
+    status: proposed
+
+  - id: schedule-version-timeline
+    target_document_id: NU-OPS-017
+    kind: timeline
+    category: evidence_bearing
+    purpose: Clarify historical-to-proposed notice sequence and avoid applying the prior rule to current dates.
+    placement: Near revision/history note.
+    caption: Proposed schedule-notice chronology; approval and effective-state labels follow the source documents.
+    alt_text: Timeline from prior notice NU-OPS-017 effective 2024-01-01 to proposed replacement NU-OPS-005 effective 2024-09-21, with draft/approval status noted.
+    asset_path: null
+    sources:
+      - document_id: NU-OPS-017
+        locator: {kind: document_metadata, value: "issued_date; effective_date; planned_status; relationships"}
+        claim_supported: Prior notice issue/effective dates and proposed superseded relationship.
+      - document_id: NU-OPS-005
+        locator: {kind: document_metadata, value: "issued_date; effective_date; planned_status; relationships"}
+        claim_supported: Replacement notice proposed issue/effective dates and supersession of NU-OPS-017.
+    generation:
+      approach: Lightweight SVG timeline generated from cited YAML date inputs or parsed front matter; label proposals explicitly.
+      input: Document metadata in NU-OPS-005 and NU-OPS-017 front matter
+      seed: null
+      tool: Python standard library SVG emitter
+      tool_version: null
+      prompt_or_config: Dates are proposed until approved; do not present the line as evidence of authorization.
+      preserve_output: true
+    review_notes: ["Confirm chronology against fact ledger before approval."]
+    status: proposed
+
+  - id: huddle-followup-status
+    target_document_id: NU-OPS-012
+    kind: illustration
+    category: evidence_bearing
+    purpose: Help readers scan completed, open, deferred, and unresolved items without changing their status.
+    placement: Small status legend before action tables; preserve the detailed text entries.
+    caption: Huddle status legend; each item’s detailed record remains authoritative.
+    alt_text: "Four labeled status chips: completed during huddle, open follow-up, deferred item, unresolved question."
+    asset_path: null
+    sources:
+      - document_id: NU-OPS-012
+        locator: {kind: section, value: "Completed during this huddle; Open follow-ups; Deferred items; Unresolved service-desk question"}
+        claim_supported: The four distinctions and item classifications used in the notes.
+    generation:
+      approach: HTML/CSS text chips with icons redundant to labels; all labels selectable text.
+      input: Headings and item statuses in NU-OPS-012
+      seed: null
+      tool: HTML/CSS renderer
+      tool_version: null
+      prompt_or_config: Do not show the Alder Creek backup as resolved or September metrics as reported.
+      preserve_output: true
+    review_notes: ["Do not encode color alone as meaning."]
+    status: proposed
+
+  - id: operations-metrics-no-results-warning
+    target_document_id: NU-OPS-019
+    kind: callout
+    category: evidence_bearing
+    purpose: Prevent readers from mistaking definitions for measured results.
+    placement: Near the top, before measure definitions.
+    caption: Definitions only; no source records or monthly totals are included.
+    alt_text: Text callout stating this document defines measures but contains no values, dataset, denominator, or targets.
+    asset_path: null
+    sources:
+      - document_id: NU-OPS-019
+        locator: {kind: section, value: "Purpose and reporting period; Known data limits"}
+        claim_supported: The document supplies definitions only and no numerical totals/source dataset.
+      - document_id: NU-OPS-012
+        locator: {kind: section, value: "Completed during this huddle; Deferred items"}
+        claim_supported: The huddle reports no metric values and defers targets/comparisons.
+    generation:
+      approach: Searchable text callout with a simple local icon; no chart generated because there are no results data.
+      input: Source statements in NU-OPS-019 and NU-OPS-012
+      seed: null
+      tool: HTML/CSS renderer
+      tool_version: null
+      prompt_or_config: No invented values, bars, trend lines, targets, denominators, or site comparisons.
+      preserve_output: true
+    review_notes: ["Explicitly defer a results chart until an approved structured dataset exists."]
+    status: proposed
+
+  - id: avatar-emp-001
+    target_document_id: NU-OPS-021
+    kind: portrait
+    category: decorative
+    purpose: Provide an explicitly fictional visual identifier for the staff directory.
+    placement: Beside the EMP-001 text entry; identity details remain selectable text.
+    caption: Fictional illustrative avatar for EMP-001.
+    alt_text: Abstract cartoon avatar used as a visual identifier for EMP-001; not a photograph or likeness.
+    asset_path: assets/generated/portraits/emp-001.png
+    sources:
+      - source_path: corpus/staff.yml
+        locator: {kind: field, value: "people[employee_id=EMP-001].employee_id"}
+        claim_supported: EMP-001 is a fictional registry entry; portrait appearance is abstract and non-evidentiary.
+    generation:
+      approach: Fixed-template Pillow glyph with a stable employee-ID palette assignment; no visual traits are inferred from registry values.
+      input: corpus/staff.yml employee_id only; generator configuration in scripts/generate_visuals.py
+      seed: 21001
+      tool: scripts/generate_visuals.py + Pillow
+      tool_version: "0.1.0; Python 3.14.7; Pillow 12.3.0; PyYAML 6.0.3"
+      prompt_or_config: Identical neutral face and body geometry; only abstract background, shirt, and geometric badge colors vary.
+      preserve_output: true
+    review_notes: ["Review generated image; do not infer protected traits, age, role, or personality from appearance.", "Visual checked against cited source/brand facts; PDF layout and extracted text checked."]
+    status: reviewed
+  - id: avatar-emp-002
+    target_document_id: NU-OPS-021
+    kind: portrait
+    category: decorative
+    purpose: Provide an explicitly fictional visual identifier for the staff directory.
+    placement: Beside the EMP-002 text entry; identity details remain selectable text.
+    caption: Fictional illustrative avatar for EMP-002.
+    alt_text: Abstract cartoon avatar used as a visual identifier for EMP-002; not a photograph or likeness.
+    asset_path: assets/generated/portraits/emp-002.png
+    sources:
+      - source_path: corpus/staff.yml
+        locator: {kind: field, value: "people[employee_id=EMP-002].employee_id"}
+        claim_supported: EMP-002 is a fictional registry entry; portrait appearance is abstract and non-evidentiary.
+    generation: {approach: Fixed-template Pillow glyph; no traits inferred from registry values., input: "corpus/staff.yml employee_id only; scripts/generate_visuals.py", seed: 21001, tool: "scripts/generate_visuals.py + Pillow", tool_version: "0.1.0; Python 3.14.7; Pillow 12.3.0; PyYAML 6.0.3", prompt_or_config: "Identical neutral geometry; abstract palette and geometric badge vary only.", preserve_output: true}
+    review_notes: ["Review generated image; do not infer protected traits, age, role, or personality from appearance.", "Visual checked against cited source/brand facts; PDF layout and extracted text checked."]
+    status: reviewed
+  - id: avatar-emp-003
+    target_document_id: NU-OPS-021
+    kind: portrait
+    category: decorative
+    purpose: Provide an explicitly fictional visual identifier for the staff directory.
+    placement: Beside the EMP-003 text entry; identity details remain selectable text.
+    caption: Fictional illustrative avatar for EMP-003.
+    alt_text: Abstract cartoon avatar used as a visual identifier for EMP-003; not a photograph or likeness.
+    asset_path: assets/generated/portraits/emp-003.png
+    sources:
+      - source_path: corpus/staff.yml
+        locator: {kind: field, value: "people[employee_id=EMP-003].employee_id"}
+        claim_supported: EMP-003 is a fictional registry entry; portrait appearance is abstract and non-evidentiary.
+    generation: {approach: Fixed-template Pillow glyph; no traits inferred from registry values., input: "corpus/staff.yml employee_id only; scripts/generate_visuals.py", seed: 21001, tool: "scripts/generate_visuals.py + Pillow", tool_version: "0.1.0; Python 3.14.7; Pillow 12.3.0; PyYAML 6.0.3", prompt_or_config: "Identical neutral geometry; abstract palette and geometric badge vary only.", preserve_output: true}
+    review_notes: ["Review generated image; do not infer protected traits, age, role, or personality from appearance.", "Visual checked against cited source/brand facts; PDF layout and extracted text checked."]
+    status: reviewed
+  - id: avatar-emp-004
+    target_document_id: NU-OPS-021
+    kind: portrait
+    category: decorative
+    purpose: Provide an explicitly fictional visual identifier for the staff directory.
+    placement: Beside the EMP-004 text entry; identity details remain selectable text.
+    caption: Fictional illustrative avatar for EMP-004.
+    alt_text: Abstract cartoon avatar used as a visual identifier for EMP-004; not a photograph or likeness.
+    asset_path: assets/generated/portraits/emp-004.png
+    sources:
+      - source_path: corpus/staff.yml
+        locator: {kind: field, value: "people[employee_id=EMP-004].employee_id"}
+        claim_supported: EMP-004 is a fictional registry entry; portrait appearance is abstract and non-evidentiary.
+    generation: {approach: Fixed-template Pillow glyph; no traits inferred from registry values., input: "corpus/staff.yml employee_id only; scripts/generate_visuals.py", seed: 21001, tool: "scripts/generate_visuals.py + Pillow", tool_version: "0.1.0; Python 3.14.7; Pillow 12.3.0; PyYAML 6.0.3", prompt_or_config: "Identical neutral geometry; abstract palette and geometric badge vary only.", preserve_output: true}
+    review_notes: ["Review generated image; do not infer protected traits, age, role, or personality from appearance.", "Visual checked against cited source/brand facts; PDF layout and extracted text checked."]
+    status: reviewed
+  - id: avatar-emp-005
+    target_document_id: NU-OPS-021
+    kind: portrait
+    category: decorative
+    purpose: Provide an explicitly fictional visual identifier for the staff directory.
+    placement: Beside the EMP-005 text entry; identity details remain selectable text.
+    caption: Fictional illustrative avatar for EMP-005.
+    alt_text: Abstract cartoon avatar used as a visual identifier for EMP-005; not a photograph or likeness.
+    asset_path: assets/generated/portraits/emp-005.png
+    sources:
+      - source_path: corpus/staff.yml
+        locator: {kind: field, value: "people[employee_id=EMP-005].employee_id"}
+        claim_supported: EMP-005 is a fictional registry entry; portrait appearance is abstract and non-evidentiary.
+    generation: {approach: Fixed-template Pillow glyph; no traits inferred from registry values., input: "corpus/staff.yml employee_id only; scripts/generate_visuals.py", seed: 21001, tool: "scripts/generate_visuals.py + Pillow", tool_version: "0.1.0; Python 3.14.7; Pillow 12.3.0; PyYAML 6.0.3", prompt_or_config: "Identical neutral geometry; abstract palette and geometric badge vary only.", preserve_output: true}
+    review_notes: ["Review generated image; do not infer protected traits, age, role, or personality from appearance.", "Visual checked against cited source/brand facts; PDF layout and extracted text checked."]
+    status: reviewed
+  - id: avatar-emp-006
+    target_document_id: NU-OPS-021
+    kind: portrait
+    category: decorative
+    purpose: Provide an explicitly fictional visual identifier for the staff directory.
+    placement: Beside the EMP-006 text entry; identity details remain selectable text.
+    caption: Fictional illustrative avatar for EMP-006.
+    alt_text: Abstract cartoon avatar used as a visual identifier for EMP-006; not a photograph or likeness.
+    asset_path: assets/generated/portraits/emp-006.png
+    sources:
+      - source_path: corpus/staff.yml
+        locator: {kind: field, value: "people[employee_id=EMP-006].employee_id"}
+        claim_supported: EMP-006 is a fictional registry entry; portrait appearance is abstract and non-evidentiary.
+    generation: {approach: Fixed-template Pillow glyph; no traits inferred from registry values., input: "corpus/staff.yml employee_id only; scripts/generate_visuals.py", seed: 21001, tool: "scripts/generate_visuals.py + Pillow", tool_version: "0.1.0; Python 3.14.7; Pillow 12.3.0; PyYAML 6.0.3", prompt_or_config: "Identical neutral geometry; abstract palette and geometric badge vary only.", preserve_output: true}
+    review_notes: ["Review generated image; do not infer protected traits, age, role, or personality from appearance.", "Visual checked against cited source/brand facts; PDF layout and extracted text checked."]
+    status: reviewed
+  - id: avatar-emp-007
+    target_document_id: NU-OPS-021
+    kind: portrait
+    category: decorative
+    purpose: Provide an explicitly fictional visual identifier for the staff directory.
+    placement: Beside the EMP-007 text entry; identity details remain selectable text.
+    caption: Fictional illustrative avatar for EMP-007.
+    alt_text: Abstract cartoon avatar used as a visual identifier for EMP-007; not a photograph or likeness.
+    asset_path: assets/generated/portraits/emp-007.png
+    sources:
+      - source_path: corpus/staff.yml
+        locator: {kind: field, value: "people[employee_id=EMP-007].employee_id"}
+        claim_supported: EMP-007 is a fictional registry entry; portrait appearance is abstract and non-evidentiary.
+    generation: {approach: Fixed-template Pillow glyph; no traits inferred from registry values., input: "corpus/staff.yml employee_id only; scripts/generate_visuals.py", seed: 21001, tool: "scripts/generate_visuals.py + Pillow", tool_version: "0.1.0; Python 3.14.7; Pillow 12.3.0; PyYAML 6.0.3", prompt_or_config: "Identical neutral geometry; abstract palette and geometric badge vary only.", preserve_output: true}
+    review_notes: ["Review generated image; do not infer protected traits, age, role, or personality from appearance.", "Visual checked against cited source/brand facts; PDF layout and extracted text checked."]
+    status: reviewed
+  - id: avatar-emp-008
+    target_document_id: NU-OPS-021
+    kind: portrait
+    category: decorative
+    purpose: Provide an explicitly fictional visual identifier for the staff directory.
+    placement: Beside the EMP-008 text entry; identity details remain selectable text.
+    caption: Fictional illustrative avatar for EMP-008.
+    alt_text: Abstract cartoon avatar used as a visual identifier for EMP-008; not a photograph or likeness.
+    asset_path: assets/generated/portraits/emp-008.png
+    sources:
+      - source_path: corpus/staff.yml
+        locator: {kind: field, value: "people[employee_id=EMP-008].employee_id"}
+        claim_supported: EMP-008 is a fictional registry entry; portrait appearance is abstract and non-evidentiary.
+    generation: {approach: Fixed-template Pillow glyph; no traits inferred from registry values., input: "corpus/staff.yml employee_id only; scripts/generate_visuals.py", seed: 21001, tool: "scripts/generate_visuals.py + Pillow", tool_version: "0.1.0; Python 3.14.7; Pillow 12.3.0; PyYAML 6.0.3", prompt_or_config: "Identical neutral geometry; abstract palette and geometric badge vary only.", preserve_output: true}
+    review_notes: ["Review generated image; do not infer protected traits, age, role, or personality from appearance.", "Visual checked against cited source/brand facts; PDF layout and extracted text checked."]
+    status: reviewed
+  - id: staff-home-site-count
+    target_document_id: NU-OPS-021
+    kind: chart
+    category: evidence_bearing
+    purpose: Show the number of registered staff by home-site category using only the staff registry.
+    placement: Directory overview, next to a textual count/table.
+    caption: Staff counts by registry home_site; central_office is shown separately from the three clinic sites.
+    alt_text: Bar chart counts staff by home_site from the eight entries in staff.yml; it does not count site-lead coverage or staffing capacity.
+    asset_path: assets/generated/staff-home-site-count.svg
+    sources:
+      - source_path: corpus/staff.yml
+        locator: {kind: data_path, value: "people[].home_site"}
+        claim_supported: Count of listed employee records grouped by their registry home_site value only.
+    generation:
+      approach: Deterministic SVG bar chart generated from staff.yml counts and an explicit category-label/order file; count values come only from staff.yml.
+      input: "corpus/staff.yml people[].home_site; corpus/data/visuals/staff-home-sites.yml categories[].id and label"
+      seed: null
+      tool: scripts/generate_visuals.py
+      tool_version: "0.1.0; Python 3.14.7; PyYAML 6.0.3"
+      prompt_or_config: Keep central_office distinct; Alder Creek has no named incumbent in the registry and should be annotated as no listed employee with that home_site, not a staffing vacancy count.
+      preserve_output: true
+    review_notes: ["Verify aggregation mechanically from exact registry rows before approval.", "Visual checked against cited source/brand facts; PDF layout and extracted text checked."]
+    status: reviewed
+  - id: staff-site-role-map
+    target_document_id: NU-OPS-021
+    kind: diagram
+    category: evidence_bearing
+    purpose: Show the three fictional sites and the role-based site-lead entries recorded in the directory.
+    placement: Directory section grouping staff by site.
+    caption: Registry-listed home sites and site-lead roles; a role-only route is not a named employee assignment.
+    alt_text: Three-site schematic with Harbor Point linked to EMP-003, Northgate linked to EMP-008, and Alder Creek labeled role-only/no named employee in staff.yml.
+    asset_path: null
+    sources:
+      - source_path: corpus/staff.yml
+        locator: {kind: field, value: "people[].employee_id, name, role, home_site"}
+        claim_supported: The employee registry lists Harbor Point and Northgate site leads but no employee whose home_site is Alder Creek.
+      - document_id: NU-OPS-007
+        locator: {kind: section, value: "Site lead roles by site; Alder Creek Site Lead route"}
+        claim_supported: Alder Creek is represented as a role-only destination; no named incumbent or backup is established.
+    generation:
+      approach: Simple not-to-scale SVG schematic with no real geography or route distances.
+      input: corpus/staff.yml plus the Alder Creek role-only note in NU-OPS-007
+      seed: null
+      tool: Python standard library SVG emitter
+      tool_version: null
+      prompt_or_config: Do not imply employee count, coverage schedule, location adjacency, or geographic facts.
+      preserve_output: true
+    review_notes: ["Requires approved NU-OPS-021 inventory entry and audience/access decision."]
+    status: proposed
+
+  - id: receiving-exception-window
+    target_document_id: NU-OPS-018
+    kind: timeline
+    category: evidence_bearing
+    purpose: Emphasize the temporary site-bound window and routine procedure outside the window.
+    placement: Near the exception's effective/expiration dates.
+    caption: Proposed Northgate receiving exception window; normal NU-OPS-008 process applies outside its stated scope.
+    alt_text: Timeline highlighting proposed exception dates 2024-10-10 through 2024-10-24 for Northgate only, with a label that the draft remains conditional on both documents' approvals.
+    asset_path: null
+    sources:
+      - document_id: NU-OPS-018
+        locator: {kind: document_metadata, value: "site_scope, effective_date, expiration_date, relationships"}
+        claim_supported: Proposed Northgate-only exception dates and relationship to NU-OPS-008.
+      - document_id: NU-OPS-008
+        locator: {kind: section, value: "Routine receiving; exception relationship"}
+        claim_supported: The base guide remains routine outside the exception scope.
+    generation:
+      approach: SVG date band generated from source front matter and reviewed against the exception body; preserve the final asset.
+      input: NU-OPS-018 and NU-OPS-008 Markdown front matter/exception text
+      seed: null
+      tool: Python standard library SVG emitter
+      tool_version: null
+      prompt_or_config: Status must say proposed/conditional until source approvals are recorded.
+      preserve_output: true
+    review_notes: ["Cross-check exact boundary inclusivity from source body before rendering."]
+    status: proposed
+
+  - id: directory-routing-map
+    target_document_id: NU-OPS-007
+    kind: diagram
+    category: evidence_bearing
+    purpose: Provide a compact view of fictional role-based routing, with unknown destinations kept visible as unknown.
+    placement: After directory usage notes; detailed role table remains adjacent.
+    caption: Role-based routing overview derived from this directory; not an on-call or response-time chart.
+    alt_text: Role-routing map connecting issues to listed roles only; Alder Creek backup is marked not established.
+    asset_path: null
+    sources:
+      - document_id: NU-OPS-007
+        locator: {kind: section, value: "Central operations roles; Site lead roles by site; Facilities and supply routing; Records and incident routing; After-hours path; Directory limits"}
+        claim_supported: Role destinations and explicit limits as listed in the directory.
+    generation:
+      approach: Hand-authored SVG from a reviewed route table; keep unestablished route labels explicit.
+      input: Role routing table in NU-OPS-007
+      seed: null
+      tool: Python standard library SVG emitter
+      tool_version: null
+      prompt_or_config: No response SLAs, named Alder Creek lead, deputy, clinical route, or coverage schedule.
+      preserve_output: true
+    review_notes: ["Map only what directory text explicitly supports."]
+    status: proposed
+
+  - id: vendor-visit-checklist-icons
+    target_document_id: NU-OPS-014
+    kind: icon
+    category: decorative
+    purpose: Add scan-friendly cues to the vendor sign-in checklist.
+    placement: Small monochrome icons next to check-in, escort, work-area, and sign-out headings if present in source.
+    caption: ""
+    alt_text: Simple line icons accompany the corresponding text labels; they add no additional requirements.
+    asset_path: null
+    sources: []
+    generation:
+      approach: Small locally authored SVG line icons; include icons only for checklist concepts already named in NU-OPS-014.
+      input: Relevant headings and checklist items in NU-OPS-014
+      seed: null
+      tool: SVG
+      tool_version: null
+      prompt_or_config: Decorative navigation only; all duties remain in text.
+      preserve_output: true
+    review_notes: ["Do not imply contractor retrieval access; icons are not credentials."]
+    status: proposed
+
+  - id: exception-scope-badges
+    target_document_id: NU-OPS-004
+    kind: callout
+    category: evidence_bearing
+    purpose: Make the exception's site, role, subject, and time boundaries easy to scan.
+    placement: Immediately below the title and metadata.
+    caption: "Proposed scope: Harbor Point; eligible operations_leads roles; stated administrative-storage work; 2024-10-07 through 2024-10-11."
+    alt_text: Selectable-text scope panel lists Harbor Point only, eligible operations_leads, administrative storage work only, and proposed dates 2024-10-07 to 2024-10-11.
+    asset_path: null
+    sources:
+      - document_id: NU-OPS-004
+        locator: {kind: document_metadata, value: "site_scope, intended_audience, effective_date, expiration_date, exception scope"}
+        claim_supported: The proposed exception's site, audience, date, and subject limits.
+      - document_id: NU-OPS-010
+        locator: {kind: section, value: "operations_leads eligibility; no inheritance"}
+        claim_supported: Exact access eligibility used by the exception; no implicit scope inheritance.
+    generation:
+      approach: HTML/CSS badge panel built from text metadata; keep each boundary as selectable text.
+      input: NU-OPS-004 and NU-OPS-010 Markdown
+      seed: null
+      tool: HTML/CSS renderer
+      tool_version: null
+      prompt_or_config: Label dates proposed and source draft; do not extend the exception to unrelated checklist steps.
+      preserve_output: true
+    review_notes: ["Validate precise role eligibility against access matrix before rendering."]
+    status: proposed
+
+  - id: document-revision-delta
+    target_document_id: NU-OPS-015
+    kind: diagram
+    category: evidence_bearing
+    purpose: Show the narrow amendment from bulletin to governance policy.
+    placement: After summary of changed sections.
+    caption: "Proposed amendment map: NU-OPS-015 changes only the named routing/revision practices of NU-OPS-001."
+    alt_text: One-direction link from NU-OPS-015 to NU-OPS-001's stated document-routing and revision-practice scope; all other policy sections remain unchanged.
+    asset_path: null
+    sources:
+      - document_id: NU-OPS-015
+        locator: {kind: section, value: "Amendment scope and changes"}
+        claim_supported: Named amendment topics and explicit unchanged areas.
+      - document_id: NU-OPS-001
+        locator: {kind: document_metadata, value: "relationships; revision sections"}
+        claim_supported: Base policy and amendment relationship.
+    generation:
+      approach: Small SVG scope diagram with a highlighted limited section and muted unchanged areas only when exact sections are named.
+      input: NU-OPS-015 and NU-OPS-001 Markdown
+      seed: null
+      tool: Python standard library SVG emitter
+      tool_version: null
+      prompt_or_config: Approval is pending; preserve draft and limited-scope labels.
+      preserve_output: true
+    review_notes: ["Do not imply all policy content was reissued."]
+    status: proposed
+
+  - id: incident-reporting-boundary
+    target_document_id: NU-OPS-011
+    kind: diagram
+    category: evidence_bearing
+    purpose: Separate workplace incident reporting from facilities and service-interruption records.
+    placement: Near sections distinguishing related records and reporting routes.
+    caption: Administrative reporting route and related-record boundary, based on the draft guide.
+    alt_text: Incident observation leads to the workplace incident report, with separate facilities or interruption records linked only when applicable; no clinical incident path is depicted.
+    asset_path: null
+    sources:
+      - document_id: NU-OPS-011
+        locator: {kind: section, value: "Reportable events; Reporting steps; Related records and boundaries"}
+        claim_supported: Workplace incident path, report content, and boundaries between related administrative records.
+      - document_id: NU-OPS-003
+        locator: {kind: section, value: "Facilities issue intake"}
+        claim_supported: Facilities issues have a separate intake record and routing process.
+      - document_id: NU-OPS-006
+        locator: {kind: section, value: "Service interruption record"}
+        claim_supported: Service interruptions have a separate coordination record.
+    generation:
+      approach: SVG swimlane or linked process diagram based on the three source sections.
+      input: NU-OPS-011, NU-OPS-003, NU-OPS-006 Markdown
+      seed: null
+      tool: Python standard library SVG emitter
+      tool_version: null
+      prompt_or_config: Exclude any clinical event or patient-data route.
+      preserve_output: true
+    review_notes: ["Check that cross-links do not imply every incident needs every record."]
+    status: proposed
+
+  - id: receiving-condition-cues
+    target_document_id: NU-OPS-008
+    kind: icon
+    category: decorative
+    purpose: Improve scanning of receipt, discrepancy, and storage instructions.
+    placement: Small icons beside existing checklist sections.
+    caption: ""
+    alt_text: Decorative package, checkmark, and note icons repeat the accompanying section labels.
+    asset_path: null
+    sources: []
+    generation:
+      approach: Locally authored SVG line icons with no new workflow content.
+      input: Existing section headings in NU-OPS-008
+      seed: null
+      tool: SVG
+      tool_version: null
+      prompt_or_config: Icons are redundant cues; do not imply approval, quantity, or condition not stated in text.
+      preserve_output: true
+    review_notes: []
+    status: proposed
+
+  - id: northgate-exception-window
+    target_document_id: NU-OPS-018
+    kind: callout
+    category: evidence_bearing
+    purpose: Pair the time-window visual with a clear written boundary and approval status.
+    placement: Near the opening paragraph.
+    caption: Proposed Northgate-only receiving exception; conditional on approval of both NU-OPS-018 and NU-OPS-008.
+    alt_text: Text callout states Northgate only, eligible goods and process as specified in the draft, proposed 2024-10-10 through 2024-10-24, and pending approvals.
+    asset_path: null
+    sources:
+      - document_id: NU-OPS-018
+        locator: {kind: section, value: "Scope; effective and expiration dates; return to routine handling"}
+        claim_supported: Exception boundaries, proposed window, and return to base procedure.
+      - document_id: NU-OPS-008
+        locator: {kind: section, value: "Routine receiving process"}
+        claim_supported: Base routine applies beyond the exception scope.
+    generation:
+      approach: Searchable HTML/CSS callout generated from reviewed metadata and scope text.
+      input: NU-OPS-018 and NU-OPS-008 Markdown
+      seed: null
+      tool: HTML/CSS renderer
+      tool_version: null
+      prompt_or_config: Do not imply the exception is active before approvals.
+      preserve_output: true
+    review_notes: ["Pair with the timeline entry; avoid redundant oversized graphics."]
+    status: proposed
+
+  - id: schedule-change-route
+    target_document_id: NU-OPS-005
+    kind: diagram
+    category: evidence_bearing
+    purpose: Distinguish a schedule-change request from approval and recording.
+    placement: Beside submission/approval steps.
+    caption: Proposed administrative schedule-change path; request and approval are separate states.
+    alt_text: Staff request proceeds to the applicable approver, and only an approved change is entered in the schedule record; the prior edition remains historical.
+    asset_path: null
+    sources:
+      - document_id: NU-OPS-005
+        locator: {kind: section, value: "Approval roles; How to submit and record a change; Same-day change routing"}
+        claim_supported: Current draft approval roles, submission, and record steps.
+      - document_id: NU-OPS-017
+        locator: {kind: document_metadata, value: "planned_status; superseded_by"}
+        claim_supported: Prior edition is historical and not the proposed current path.
+    generation:
+      approach: SVG state flow with separate request, decision, and record nodes.
+      input: NU-OPS-005 and NU-OPS-017 Markdown
+      seed: null
+      tool: Python standard library SVG emitter
+      tool_version: null
+      prompt_or_config: Do not imply approval of either draft or merge request and approval into one step.
+      preserve_output: true
+    review_notes: ["Check exact role names and any same-day branch against source text."]
+    status: proposed
+
+  - id: site-directory-roster
+    target_document_id: NU-OPS-007
+    kind: illustration
+    category: evidence_bearing
+    purpose: Provide site grouping for role destinations without implying named Alder Creek incumbent or deputy.
+    placement: Adjacent to the role table.
+    caption: Site role coverage as listed in the directory; Alder Creek is role-only in this corpus.
+    alt_text: Three site labels with role routes; Alder Creek Site Lead shown without a named incumbent or backup.
+    asset_path: null
+    sources:
+      - document_id: NU-OPS-007
+        locator: {kind: section, value: "Site lead roles by site; directory limits"}
+        claim_supported: Site role mapping and explicit absence of a named Alder Creek incumbent/backup.
+    generation:
+      approach: HTML/CSS roster cards from text data; no portrait or person assignment beyond staff.yml.
+      input: NU-OPS-007 role table and corpus/staff.yml
+      seed: null
+      tool: HTML/CSS renderer
+      tool_version: null
+      prompt_or_config: Clearly label Alder Creek role-only; do not expose the all-staff directory to this narrower access scope.
+      preserve_output: true
+    review_notes: ["The proposed NU-OPS-021 all-staff directory is separate due to different access scope."]
+    status: proposed
+
+  - id: revision-bulletin-change-cards
+    target_document_id: NU-OPS-015
+    kind: illustration
+    category: evidence_bearing
+    purpose: Make the bulletin's limited changes and unchanged areas scannable.
+    placement: Summary area after the amendment statement.
+    caption: Change summary for the narrowly scoped amendment.
+    alt_text: Two textual change cards for routing and revision identification, with an unchanged-policy note; the bulletin remains draft pending approval.
+    asset_path: null
+    sources:
+      - document_id: NU-OPS-015
+        locator: {kind: section, value: "Changes made; unchanged requirements; approval"}
+        claim_supported: Actual listed changes, unchanged sections, and approval state.
+    generation:
+      approach: Styled text cards using only the bulletin's own enumerated changes; no new policy summary.
+      input: NU-OPS-015 Markdown
+      seed: null
+      tool: HTML/CSS renderer
+      tool_version: null
+      prompt_or_config: Retain draft/approval pending status.
+      preserve_output: true
+    review_notes: []
+    status: proposed
+
+  - id: open-question-status-panel
+    target_document_id: NU-OPS-020
+    kind: callout
+    category: evidence_bearing
+    purpose: Keep unresolved service desk questions visibly open and distinguish them from answered directory facts.
+    placement: At the top of the question log and beside each entry.
+    caption: Open questions are not answered by the available corpus.
+    alt_text: Status panel lists Alder Creek site-lead backup and vendor-log retention period as unresolved, with no answer or deadline inferred.
+    asset_path: null
+    sources:
+      - document_id: NU-OPS-020
+        locator: {kind: section, value: "Open questions and status"}
+        claim_supported: Exact open questions and status recorded in the log.
+      - document_id: NU-OPS-012
+        locator: {kind: section, value: "Unresolved service-desk question; Deferred items"}
+        claim_supported: The Alder Creek backup remains unresolved in the huddle record.
+      - document_id: NU-OPS-014
+        locator: {kind: section, value: "Record retention"}
+        claim_supported: Vendor visit log retention is not established by the procedure.
+    generation:
+      approach: Searchable text status chips with explicit “unresolved/not established” labels.
+      input: NU-OPS-020 and cited source sections
+      seed: null
+      tool: HTML/CSS renderer
+      tool_version: null
+      prompt_or_config: Do not convert follow-up owner into a resolver or invent due dates.
+      preserve_output: true
+    review_notes: ["Keep uncertainty clear in both visual and nearby prose."]
+    status: proposed
+
+  - id: unresolved-question-followup-flow
+    target_document_id: NU-OPS-020
+    kind: diagram
+    category: evidence_bearing
+    purpose: Show the safe evidence path for closing a question without implying it has been resolved.
+    placement: Near the final follow-up guidance.
+    caption: "Proposed evidence path: confirm a source, record it, then update the question status; otherwise retain ‘not established.’"
+    alt_text: Open question proceeds to source check; if a source confirms the answer, record its evidence and update status; otherwise keep the item open and answer that the corpus does not establish it.
+    asset_path: null
+    sources:
+      - document_id: NU-OPS-020
+        locator: {kind: section, value: "Follow-up owner; status; closure criteria"}
+        claim_supported: Status updates require a confirming source and unresolved items remain open.
+      - document_id: NU-OPS-012
+        locator: {kind: section, value: "Open follow-ups"}
+        claim_supported: The Alder Creek question is assigned for verification, not answered.
+    generation:
+      approach: SVG decision flow based on existing follow-up instructions.
+      input: NU-OPS-020 and NU-OPS-012 Markdown
+      seed: null
+      tool: Python standard library SVG emitter
+      tool_version: null
+      prompt_or_config: Keep answer path conditional; no fictitious source or resolution node.
+      preserve_output: true
+    review_notes: ["Review for accidental implication that a source has already been found."]
+    status: proposed
+
+  - id: historical-schedule-stamp
+    target_document_id: NU-OPS-017
+    kind: callout
+    category: evidence_bearing
+    purpose: Mark the schedule notice as a prior edition and prevent current-rule confusion.
+    placement: Prominent searchable text panel below the title.
+    caption: Prior edition — planned as superseded by NU-OPS-005, subject to approval/effectiveness.
+    alt_text: Text status panel says prior edition, draft, planned superseded relationship to NU-OPS-005, and not current guidance.
+    asset_path: null
+    sources:
+      - document_id: NU-OPS-017
+        locator: {kind: document_metadata, value: "planned_status; relationships"}
+        claim_supported: Prior version's planned status and relationship.
+      - document_id: NU-OPS-005
+        locator: {kind: document_metadata, value: "planned_status; relationships"}
+        claim_supported: Proposed replacement and its effective date/status.
+    generation:
+      approach: Renderer text callout, not a baked image.
+      input: NU-OPS-017 and NU-OPS-005 front matter
+      seed: null
+      tool: HTML/CSS renderer
+      tool_version: null
+      prompt_or_config: Preserve pending approval and draft wording.
+      preserve_output: true
+    review_notes: []
+    status: proposed

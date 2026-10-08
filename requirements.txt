@@ -1,0 +1,3 @@
+# Single environment entry point for rendering and scenario asset generation.
+-r scripts/requirements-render.txt
+-r scripts/requirements-assets.txt

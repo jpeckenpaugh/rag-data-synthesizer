@@ -53,7 +53,7 @@ These groups are not a personnel directory. A document’s audience may be narro
 
 | Scope label | Eligible fictional employee IDs | Typical document class |
 | --- | --- | --- |
-| `all_staff` | EMP-001, EMP-002, EMP-003, EMP-004, EMP-005, EMP-006, EMP-007, EMP-008 | NU-OPS-001, NU-OPS-005, NU-OPS-010, NU-OPS-015, and NU-OPS-017 |
+| `all_staff` | EMP-001, EMP-002, EMP-003, EMP-004, EMP-005, EMP-006, EMP-007, EMP-008 | NU-OPS-001, NU-OPS-005, NU-OPS-010, NU-OPS-015, NU-OPS-017, and NU-OPS-021 |
 | `site_operations` | EMP-001, EMP-002, EMP-003, EMP-006, EMP-007, EMP-008 | NU-OPS-002, NU-OPS-003, NU-OPS-006, NU-OPS-007, NU-OPS-008, NU-OPS-011, NU-OPS-013, NU-OPS-014, and NU-OPS-016 |
 | `operations_leads` | EMP-001, EMP-003, EMP-005, EMP-006, EMP-007, EMP-008 | NU-OPS-004, NU-OPS-009, NU-OPS-012, NU-OPS-018, NU-OPS-019, and NU-OPS-020 |
 
@@ -65,7 +65,7 @@ Use the document’s front matter or manifest value as the source of its scope. 
 
 | Scope | Examples in this corpus |
 | --- | --- |
-| `all_staff` | NU-OPS-001 Operations Governance and Document Control; NU-OPS-005 Staff Schedule Change Notice; NU-OPS-010 Internal Information Access Matrix; NU-OPS-015 Document Revision Bulletin 24-03; NU-OPS-017 Staff Schedule Change Notice, Prior Edition |
+| `all_staff` | NU-OPS-001 Operations Governance and Document Control; NU-OPS-005 Staff Schedule Change Notice; NU-OPS-010 Internal Information Access Matrix; NU-OPS-015 Document Revision Bulletin 24-03; NU-OPS-017 Staff Schedule Change Notice, Prior Edition; NU-OPS-021 Staff and Site Directory |
 | `site_operations` | NU-OPS-002 Site Opening and Closing Checklist; NU-OPS-003 Facilities Issue Intake and Escalation; NU-OPS-006 Service Interruption Response; NU-OPS-007 Site Contact and Escalation Directory; NU-OPS-008 Supply Request and Receiving Guide; NU-OPS-011 Workplace Incident Reporting Guide; NU-OPS-013 Severe Weather Site Coordination Card; NU-OPS-014 Vendor Visit and Contractor Sign-In; NU-OPS-016 Facilities Issue Routing, Revision 1 |
 | `operations_leads` | NU-OPS-004 Harbor Point After-Hours Access Exception; NU-OPS-009 Records Handling and Misdelivery Procedure; NU-OPS-012 Quality Huddle Notes, September; NU-OPS-018 Northgate Supply Receiving Exception; NU-OPS-019 Monthly Operations Metrics Definitions; NU-OPS-020 Unresolved Service Desk Questions Log |
 

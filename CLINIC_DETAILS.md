@@ -71,7 +71,7 @@ The corpus focuses on non-clinical operations: facilities, staffing administrati
 
 ### Document inventory
 
-Create 20 Markdown documents with stable IDs. Versions marked superseded are separate documents and remain in the corpus for historical retrieval tests.
+Create 21 Markdown documents with stable IDs. Versions marked superseded are separate documents and remain in the corpus for historical retrieval tests. This remains an approximately 20-document corpus; NU-OPS-021 is an approved addition to keep the all-staff directory distinct from the narrower role-routing directory.
 
 | ID | Working title | Type / focus | Initial status |
 | --- | --- | --- | --- |
@@ -95,6 +95,9 @@ Create 20 Markdown documents with stable IDs. Versions marked superseded are sep
 | NU-OPS-018 | Northgate Supply Receiving Exception | Time-bounded receiving exception to NU-OPS-008 | Current, limited scope |
 | NU-OPS-019 | Monthly Operations Metrics Definitions | Reference; definitions and reporting ownership | Current |
 | NU-OPS-020 | Unresolved Service Desk Questions Log | Brief working log; explicitly records facts not established by the corpus | Current, incomplete |
+| NU-OPS-021 | Staff and Site Directory | All-staff reference; registry-backed employee and home-site fields | Current |
+
+NU-OPS-007 remains the role-based operational contact and escalation directory with `site_operations` access. NU-OPS-021 is a separate organization-wide, `all_staff` directory of the eight fictional registry entries. It must not imply contact routes, shift coverage, reporting lines, employment status, or named Alder Creek coverage; role-based routing remains in NU-OPS-007.
 
 The plan and ledger should assign fictional authors/owners and publication, effective, review, and supersession dates. Keep the chronology internally consistent: historical versions precede their replacements, exceptions have start/end dates, and the revision bulletin does not silently change unrelated content. The September huddle notes should use a clearly stated fictional year consistent with the corpus timeline.
 
@@ -120,6 +123,7 @@ Use these explicit relationships as the controlled source of expected precedence
 - NU-OPS-015 amends NU-OPS-001 document-routing/revision practices and specifies how current controlled copies are identified. Its scope is limited to those stated sections.
 - NU-OPS-007 supplies fictional role-based routing details used by procedures. If a role or destination is absent there and elsewhere, the corpus does not establish it.
 - NU-OPS-012 and NU-OPS-020 contain incomplete follow-ups by design. They support testing of careful retrieval and abstention, not filling gaps with guesses.
+- NU-OPS-021 reproduces identity and home-site fields from `corpus/staff.yml`; the registry is the source of truth for those fields. Its role-routing reference points to NU-OPS-007, whose narrower access scope remains unchanged.
 
 The evaluation set should include supported direct lookups, multi-document synthesis, date/site/access filters, current-versus-historical precedence, exception scope, citation evidence, and unanswerable questions. Each case should identify expected answerability, required filters, evidence document IDs and PDF page references after rendering, and concise expected answer points. Include at least one case where a superficially relevant historical or out-of-scope document must not determine the answer. Include unsupported questions that invite invented contacts, dates, or procedures; the expected behavior is to state that the corpus does not establish the answer.
 
@@ -147,17 +151,17 @@ evaluation/
   questions.jsonl
 reports/
   validation.json
-  rendering.md
+  rendering.json
 scripts/
   render_pdfs.py
   requirements-render.txt
 ```
 
-Markdown files are authoritative; PDFs are generated outputs. Implement a repeatable local renderer in `scripts/render_pdfs.py` that reads the corpus Markdown, uses its front matter for visible document metadata, and writes corresponding PDFs under `corpus/documents/pdf/`. Pin the renderer dependencies in `scripts/requirements-render.txt` and document setup and invocation in `corpus/README.md`. Prefer a self-contained Python rendering stack that does not require a separately installed office suite. The process should fail clearly for missing required metadata or source files and should produce stable, readable page headers/footers with page numbers. Record the actual tool/dependency versions and rendering outcome in `reports/rendering.md` after generation. PDFs are ingestion inputs; keep `evaluation/questions.jsonl` outside the PDF tree so answer keys cannot be ingested accidentally.
+Markdown files are authoritative; PDFs are generated outputs. Implement a repeatable local renderer in `scripts/render_pdfs.py` that reads the corpus Markdown, uses its front matter for visible document metadata, and writes corresponding PDFs under `corpus/documents/pdf/`. Pin the renderer dependencies in `scripts/requirements-render.txt` and document setup and invocation in `corpus/README.md`. Prefer a self-contained Python rendering stack that does not require a separately installed office suite. The process should fail clearly for missing required metadata or source files and should produce stable, readable page headers/footers with page numbers. Record the actual tool/dependency versions and rendering outcome in `reports/rendering.json` after generation. Use the root `requirements.txt` to install the shared Python 3.14 `.venv` dependencies; component pin files document the renderer and asset packages. PDFs are ingestion inputs; keep `evaluation/questions.jsonl` outside the PDF tree so answer keys cannot be ingested accidentally.
 
 ### Acceptance targets
 
-- Exactly 20 planned document IDs, with Markdown source for each.
+- Exactly 21 planned document IDs, with Markdown source for each.
 - All organization names and document facts consistently fictional and within the non-clinical operational boundary.
 - Every document has complete required metadata and an explicit relationship list, even when empty.
 - Planned version history and exceptions are time-, site-, and scope-bounded and internally consistent.

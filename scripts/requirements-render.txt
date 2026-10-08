@@ -1,0 +1,5 @@
+# Main project environment: Python 3.14.
+mistune==3.3.4
+WeasyPrint==70.0
+PyYAML==6.0.3
+pypdf==6.19.0

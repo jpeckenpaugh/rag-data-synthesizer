@@ -47,6 +47,12 @@ Tessa Quill, Harbor Point Site Lead, coordinates this cross-site draft. The site
 
 Complete the listed checks only within the staff member’s assigned role and access. This document covers facilities, workspace, and administrative handoff status. It does not set care-readiness or clinical opening criteria.
 
+### Draft visual aid
+
+The proposed flow below summarizes the routine handoff described in this draft. It is explanatory only and does not establish an approved procedure or change any checklist requirement.
+
+![Proposed flow: record site and handoff, complete non-clinical workspace checks, route an issue if needed, and record closeout. Harbor Point after-hours access is a separate, limited branch under NU-OPS-004 only if both drafts are approved and effective.](asset:opening-closing-check-flow)
+
 ## Before opening
 
 Record the date, site, scheduled opening handoff time, and completing role in the site’s opening record. Use role labels rather than personal contact details in shared notes.

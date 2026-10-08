@@ -1,0 +1,26 @@
+title: Routine opening and closing handoff
+opening:
+  title: Opening handoff
+  lines:
+    - Record date, site, scheduled handoff time, and completing role.
+    - Complete listed non-clinical workspace and access-item checks.
+decision: Routine handoff can proceed?
+proceed:
+  title: Yes · routine handoff proceeds
+  lines:
+    - "Record proposed outcome: Complete or Complete with open item."
+    - "An open follow-up may remain without holding routine handoff."
+hold_and_route:
+  title: No · hold and route
+  lines:
+    - "Use proposed Hold for site lead outcome."
+    - Notify the local site lead.
+    - "Route facilities issues through NU-OPS-007 and the applicable facilities procedure."
+closing:
+  title: At closing · separate record
+  lines:
+    - Record site and handoff time.
+    - Return shared access items to their designated location.
+    - Record conditions needing follow-up.
+    - Name the receiving role, or mark the next owner unconfirmed.
+exception_note: "Separate boundary: Harbor Point after-hours access is governed by NU-OPS-004 only if NU-OPS-002 and NU-OPS-004 are approved/effective for the stated task, role, and dates."

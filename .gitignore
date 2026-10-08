@@ -1,0 +1,9 @@
+# Local Python environment for the corpus renderer and asset generator.
+.venv/
+.DS_Store
+
+# Renderer and visual review intermediates.
+tmp/pdfs/
+tmp/render/
+__pycache__/
+*.py[cod]
