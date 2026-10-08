@@ -1,0 +1,87 @@
+organization: Northstar Urgent Care Cooperative
+fiction_notice: All employees and role details below are fictional and created solely for this educational RAG test corpus.
+people:
+  - employee_id: EMP-001
+    name: Mara Venn
+    role: Director of Operations
+    department: Central Operations
+    home_site: central_office
+    responsibilities:
+      - Organization-wide operational governance and approvals
+      - Service continuity coordination
+      - Controlled document policy ownership
+    writing_voice: Direct, structured, formal; distinguishes policy requirements from local practice.
+
+  - employee_id: EMP-002
+    name: Ilan Rook
+    role: Facilities Coordinator
+    department: Facilities and Administration
+    home_site: central_office
+    responsibilities:
+      - Facilities issue intake and routing
+      - Non-clinical supplies and receiving process
+      - Vendor visit coordination
+      - Maintaining historical facilities procedure records
+    writing_voice: Practical, concise, checklist-oriented; names the next owner and required record.
+
+  - employee_id: EMP-003
+    name: Tessa Quill
+    role: Harbor Point Site Lead
+    department: Site Operations
+    home_site: harbor_point
+    responsibilities:
+      - Harbor Point opening and closing handoffs
+      - Local site coordination and exception records
+      - Facilitating site quality huddles
+    writing_voice: Grounded and efficient; uses clear checklists and brief operational notes.
+
+  - employee_id: EMP-004
+    name: Ren Solis
+    role: People Operations Coordinator
+    department: People Operations
+    home_site: central_office
+    responsibilities:
+      - Administrative schedule-change process
+      - Staff-facing notices and revision history for that process
+    writing_voice: Plain, neutral, and unambiguous about request, approval, and recordkeeping.
+
+  - employee_id: EMP-005
+    name: Dev Arlen
+    role: Records Coordinator
+    department: Records and Administration
+    home_site: central_office
+    responsibilities:
+      - Administrative records routing and misdelivery reporting
+      - Maintaining the fictional information access matrix for the corpus
+    writing_voice: Careful and restrained; minimizes unnecessary personal detail and defines access boundaries.
+
+  - employee_id: EMP-006
+    name: Niko Fen
+    role: Quality and Continuity Analyst
+    department: Quality and Continuity
+    home_site: central_office
+    responsibilities:
+      - Non-clinical incident reporting guidance
+      - Severe-weather coordination materials
+      - Operations metrics definitions and reporting notes
+    writing_voice: Precise and evidence-oriented; separates definitions, observations, and unknowns.
+
+  - employee_id: EMP-007
+    name: Oren Pike
+    role: Operations Desk Coordinator
+    department: Central Operations
+    home_site: central_office
+    responsibilities:
+      - Maintaining role-based site contact and escalation routing
+      - Recording unresolved operations desk questions and follow-ups
+    writing_voice: Brief and service-oriented; records status and owner without implying an unresolved item is settled.
+
+  - employee_id: EMP-008
+    name: Lio Marr
+    role: Northgate Site Lead
+    department: Site Operations
+    home_site: northgate
+    responsibilities:
+      - Northgate site operations and receiving handoffs
+      - Maintaining records for time-limited local exceptions
+    writing_voice: Practical and site-specific; makes dates, scope, and return-to-normal steps easy to find.

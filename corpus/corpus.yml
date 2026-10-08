@@ -1,0 +1,638 @@
+corpus_id: nucc-ops-v1
+organization: Northstar Urgent Care Cooperative
+setting: Three-site fictional urgent care network in Westmere
+purpose: Source documents for building and testing a retrieval-augmented generation integration.
+outline_status: proposed
+staff_registry: staff.yml
+outline_note: High-level section headers and coverage for review before drafting. All organization, people, dates, events, contact details, and procedures are fictional. Content is limited to non-clinical operations.
+site_ids:
+  - harbor_point
+  - alder_creek
+  - northgate
+access_scopes:
+  - all_staff
+  - site_operations
+  - operations_leads
+documents:
+  - id: NU-OPS-001
+    title: Operations Governance and Document Control
+    filename: NU-OPS-001-operations-governance.md
+    type: policy
+    audience: All staff; document owners; operations leads
+    access_scope: all_staff
+    site_scope: organization_wide
+    intended_author: EMP-001
+    purpose: Explain who owns, approves, distributes, and reviews operational documents.
+    proposed_sections:
+      - Purpose and scope
+      - Document ownership and approval roles
+      - Status labels and controlled-copy identification
+      - Review and revision cycle
+      - Distribution and access rules
+      - Superseded copy handling
+      - Document questions and escalation
+    key_facts_to_establish:
+      - Fictional governance roles and approval boundaries
+      - How staff identify the current approved copy
+      - Routine review interval and exception process
+    relationships:
+      - type: amended_by
+        document_id: NU-OPS-015
+        scope: Document routing and revision practices only
+    rag_coverage:
+      - Current-copy identification
+      - Multi-document interpretation with NU-OPS-015
+      - Access-scope metadata
+
+  - id: NU-OPS-002
+    title: Site Opening and Closing Checklist
+    filename: NU-OPS-002-site-opening-closing.md
+    intended_author: EMP-003
+    type: procedure_checklist
+    audience: Site operations staff and site leads
+    access_scope: site_operations
+    site_scope: all_sites
+    purpose: Provide a non-clinical checklist for routine site opening, handoff, and closing.
+    proposed_sections:
+      - Applicability and roles
+      - Before opening: facilities and workspace checks
+      - Opening handoff and readiness record
+      - During-day issue logging
+      - Closing handoff and workspace reset
+      - After-hours access boundary
+      - Escalation and checklist retention
+    key_facts_to_establish:
+      - Common routine steps across all three sites
+      - Which actions require a site lead
+      - The boundary between this routine and the Harbor Point exception
+    relationships:
+      - type: exception_to
+        document_id: NU-OPS-004
+        scope: After-hours access at Harbor Point during the stated exception window
+    rag_coverage:
+      - Site-specific exception scope
+      - Direct procedural lookup
+      - Distinguishing access exception from other checklist steps
+
+  - id: NU-OPS-003
+    title: Facilities Issue Intake and Escalation
+    filename: NU-OPS-003-facilities-issue-intake.md
+    intended_author: EMP-002
+    type: procedure
+    audience: Site operations staff and site leads
+    access_scope: site_operations
+    site_scope: all_sites
+    purpose: Define how non-clinical facilities issues are recorded, prioritized, routed, and followed up.
+    proposed_sections:
+      - Scope and issue categories
+      - Intake fields and issue record
+      - Priority definitions
+      - Routine routing path
+      - Urgent site coordination
+      - Status updates and closure
+      - Escalation directory references
+    key_facts_to_establish:
+      - Current intake channel and minimum information required
+      - Priority-to-routing mapping
+      - What to do when the ordinary destination is unavailable
+    relationships:
+      - type: supersedes
+        document_id: NU-OPS-016
+        scope: Facilities issue routing and escalation
+      - type: references
+        document_id: NU-OPS-007
+        scope: Fictional role-based escalation destinations
+    rag_coverage:
+      - Current versus superseded routing
+      - Direct lookup and role-based routing
+      - Citation to priority definitions
+
+  - id: NU-OPS-004
+    title: Harbor Point After-Hours Access Exception
+    filename: NU-OPS-004-harbor-point-access-exception.md
+    intended_author: EMP-003
+    type: exception_notice
+    audience: Harbor Point site operations staff and operations leads
+    access_scope: operations_leads
+    site_scope: harbor_point
+    purpose: Define a narrow, temporary after-hours access exception without changing other opening or closing controls.
+    proposed_sections:
+      - Notice and reason for exception
+      - Site and role eligibility
+      - Effective dates and expiration
+      - Permitted access window
+      - Required check-in and record
+      - Unchanged requirements from NU-OPS-002
+      - Exception owner and review trigger
+    key_facts_to_establish:
+      - Fictional date-bounded window and eligible roles
+      - Required recordkeeping for the exception
+      - Explicit limits of the exception
+    relationships:
+      - type: exception_to
+        document_id: NU-OPS-002
+        scope: Harbor Point after-hours access only
+    rag_coverage:
+      - Site and date filters
+      - Narrow exception interpretation
+      - Avoiding overgeneralization to other sites
+
+  - id: NU-OPS-005
+    title: Staff Schedule Change Notice
+    filename: NU-OPS-005-staff-schedule-change-notice.md
+    intended_author: EMP-004
+    type: notice
+    audience: All staff; site leads
+    access_scope: all_staff
+    site_scope: organization_wide
+    purpose: State the current administrative approval and recording path for schedule changes.
+    proposed_sections:
+      - Notice purpose and effective date
+      - What counts as a schedule change
+      - Approval roles
+      - How to submit and record a change
+      - Same-day change routing
+      - Prior-edition status
+      - Questions and contact route
+    key_facts_to_establish:
+      - Current approver role(s)
+      - Required record and submission route
+      - Distinction between request and approval
+    relationships:
+      - type: supersedes
+        document_id: NU-OPS-017
+        scope: Schedule-change approval and recording
+      - type: references
+        document_id: NU-OPS-007
+        scope: Fictional role-based routing destinations
+    rag_coverage:
+      - Current versus prior notice
+      - Answering who may approve
+      - Unsupported edge case where authority is not specified
+
+  - id: NU-OPS-006
+    title: Service Interruption Response
+    filename: NU-OPS-006-service-interruption-response.md
+    intended_author: EMP-001
+    type: procedure
+    audience: Site operations staff and operations leads
+    access_scope: site_operations
+    site_scope: all_sites
+    purpose: Coordinate non-clinical response and communications during facility or administrative service interruptions.
+    proposed_sections:
+      - Scope and examples of interruption
+      - Initial site status check
+      - Notification and incident record
+      - Continuity coordination roles
+      - Updates to staff and central operations
+      - Recovery and closure record
+      - Follow-up review
+    key_facts_to_establish:
+      - Which role coordinates an interruption
+      - Minimum status information to record
+      - Where uncertainty is escalated without inventing service guarantees
+    relationships:
+      - type: references
+        document_id: NU-OPS-007
+        scope: Escalation roles
+      - type: references
+        document_id: NU-OPS-013
+        scope: Severe-weather coordination
+    rag_coverage:
+      - Multi-document synthesis
+      - Direct evidence citations
+      - Unsupported service restoration estimates
+
+  - id: NU-OPS-007
+    title: Site Contact and Escalation Directory
+    filename: NU-OPS-007-site-contact-directory.md
+    intended_author: EMP-007
+    type: reference_directory
+    audience: Staff; site leads; operations leads
+    access_scope: site_operations
+    site_scope: all_sites
+    purpose: Provide fictional role-based internal routing destinations for operational issues.
+    proposed_sections:
+      - How to use the directory
+      - Central operations roles
+      - Site lead roles by site
+      - Facilities and supply routing
+      - Records and workplace incident routing
+      - After-hours escalation path
+      - Directory limits and update owner
+    key_facts_to_establish:
+      - Role names and responsibilities
+      - Fictional contact channels using reserved example.invalid domains where needed
+      - Explicitly absent destinations that must not be guessed
+    relationships:
+      - type: referenced_by
+        document_id: NU-OPS-003
+      - type: referenced_by
+        document_id: NU-OPS-005
+      - type: referenced_by
+        document_id: NU-OPS-006
+      - type: referenced_by
+        document_id: NU-OPS-008
+      - type: referenced_by
+        document_id: NU-OPS-009
+      - type: referenced_by
+        document_id: NU-OPS-011
+    rag_coverage:
+      - Role-based contact retrieval
+      - Metadata access filtering
+      - Unanswerable missing-contact questions
+
+  - id: NU-OPS-008
+    title: Supply Request and Receiving Guide
+    filename: NU-OPS-008-supply-request-receiving.md
+    intended_author: EMP-002
+    type: procedure_guide
+    audience: Site operations staff and site leads
+    access_scope: site_operations
+    site_scope: all_sites
+    purpose: Describe routine non-clinical supply requests, receipt checks, discrepancy logging, and storage handoff.
+    proposed_sections:
+      - Scope and excluded supplies
+      - Routine request process
+      - Approval and reorder thresholds
+      - Receiving and discrepancy checks
+      - Temporary holding and notification
+      - Records and follow-up
+      - Local exceptions
+    key_facts_to_establish:
+      - Routine request owner and approval boundary
+      - Receiving discrepancy record requirements
+      - Which rules are changed only by NU-OPS-018
+    relationships:
+      - type: exception_to
+        document_id: NU-OPS-018
+        scope: Northgate receiving during the stated exception window
+      - type: references
+        document_id: NU-OPS-007
+        scope: Fictional supply routing role
+    rag_coverage:
+      - Routine process lookup
+      - Site/date-specific exception
+      - Distinguishing request approval from receiving acknowledgment
+
+  - id: NU-OPS-009
+    title: Records Handling and Misdelivery Procedure
+    filename: NU-OPS-009-records-handling-misdelivery.md
+    intended_author: EMP-005
+    type: administrative_procedure
+    audience: Staff; site leads; records coordinator
+    access_scope: operations_leads
+    site_scope: organization_wide
+    purpose: Set administrative steps for routing, protecting, and reporting misdelivered organizational records without exposing personal data.
+    proposed_sections:
+      - Scope and handling principles
+      - Internal records routing
+      - Misdelivery recognition
+      - Immediate containment and notification
+      - Incident record and follow-up
+      - Access limits and escalation
+      - Out-of-scope requests
+    key_facts_to_establish:
+      - Fictional internal owner role
+      - Minimum non-sensitive incident record fields
+      - Clear escalation path without reproducing sensitive data
+    relationships:
+      - type: references
+        document_id: NU-OPS-007
+        scope: Role-based escalation destinations
+      - type: governed_by
+        document_id: NU-OPS-010
+    rag_coverage:
+      - Role/access filtering
+      - Procedure retrieval with citation
+      - Safe refusal of requests for invented personal records
+
+  - id: NU-OPS-010
+    title: Internal Information Access Matrix
+    filename: NU-OPS-010-information-access-matrix.md
+    intended_author: EMP-005
+    type: access_matrix
+    audience: All staff; operations leads; RAG integration evaluators
+    access_scope: all_staff
+    site_scope: organization_wide
+    purpose: Define the fictional access-scope labels used by this corpus and which roles may retrieve each class of document.
+    proposed_sections:
+      - Purpose and limits of this test matrix
+      - Fictional role groups
+      - Access-scope definitions
+      - Document classes and scope mapping
+      - Site-specific visibility
+      - Handling ambiguous authorization
+      - Review owner and revision record
+    key_facts_to_establish:
+      - Mapping between fictional roles and the three scope labels
+      - Access filtering is a corpus test convention, not real security advice
+      - What the assistant should do when caller authorization is unknown
+    relationships:
+      - type: governs_access_for
+        document_id: all_documents
+        scope: Test labels and expected filtering behavior
+    rag_coverage:
+      - Metadata filtering
+      - Refusal or clarification when authorization context is missing
+      - Scope-limited document retrieval
+
+  - id: NU-OPS-011
+    title: Workplace Incident Reporting Guide
+    filename: NU-OPS-011-workplace-incident-reporting.md
+    intended_author: EMP-006
+    type: administrative_procedure
+    audience: Staff; site leads; operations leads
+    access_scope: site_operations
+    site_scope: all_sites
+    purpose: Explain administrative reporting and follow-up for non-clinical workplace incidents.
+    proposed_sections:
+      - Scope and non-clinical boundary
+      - Immediate notification and site coordination
+      - Minimum incident record
+      - Role-based review and follow-up
+      - Record access and retention pointer
+      - Unresolved or out-of-scope issues
+    key_facts_to_establish:
+      - Internal reporting owner and routing
+      - Record fields that avoid unnecessary sensitive detail
+      - No clinical response instructions
+    relationships:
+      - type: references
+        document_id: NU-OPS-007
+        scope: Fictional reporting destinations
+      - type: governed_by
+        document_id: NU-OPS-010
+    rag_coverage:
+      - Procedural retrieval
+      - Access filter
+      - Domain-boundary and unsupported-question behavior
+
+  - id: NU-OPS-012
+    title: Quality Huddle Notes, September
+    filename: NU-OPS-012-quality-huddle-notes-september.md
+    intended_author: EMP-003
+    type: meeting_notes
+    audience: Site leads and operations leads
+    access_scope: operations_leads
+    site_scope: organization_wide
+    purpose: Provide an informal working record with assigned follow-ups and a deliberately unresolved service desk item.
+    proposed_sections:
+      - Meeting context and attendees by role
+      - Completed actions
+      - Open follow-ups and owners
+      - Items deferred
+      - Unresolved service desk question
+      - Next review date
+    key_facts_to_establish:
+      - Fictional meeting date consistent with the plan
+      - Which actions are complete versus pending
+      - Explicit unknowns that should remain unanswered
+    relationships:
+      - type: references
+        document_id: NU-OPS-020
+        scope: Unresolved service desk item
+    rag_coverage:
+      - Status and date retrieval
+      - Distinguishing pending from complete
+      - Abstaining on unresolved follow-up
+
+  - id: NU-OPS-013
+    title: Severe Weather Site Coordination Card
+    filename: NU-OPS-013-severe-weather-coordination.md
+    intended_author: EMP-006
+    type: quick_reference
+    audience: Site operations staff and operations leads
+    access_scope: site_operations
+    site_scope: all_sites
+    purpose: Provide a compact non-clinical coordination checklist for site status, staff communications, and operational updates during severe weather.
+    proposed_sections:
+      - Activation and scope
+      - Site status check
+      - Staff and central operations updates
+      - Site-specific reporting fields
+      - Update cadence and owner
+      - Service interruption handoff
+      - Limits and review
+    key_facts_to_establish:
+      - Who reports site status and through what fictional route
+      - Information to include in updates
+      - No promise about reopening or weather outcomes
+    relationships:
+      - type: related_to
+        document_id: NU-OPS-006
+        scope: Service interruption coordination
+      - type: references
+        document_id: NU-OPS-007
+        scope: Role-based contacts
+    rag_coverage:
+      - Cross-document coordination
+      - Current site and date filter
+      - Unsupported reopening-time question
+
+  - id: NU-OPS-014
+    title: Vendor Visit and Contractor Sign-In
+    filename: NU-OPS-014-vendor-visit-sign-in.md
+    intended_author: EMP-002
+    type: checklist
+    audience: Site operations staff; site leads; visiting contractors
+    access_scope: site_operations
+    site_scope: all_sites
+    purpose: Record and coordinate non-clinical facilities vendor visits at a site.
+    proposed_sections:
+      - Visit authorization and scope
+      - Arrival and sign-in fields
+      - Escort and work-area boundaries
+      - Work completion and sign-out
+      - Unexpected or unlisted vendor handling
+      - Record storage and escalation
+    key_facts_to_establish:
+      - Required sign-in and sign-out fields
+      - Who confirms the visit scope
+      - What to do when authorization cannot be confirmed
+    relationships:
+      - type: references
+        document_id: NU-OPS-003
+        scope: Facilities work request context
+      - type: references
+        document_id: NU-OPS-007
+        scope: Fictional site lead routing
+    rag_coverage:
+      - Checklist lookup
+      - Missing authorization abstention
+      - Cross-document role resolution
+
+  - id: NU-OPS-015
+    title: Document Revision Bulletin 24-03
+    filename: NU-OPS-015-document-revision-bulletin-24-03.md
+    intended_author: EMP-001
+    type: revision_bulletin
+    audience: Document owners; all staff
+    access_scope: all_staff
+    site_scope: organization_wide
+    purpose: Make a limited amendment to document routing and current-copy identification under NU-OPS-001.
+    proposed_sections:
+      - Bulletin status and effective date
+      - Sections amended
+      - Updated routing and revision labels
+      - Actions for document owners
+      - Unchanged requirements
+      - Superseded-copy handling
+      - Bulletin end or incorporation note
+    key_facts_to_establish:
+      - Exact amendment and effective date
+      - Explicitly unchanged portions of NU-OPS-001
+      - Relationship to current-copy identification
+    relationships:
+      - type: amends
+        document_id: NU-OPS-001
+        scope: Document routing and revision practices only
+    rag_coverage:
+      - Amendment precedence and scope
+      - Date-sensitive interpretation
+      - Multi-document synthesis
+
+  - id: NU-OPS-016
+    title: Facilities Issue Routing, Revision 1
+    filename: NU-OPS-016-facilities-issue-routing-rev1.md
+    intended_author: EMP-002
+    type: historical_procedure
+    audience: Site operations staff and site leads
+    access_scope: site_operations
+    site_scope: all_sites
+    purpose: Preserve the former facilities routing path for historical lookup and precedence testing.
+    proposed_sections:
+      - Original purpose and applicability
+      - Prior issue categories
+      - Former routing path
+      - Former escalation and follow-up
+      - Revision history and supersession notice
+      - Historical-use warning
+    key_facts_to_establish:
+      - Historical effective dates
+      - Former route, distinct from current procedure
+      - Clear superseded status and replacement ID
+    relationships:
+      - type: superseded_by
+        document_id: NU-OPS-003
+        scope: Facilities issue routing and escalation
+    rag_coverage:
+      - Historical lookup
+      - Current-versus-superseded precedence
+      - Avoiding stale instructions
+
+  - id: NU-OPS-017
+    title: Staff Schedule Change Notice, Prior Edition
+    filename: NU-OPS-017-staff-schedule-change-prior.md
+    intended_author: EMP-004
+    type: historical_notice
+    audience: All staff; site leads
+    access_scope: all_staff
+    site_scope: organization_wide
+    purpose: Preserve the previous schedule-change approval rule for historical retrieval.
+    proposed_sections:
+      - Original notice and effective period
+      - Prior approval roles
+      - Prior submission and record process
+      - Revision history
+      - Supersession notice and current reference
+    key_facts_to_establish:
+      - Historical approval rule and valid dates
+      - Clear status as superseded by NU-OPS-005
+      - No ambiguity about which rule is current
+    relationships:
+      - type: superseded_by
+        document_id: NU-OPS-005
+        scope: Schedule-change approval and recording
+    rag_coverage:
+      - Historical versus current rule
+      - Date-filtered lookup
+      - Avoiding stale approval claims
+
+  - id: NU-OPS-018
+    title: Northgate Supply Receiving Exception
+    filename: NU-OPS-018-northgate-receiving-exception.md
+    intended_author: EMP-008
+    type: exception_notice
+    audience: Northgate site operations staff and operations leads
+    access_scope: operations_leads
+    site_scope: northgate
+    purpose: Define a narrowly scoped temporary receiving exception to routine supply handling.
+    proposed_sections:
+      - Exception purpose and owner
+      - Site, supply, and date scope
+      - Temporary receiving steps
+      - Required discrepancy record
+      - Unchanged request and approval rules
+      - Expiration and return to normal process
+    key_facts_to_establish:
+      - Fictional receiving window and affected category
+      - Temporary steps and record owner
+      - Explicit unchanged portions of NU-OPS-008
+    relationships:
+      - type: exception_to
+        document_id: NU-OPS-008
+        scope: Northgate receiving during the stated exception window
+    rag_coverage:
+      - Site/date/scope filtering
+      - Exception versus base procedure
+      - Avoiding application to other sites or periods
+
+  - id: NU-OPS-019
+    title: Monthly Operations Metrics Definitions
+    filename: NU-OPS-019-operations-metrics-definitions.md
+    intended_author: EMP-006
+    type: reference
+    audience: Site leads and operations leads
+    access_scope: operations_leads
+    site_scope: organization_wide
+    purpose: Define fictional administrative measures and their reporting ownership for the corpus period.
+    proposed_sections:
+      - Purpose and reporting period
+      - Metric definitions
+      - Included and excluded events
+      - Site submission responsibilities
+      - Review and correction process
+      - Known data limitations
+      - Owner and next review
+    key_facts_to_establish:
+      - Small set of operational metric definitions
+      - Reporting owner and cadence
+      - Explicit limits where no underlying values are provided
+    relationships:
+      - type: references
+        document_id: NU-OPS-012
+        scope: Huddle follow-up context
+    rag_coverage:
+      - Precise definition retrieval
+      - Multi-document status interpretation
+      - Unsupported numeric result abstention
+
+  - id: NU-OPS-020
+    title: Unresolved Service Desk Questions Log
+    filename: NU-OPS-020-unresolved-service-desk-questions.md
+    intended_author: EMP-007
+    type: working_log
+    audience: Operations leads
+    access_scope: operations_leads
+    site_scope: organization_wide
+    purpose: Record questions that were raised but not answered in the available corpus.
+    proposed_sections:
+      - Log purpose and status
+      - Open question entries
+      - Assigned follow-up owner by role
+      - Missing evidence required
+      - Last reviewed date
+      - Explicit non-answer notice
+    key_facts_to_establish:
+      - At least two useful unknowns not answered elsewhere in the corpus
+      - Pending status and next owner where established
+      - Clear instruction not to infer an answer from silence
+    relationships:
+      - type: referenced_by
+        document_id: NU-OPS-012
+        scope: Huddle follow-up context
+    rag_coverage:
+      - Unanswerable questions
+      - Abstention and uncertainty handling
+      - Distinguishing assigned follow-up from a confirmed answer
