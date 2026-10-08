@@ -49,6 +49,8 @@ For this corpus only, use these role groups:
 
 These groups are not a personnel directory. A document’s audience may be narrower than its scope. The employee IDs below are explicit corpus-only eligibility assignments based on the fictional staff registry; they are not real security rules and do not establish authorization in any actual organization.
 
+The explicit `operations_leads` fixture includes EMP-005, whose registry role is Records Coordinator. This inclusion is assigned by employee ID for deterministic RAG corpus testing; it is not inferred from the role title and does not establish real-world eligibility or authority.
+
 ## Access-scope definitions and role mapping
 
 | Scope label | Eligible fictional employee IDs | Typical document class |

@@ -27,7 +27,7 @@ relationships:
 **Northstar Urgent Care Cooperative (NUCC)**  
 **Document ID:** NU-OPS-017 · **Status:** Draft (planned status: superseded) · **Version:** 1.0  
 **Proposed issue date:** 2023-12-18 · **Proposed effective date:** 2024-01-01  
-**Proposed end of effective period:** 2024-09-21, conditional on NU-OPS-005 approval  
+**Proposed last effective date:** 2024-09-20 · **Proposed successor handoff/review date:** 2024-09-21, conditional on NU-OPS-005 approval
 **Scope:** Organization-wide · **Access scope:** `all_staff`  
 **Owner and author:** Ren Solis, People Operations Coordinator (EMP-004)
 
@@ -35,7 +35,7 @@ relationships:
 
 ## Historical notice and proposed effective period
 
-This document is a draft reconstruction of a prior administrative schedule-change notice for corpus testing. The dates and historical rule below are proposed until coordinator review confirms them. The proposed effective period begins **2024-01-01** and ends immediately before **2024-09-21**, but only if NU-OPS-005 is approved with that effective date.
+This document is a draft reconstruction of a prior administrative schedule-change notice for corpus testing. The dates and historical rule below are proposed until coordinator review confirms them. The proposed effective period begins **2024-01-01** and its last proposed effective date is **2024-09-20**, but only if NU-OPS-005 is approved with the proposed successor effective date of **2024-09-21**. That successor date is the proposed handoff and review point; it is not an effective date for this prior edition.
 
 Until NU-OPS-005 is approved and effective, this draft does not establish a prior approved rule. If NU-OPS-005 remains unapproved, the previously approved source, if any, remains applicable; neither this reconstruction nor the NU-OPS-005 draft should be treated as approved instruction. If both documents are later approved as proposed, NU-OPS-017 would be used only to answer historical questions about its proposed period and would not control requests on or after the replacement’s effective date.
 
@@ -69,4 +69,4 @@ NU-OPS-005 identifies itself as the proposed replacement for NU-OPS-017, with pr
 
 ---
 
-**Drafting note for coordinator:** This file intentionally proposes a historical rule distinct from NU-OPS-005: single-site approval by the affected site lead; multi-site, central-office, and site-lead schedule approval by the People Operations Coordinator after site-lead comments. Request fields and log steps are also reconstructed proposals. Proposed dates are 2023-12-18 issue, 2024-01-01 effective, and a conditional end immediately before 2024-09-21. Reconcile this proposed history and the conditional supersession against NU-OPS-005 before approval. If NU-OPS-005 is unapproved, do not describe this draft as the current approved source; the previously approved source, if any, remains applicable.
+**Drafting note for coordinator:** This file intentionally proposes a historical rule distinct from NU-OPS-005: single-site approval by the affected site lead; multi-site, central-office, and site-lead schedule approval by the People Operations Coordinator after site-lead comments. Request fields and log steps are also reconstructed proposals. Proposed dates are 2023-12-18 issue, 2024-01-01 effective, 2024-09-20 last effective, and 2024-09-21 conditional successor handoff/review. Reconcile this proposed history and the conditional supersession against NU-OPS-005 before approval. If NU-OPS-005 is unapproved, do not describe this draft as the current approved source; the previously approved source, if any, remains applicable.

@@ -7,7 +7,7 @@ site_scope: northgate
 owner_role: Northgate Site Lead
 author: Lio Marr
 author_employee_id: EMP-008
-intended_audience: Northgate Site Lead and operations-lead-eligible staff
+intended_audience: Personnel eligible for operations_leads under NU-OPS-010; Northgate Site Lead owns local exception records
 access_scope: operations_leads
 status: draft
 planned_status: current (limited scope)
@@ -28,7 +28,7 @@ relationships:
 **Status:** Draft; inactive pending approval · **Version:** 1.0  
 **Proposed window:** 10 October 2024 through 24 October 2024, inclusive  
 **Site:** Northgate only · **Access scope:** `operations_leads`  
-**Owner:** Northgate Site Lead
+**Intended users:** Personnel eligible for `operations_leads` under NU-OPS-010 · **Local owner:** Northgate Site Lead · **Required approver:** Director of Operations
 
 > Fictional educational test material. This proposed exception covers administrative supply receipt handling only. It is not active unless NU-OPS-008 and this exception are both approved and effective. It does not provide clinical or patient-care guidance.
 
@@ -51,10 +51,10 @@ It would not cover other supply classes, other sites, or deliveries outside thos
 
 ## 3. Proposed temporary receiving steps
 
-If both this notice and NU-OPS-008 have been approved and are effective, Northgate receiving staff may use these steps for an in-scope delivery lacking its reference at handoff:
+Only personnel eligible to retrieve `operations_leads` documents under NU-OPS-010 may retrieve and use this exception procedure. A Northgate receiving staff member may physically accept a delivery under the routine receiving process in NU-OPS-008; physical receipt alone does not grant access to this exception or authorize its temporary steps. The Northgate Site Lead owns the local provisional record and temporary hold. The Director of Operations is the required approver for this cross-site procedure exception. If both this notice and NU-OPS-008 have been approved and are effective, the Northgate Site Lead may apply these steps to an in-scope delivery lacking its reference at handoff:
 
 1. Check the visible item description, count, and package condition. Do not open a sealed package solely to identify its contents.
-2. Make a provisional entry in the Northgate receiving log with date and time, item description, observed quantity, visible condition, carrier or supplier reference if shown, and the receiving staff member's role.
+2. Make a provisional entry in the Northgate receiving log with date and time, item description, observed quantity, visible condition, carrier or supplier reference if shown, and the role of the person recording the entry.
 3. Label the entry **reference pending** and identify the next owner as the Northgate Site Lead. Do not record the delivery as matched, complete, or approved.
 4. The Northgate Site Lead must designate and record an appropriate non-clinical administrative holding location before this step is used. Keep the package intact there, separate from ordinary stock, until the order or transfer reference is matched. This is a proposed local arrangement, not a location established by NU-OPS-008. If no appropriate location is confirmed and recorded, this exception cannot be used for that delivery; follow the applicable approved current process.
 5. Send the provisional entry ID and available delivery details to the Facilities Coordinator. The site lead updates the local record when the reference is confirmed and applies the ordinary receiving steps in NU-OPS-008 before moving eligible items to ordinary storage.

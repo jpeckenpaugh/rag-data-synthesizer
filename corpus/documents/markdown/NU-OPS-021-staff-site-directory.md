@@ -19,7 +19,7 @@ review_date: 2025-10-01
 relationships:
   - type: derived_from
     source_path: corpus/staff.yml
-    scope: Employee ID, name, role, department, and home_site registry fields only
+    scope: Employee ID, name, role, department, home_site, and responsibilities registry fields
   - type: references
     document_id: NU-OPS-007
     scope: Role-based operational routing; this directory does not replace it
@@ -41,7 +41,7 @@ relationships:
 
 ## How to read this directory
 
-The entries below reproduce the employee ID, name, role, department, and `home_site` values in the fictional staff registry (`corpus/staff.yml`). A home-site value records the registry entry; it does not establish a person's current shift, physical presence, availability, reporting line, or site coverage.
+The entries below reproduce the employee ID, name, role, department, and `home_site` values in the fictional staff registry (`corpus/staff.yml`). The role-focus summaries are condensed from that registry's responsibility fields. A home-site value records the registry entry; it does not establish a person's current shift, physical presence, availability, reporting line, or site coverage.
 
 This document does not provide contact information, backup assignments, an on-call roster, or approval authority. For operational routing, use the role-based destinations in NU-OPS-007 and the applicable procedure. Do not infer a route or substitute a person based on this list.
 
@@ -57,6 +57,19 @@ This document does not provide contact information, backup assignments, an on-ca
 | ![Decorative fictional illustration, not a likeness](asset:avatar-emp-006) | EMP-006 | Niko Fen | Quality and Continuity Analyst | Quality and Continuity | Central office (`central_office`) |
 | ![Decorative fictional illustration, not a likeness](asset:avatar-emp-007) | EMP-007 | Oren Pike | Operations Desk Coordinator | Central Operations | Central office (`central_office`) |
 | ![Decorative fictional illustration, not a likeness](asset:avatar-emp-008) | EMP-008 | Lio Marr | Northgate Site Lead | Site Operations | Northgate (`northgate`) |
+
+## Role focus from the staff registry
+
+The summaries below condense the responsibility fields in `corpus/staff.yml`. They describe registry-listed topics; they do not define approval authority, access eligibility, current assignments, site coverage, or on-call responsibility.
+
+- **EMP-001 — Mara Venn:** Organization-wide operational governance and approvals; service continuity coordination; controlled document policy ownership.
+- **EMP-002 — Ilan Rook:** Facilities issue intake and routing; non-clinical supplies and receiving; vendor visit coordination; maintaining historical facilities procedure records.
+- **EMP-003 — Tessa Quill:** Harbor Point opening and closing handoffs; local site coordination and exception records; facilitating site quality huddles.
+- **EMP-004 — Ren Solis:** Administrative schedule-change process; staff-facing notices and revision history for that process.
+- **EMP-005 — Dev Arlen:** Administrative records routing and misdelivery reporting; maintaining the fictional information access matrix for the corpus.
+- **EMP-006 — Niko Fen:** Non-clinical incident reporting guidance; severe-weather coordination materials; operations metrics definitions and reporting notes.
+- **EMP-007 — Oren Pike:** Maintaining role-based site contact and escalation routing; recording unresolved operations desk questions and follow-ups.
+- **EMP-008 — Lio Marr:** Northgate site operations and receiving handoffs; maintaining records for time-limited local exceptions.
 
 Portraits are decorative fictional illustrations assigned to employee IDs for this test corpus. They are not photographs or likenesses of real people and do not encode or establish a person's identity, age, appearance, role, or personality. The text fields in each row provide the directory information.
 
@@ -83,8 +96,8 @@ The staff registry names Tessa Quill as Harbor Point Site Lead and Lio Marr as N
 
 This directory reflects the staff registry used for the proposed 1 October 2024 corpus snapshot. The registry is the source for these identity and home-site fields. A proposed correction should be made to the registry first and then reconciled here; this draft does not independently establish a personnel change.
 
-This document does not define employment status, schedule, reporting lines, backup coverage, contact routes, or responsibilities beyond the listed role and department. For role routing, consult NU-OPS-007. For corpus access labels, consult NU-OPS-010.
+This document does not define employment status, schedule, reporting lines, backup coverage, contact routes, or responsibilities beyond the role-focus summary sourced from the registry. For role routing, consult NU-OPS-007. For corpus access labels, consult NU-OPS-010.
 
 ---
 
-**Drafting basis:** Drafted by Ren Solis (EMP-004), People Operations Coordinator, solely from the fictional employee ID, name, role, department, and `home_site` fields in `corpus/staff.yml`. The 1 October 2024 dates are proposed scenario metadata consistent with the planned corpus snapshot and require coordinator confirmation. The home-site counts are simple counts of those registry values, not a separate staffing dataset. No contact details, reporting lines, shift information, employment status, or other personnel facts were inferred. The portrait illustrations are decorative visual identifiers, not likenesses; the chart visualizes only the adjacent registry count table.
+**Drafting basis:** Drafted by Ren Solis (EMP-004), People Operations Coordinator, solely from the fictional employee ID, name, role, department, `home_site`, and responsibilities fields in `corpus/staff.yml`. The 1 October 2024 dates are proposed scenario metadata consistent with the planned corpus snapshot and require coordinator confirmation. The home-site counts are simple counts of those registry values, not a separate staffing dataset. No contact details, reporting lines, shift information, employment status, or other personnel facts were inferred. The portrait illustrations are decorative visual identifiers, not likenesses; the chart visualizes only the adjacent registry count table.

@@ -18,6 +18,15 @@ review_date: 2024-10-14
 date_status: proposed
 relationships:
   - type: references
+    document_id: NU-OPS-003
+    scope: Facilities issue record purpose when linked to an interruption
+  - type: references
+    document_id: NU-OPS-006
+    scope: Service interruption coordination record purpose
+  - type: references
+    document_id: NU-OPS-011
+    scope: Workplace incident record purpose when linked to an interruption
+  - type: references
     document_id: NU-OPS-019
     scope: Proposed operations metric definitions reviewed at the huddle; no metric values reported
   - type: references
@@ -46,7 +55,7 @@ The group reviewed draft administrative materials for continuity, role routing, 
 
 - The group reviewed the proposed monthly measure names in NU-OPS-019 and confirmed that the draft contains definitions only, with no underlying records or numerical totals. **No September metric result was reported or inferred.** NU-OPS-019 remains a draft; these notes do not approve or amend it.
 - The Operations Desk Coordinator entered the question about an Alder Creek Site Lead backup into NU-OPS-020 as **open**. The directory does not name a deputy, and the huddle did not establish one.
-- The group recorded that a service interruption update and any linked facilities or workplace incident records have separate purposes. No specific event record or site incident was reviewed at this huddle.
+- The group recorded that the service interruption update under NU-OPS-006, a linked facilities issue record under NU-OPS-003, and a workplace incident record under NU-OPS-011 have separate purposes. No specific event record or site incident was reviewed at this huddle.
 
 These are proposed meeting-record facts for coordinator review. “Completed” means the stated huddle action was completed; it does not mean the underlying policy or question was resolved.
 

@@ -51,15 +51,17 @@ Count distinct administrative record IDs, not messages, updates, people, or esti
 
 These are record counts, not rates. No denominator, target, severity weighting, cause attribution, financial impact, or performance judgment is defined. A count must not be interpreted as evidence that one site is safer, more efficient, or better performing than another.
 
-## Submission and review ownership
+## Candidate submission and review allocation
 
-The following workflow is proposed and pending approval:
+The following role allocation is a candidate for review and remains pending approval. It is not an approved operational workflow, and it does not settle the source of record or which role produces or validates each count:
 
-- **Site leads** check their site’s relevant administrative records and send a monthly count or an explicit “not available” status to the Quality and Continuity Analyst by the fifth business day of the following month.
-- **Facilities Coordinator** confirms the facilities issue and supply receiving discrepancy counts from the designated administrative records.
-- **Director of Operations** confirms the service interruption record list used for the monthly count.
-- **Quality and Continuity Analyst** compiles the site and central submissions, checks for duplicate record IDs and missing site returns, and labels the summary as incomplete when a source or date is not confirmed.
-- **Director of Operations** reviews and approves the definitions and any proposed revision. This draft does not establish an approval of actual numerical results or an external reporting requirement.
+- **Site leads** would check their site’s relevant administrative records and send a monthly count or an explicit “not available” status to the Quality and Continuity Analyst by the fifth business day of the following month.
+- **Facilities Coordinator** would confirm the facilities issue and supply receiving discrepancy counts from the designated administrative records.
+- **Director of Operations** would confirm the service interruption record list used for the monthly count.
+- **Quality and Continuity Analyst** would compile the site and central submissions, check for duplicate record IDs and missing site returns, and label the summary as incomplete when a source or date is not confirmed.
+- **Director of Operations** would review and approve the definitions and any proposed revision. This draft does not establish an approval of actual numerical results or an external reporting requirement.
+
+The handoff between site submissions and central role confirmations remains unresolved in the available corpus. The candidate allocation above does not approve whether site leads prepare counts for all measure types and central roles validate them, or whether central roles produce their measure counts while site leads report local availability. No source of record, count-production responsibility, or validation responsibility is approved. Do not treat this candidate allocation as an operational requirement until the reporting handoff is confirmed and approved.
 
 The corpus does not identify the software platform, underlying record repository, or a monthly results dataset. Do not infer that a measure has a value when no source records or approved summary are available.
 

@@ -5,7 +5,7 @@ the rendered PDFs are linked below from `./pdf/`.
 
 ## [NU-OPS-001 — Operations Governance and Document Control](./pdf/NU-OPS-001.pdf)
 
-**Access:** `all_staff` · **Status:** Draft · **Audience:** All staff; document owners; operations leads
+**Access:** `all_staff` · **Status:** Draft · **Audience:** All staff; document owners; site leads
 
 Explain who owns, approves, distributes, and reviews operational documents.
 
@@ -17,13 +17,13 @@ Provide a non-clinical checklist for routine site opening, handoff, and closing.
 
 ## [NU-OPS-003 — Facilities Issue Intake and Escalation](./pdf/NU-OPS-003.pdf)
 
-**Access:** `site_operations` · **Status:** Draft · **Audience:** Site operations staff and site leads
+**Access:** `site_operations` · **Status:** Draft · **Audience:** Site operations staff; site leads
 
 Define how non-clinical facilities issues are recorded, prioritized, routed, and followed up.
 
 ## [NU-OPS-004 — Harbor Point After-Hours Access Exception](./pdf/NU-OPS-004.pdf)
 
-**Access:** `operations_leads` · **Status:** Draft · **Audience:** Harbor Point site operations staff and operations leads
+**Access:** `operations_leads` · **Status:** Draft · **Audience:** Harbor Point Site Lead and employees with operations_leads eligibility under NU-OPS-010
 
 Define a narrow, temporary after-hours access exception without changing other opening or closing controls.
 
@@ -35,25 +35,25 @@ State the current administrative approval and recording path for schedule change
 
 ## [NU-OPS-006 — Service Interruption Response](./pdf/NU-OPS-006.pdf)
 
-**Access:** `site_operations` · **Status:** Draft · **Audience:** Site operations staff and operations leads
+**Access:** `site_operations` · **Status:** Draft · **Audience:** Site operations staff; site and central operations leads eligible for site_operations (EMP-001, EMP-002, EMP-003, EMP-006, EMP-007, EMP-008)
 
 Coordinate non-clinical response and communications during facility or administrative service interruptions.
 
 ## [NU-OPS-007 — Site Contact and Escalation Directory](./pdf/NU-OPS-007.pdf)
 
-**Access:** `site_operations` · **Status:** Draft · **Audience:** Staff; site leads; operations leads
+**Access:** `site_operations` · **Status:** Draft · **Audience:** Site operations staff; site leads; operations leads
 
 Provide fictional role-based internal routing destinations for operational issues.
 
 ## [NU-OPS-008 — Supply Request and Receiving Guide](./pdf/NU-OPS-008.pdf)
 
-**Access:** `site_operations` · **Status:** Draft · **Audience:** Site operations staff and site leads
+**Access:** `site_operations` · **Status:** Draft · **Audience:** Site operations staff; site leads
 
 Describe routine non-clinical supply requests, receipt checks, discrepancy logging, and storage handoff.
 
 ## [NU-OPS-009 — Records Handling and Misdelivery Procedure](./pdf/NU-OPS-009.pdf)
 
-**Access:** `operations_leads` · **Status:** Draft · **Audience:** Staff; site leads; records coordinator
+**Access:** `operations_leads` · **Status:** Draft · **Audience:** Records Coordinator; site leads; operations-lead-eligible staff
 
 Set administrative steps for routing, protecting, and reporting misdelivered organizational records without exposing personal data.
 
@@ -65,37 +65,37 @@ Define the fictional access-scope labels used by this corpus and which roles may
 
 ## [NU-OPS-011 — Workplace Incident Reporting Guide](./pdf/NU-OPS-011.pdf)
 
-**Access:** `site_operations` · **Status:** Draft · **Audience:** Staff; site leads; operations leads
+**Access:** `site_operations` · **Status:** Draft · **Audience:** Employees eligible for site_operations in NU-OPS-010 (EMP-001, EMP-002, EMP-003, EMP-006, EMP-007, EMP-008)
 
 Explain administrative reporting and follow-up for non-clinical workplace incidents.
 
 ## [NU-OPS-012 — Quality Huddle Notes, September](./pdf/NU-OPS-012.pdf)
 
-**Access:** `operations_leads` · **Status:** Draft · **Audience:** Site leads and operations leads
+**Access:** `operations_leads` · **Status:** Draft · **Audience:** Employees eligible for operations_leads in NU-OPS-010 (EMP-001, EMP-003, EMP-005, EMP-006, EMP-007, EMP-008)
 
 Provide an informal working record with assigned follow-ups and a deliberately unresolved service desk item.
 
 ## [NU-OPS-013 — Severe Weather Site Coordination Card](./pdf/NU-OPS-013.pdf)
 
-**Access:** `site_operations` · **Status:** Draft · **Audience:** Site operations staff and operations leads
+**Access:** `site_operations` · **Status:** Draft · **Audience:** Employees eligible for site_operations in NU-OPS-010 (EMP-001, EMP-002, EMP-003, EMP-006, EMP-007, EMP-008)
 
 Provide a compact non-clinical coordination checklist for site status, staff communications, and operational updates during severe weather.
 
 ## [NU-OPS-014 — Vendor Visit and Contractor Sign-In](./pdf/NU-OPS-014.pdf)
 
-**Access:** `site_operations` · **Status:** Draft · **Audience:** Site operations staff; site leads; visiting contractors
+**Access:** `site_operations` · **Status:** Draft · **Audience:** Site operations staff; site leads
 
 Record and coordinate non-clinical facilities vendor visits at a site.
 
 ## [NU-OPS-015 — Document Revision Bulletin 24-03](./pdf/NU-OPS-015.pdf)
 
-**Access:** `all_staff` · **Status:** Draft · **Audience:** Document owners; all staff
+**Access:** `all_staff` · **Status:** Draft · **Audience:** All staff; document owners
 
 Make a limited amendment to document routing and current-copy identification under NU-OPS-001.
 
 ## [NU-OPS-016 — Facilities Issue Routing, Revision 1](./pdf/NU-OPS-016.pdf)
 
-**Access:** `site_operations` · **Status:** Draft · **Audience:** Site operations staff and site leads
+**Access:** `site_operations` · **Status:** Draft · **Audience:** Site operations staff; site leads
 
 Preserve the former facilities routing path for historical lookup and precedence testing.
 
@@ -107,13 +107,13 @@ Preserve the previous schedule-change approval rule for historical retrieval.
 
 ## [NU-OPS-018 — Northgate Supply Receiving Exception](./pdf/NU-OPS-018.pdf)
 
-**Access:** `operations_leads` · **Status:** Draft · **Audience:** Northgate Site Lead and operations-lead-eligible staff
+**Access:** `operations_leads` · **Status:** Draft · **Audience:** Personnel eligible for operations_leads under NU-OPS-010; Northgate Site Lead owns local exception records
 
 Define a narrowly scoped temporary receiving exception to routine supply handling.
 
 ## [NU-OPS-019 — Monthly Operations Metrics Definitions](./pdf/NU-OPS-019.pdf)
 
-**Access:** `operations_leads` · **Status:** Draft · **Audience:** Site leads and operations leads
+**Access:** `operations_leads` · **Status:** Draft · **Audience:** Operations-lead-eligible employees in NU-OPS-010 (EMP-001, EMP-003, EMP-005, EMP-006, EMP-007, EMP-008)
 
 Define fictional administrative measures and their reporting ownership for the corpus period.
 

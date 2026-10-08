@@ -95,6 +95,34 @@ Receiving confirms only what was observed at handoff. It does not approve the pu
 
 When the order matches and the item is in scope, the receiving staff member records the receipt and hands it to the site lead or designated site operations role for ordinary storage. The site lead updates the supply log with received quantity and closes the request when the request is complete.
 
+### Illustrative blank request and receiving record
+
+Use this blank example to connect the site request with the later receipt check. The request ID or order reference links the two entries; no completed request or approval is represented here.
+
+| Request field | Entry |
+| --- | --- |
+| Request ID | `[ID]` |
+| Site and date | `[site]` · `[date]` |
+| Item / non-clinical use | `[description and use]` |
+| Quantity / unit | `[quantity]` · `[unit]` |
+| On-site quantity, if known | `[quantity / not known]` |
+| Requested-by date and reason | `[date]` · `[reason]` |
+| Site lead review status | `[submitted / returned for clarification / forwarded]` |
+| Central request status | `[proposed queue state]` |
+| Approver and recorded decision | `[not identified / role and decision source, if established through an applicable process]` |
+
+| Receiving field | Entry |
+| --- | --- |
+| Date/time and site | `[date/time]` · `[site]` |
+| Order or transfer reference | `[reference, if available]` |
+| Expected / received / discrepant quantity | `[quantity]` · `[quantity]` · `[quantity or none observed]` |
+| Observed condition or paperwork mismatch | `[factual observation / none observed]` |
+| Temporary location and next-action role, if held aside | `[location]` · `[role]` |
+| Receiving check completed by | `[role or local log entry]` |
+| Request status and next owner | `[status]` · `[role / not yet confirmed]` |
+
+The blank approval field is intentional: this guide does not identify purchase authority. A completed receipt check records observed delivery and does not itself approve a purchase.
+
 ## 5. Discrepancies and temporary holding
 
 If quantity, item, condition, or paperwork does not match the order:

@@ -1,0 +1,166 @@
+ledger:
+  id: nucc-shared-claims-v1
+  purpose: >-
+    Decision ledger for approval-relevant shared claims and open decisions in the
+    fictional NUCC corpus. Markdown source documents remain authoritative for
+    their full content; this ledger records only the claim scope and decision
+    needed for approval coordination.
+  status_values:
+    proposed: A candidate fictional claim or convention awaiting approval; it is not operative.
+    unresolved: The corpus intentionally does not establish an answer or rule; do not infer one.
+  document_state_note: >-
+    A decision recorded here does not by itself approve any document. All source
+    documents remain drafts until their document-level approval is recorded.
+  entries:
+    - id: DEC-001
+      status: proposed
+      claim: Fictional timeline and precedence
+      scope: >-
+        Ratify or retain as hypothetical the proposed issue/effective/review
+        dates, September 2024 working-record events, the 2024-09-21 handoffs
+        from NU-OPS-016 to NU-OPS-003 and NU-OPS-017 to NU-OPS-005, and the
+        stated precedence and exception windows. This decision does not approve
+        the documents themselves.
+      decision_needed: Decide whether approval establishes these dates and transitions as fictional history, or whether they remain hypothetical proposals.
+      sources:
+        - CLINIC_DETAILS.md
+        - reports/content-review.md
+        - NU-OPS-001
+        - NU-OPS-002
+        - NU-OPS-003
+        - NU-OPS-004
+        - NU-OPS-005
+        - NU-OPS-006
+        - NU-OPS-007
+        - NU-OPS-008
+        - NU-OPS-009
+        - NU-OPS-010
+        - NU-OPS-011
+        - NU-OPS-012
+        - NU-OPS-013
+        - NU-OPS-014
+        - NU-OPS-015
+        - NU-OPS-016
+        - NU-OPS-017
+        - NU-OPS-018
+        - NU-OPS-019
+        - NU-OPS-020
+        - NU-OPS-021
+      dependent_documents:
+        - NU-OPS-001
+        - NU-OPS-002
+        - NU-OPS-003
+        - NU-OPS-004
+        - NU-OPS-005
+        - NU-OPS-006
+        - NU-OPS-007
+        - NU-OPS-008
+        - NU-OPS-009
+        - NU-OPS-010
+        - NU-OPS-011
+        - NU-OPS-012
+        - NU-OPS-013
+        - NU-OPS-014
+        - NU-OPS-015
+        - NU-OPS-016
+        - NU-OPS-017
+        - NU-OPS-018
+        - NU-OPS-019
+        - NU-OPS-020
+        - NU-OPS-021
+
+    - id: DEC-002
+      status: proposed
+      claim: NU-OPS-006 interruption update cadence and labels
+      scope: The draft proposes 60-minute updates during active service interruptions, plus material-change updates; its status labels are also explicitly proposed. NU-OPS-013 keeps its separate material-change and shift-handoff convention.
+      decision_needed: Accept or revise the fixed cadence and status vocabulary for NU-OPS-006, preserving NU-OPS-013's distinct severe-weather convention unless separately changed.
+      sources:
+        - reports/content-review.md
+        - NU-OPS-006
+        - NU-OPS-013
+      dependent_documents:
+        - NU-OPS-006
+        - NU-OPS-012
+        - NU-OPS-013
+
+    - id: DEC-003
+      status: unresolved
+      claim: NU-OPS-019 metric production and validation ownership
+      scope: The candidate workflow assigns possible site submissions, central role confirmations, and analyst compilation, but the source of record and responsibility for producing versus validating each count are not established.
+      decision_needed: Choose whether site leads prepare local counts for central validation, or central roles produce measure counts while site leads report local source availability; identify the approved source of record if the workflow is to be operationally complete.
+      sources:
+        - reports/content-review.md
+        - NU-OPS-019
+        - NU-OPS-012
+      dependent_documents:
+        - NU-OPS-019
+        - NU-OPS-012
+
+    - id: DEC-004
+      status: unresolved
+      claim: Controlled document repository location
+      scope: NU-OPS-001 and NU-OPS-015 refer to a designated central operations document repository but do not identify its fictional system, path, or location.
+      decision_needed: Either retain the repository location as an intentional abstention case or establish a fictional identifier/location consistently; do not imply that a real system exists.
+      sources:
+        - reports/content-review.md
+        - NU-OPS-001
+        - NU-OPS-015
+      dependent_documents:
+        - NU-OPS-001
+        - NU-OPS-015
+
+    - id: DEC-005
+      status: unresolved
+      claim: Supply purchase authority
+      scope: NU-OPS-008 describes request review and receiving but does not establish who may authorize a purchase or any spending threshold; NU-OPS-018 must not silently add such authority.
+      decision_needed: Retain purchase authority as unknown for abstention testing, or approve a specific fictional role/threshold and update all affected procedure and exception language consistently.
+      sources:
+        - reports/content-review.md
+        - NU-OPS-008
+        - NU-OPS-018
+      dependent_documents:
+        - NU-OPS-008
+        - NU-OPS-018
+
+    - id: DEC-006
+      status: unresolved
+      claim: Site handoff-record locations and retention
+      scope: The huddle and question log leave each site's approved handoff-record location and applicable retention period unconfirmed; no network-wide period is established. This is separate from vendor-visit records.
+      decision_needed: Retain the locations/periods as unknown, or establish them per site from an approved fictional source; do not infer a network-wide rule from the open follow-up.
+      sources:
+        - reports/content-review.md
+        - NU-OPS-002
+        - NU-OPS-012
+        - NU-OPS-020
+      dependent_documents:
+        - NU-OPS-002
+        - NU-OPS-012
+        - NU-OPS-020
+
+    - id: DEC-007
+      status: unresolved
+      claim: Vendor visit-log retention period
+      scope: NU-OPS-014 describes where visit entries are linked but does not establish a retention period or assign an owner to resolve that question.
+      decision_needed: Keep the period and owner unestablished, or specify an approved fictional records schedule and responsible owner; do not borrow another record type's retention rule.
+      sources:
+        - reports/content-review.md
+        - NU-OPS-014
+        - NU-OPS-020
+      dependent_documents:
+        - NU-OPS-014
+        - NU-OPS-020
+
+    - id: DEC-008
+      status: unresolved
+      claim: Alder Creek Site Lead backup
+      scope: NU-OPS-007 gives a fictional role mailbox but names no incumbent or deputy, and the working records keep the backup question open.
+      decision_needed: Preserve the unknown, or establish an authorized fictional backup role from a confirming source; mailbox existence alone does not establish coverage.
+      sources:
+        - reports/content-review.md
+        - NU-OPS-007
+        - NU-OPS-012
+        - NU-OPS-020
+      dependent_documents:
+        - NU-OPS-007
+        - NU-OPS-012
+        - NU-OPS-020

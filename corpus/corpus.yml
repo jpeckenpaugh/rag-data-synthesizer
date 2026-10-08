@@ -18,7 +18,7 @@ documents:
     title: Operations Governance and Document Control
     filename: NU-OPS-001-operations-governance.md
     type: policy
-    audience: All staff; document owners; operations leads
+    audience: "All staff; document owners; site leads"
     access_scope: all_staff
     site_scope: organization_wide
     intended_author: EMP-001
@@ -88,7 +88,7 @@ documents:
     filename: NU-OPS-003-facilities-issue-intake.md
     intended_author: EMP-002
     type: procedure
-    audience: Site operations staff and site leads
+    audience: "Site operations staff; site leads"
     access_scope: site_operations
     site_scope: all_sites
     purpose: Define how non-clinical facilities issues are recorded, prioritized, routed, and followed up.
@@ -124,7 +124,7 @@ documents:
     filename: NU-OPS-004-harbor-point-access-exception.md
     intended_author: EMP-003
     type: exception_notice
-    audience: Harbor Point site operations staff and operations leads
+    audience: "Harbor Point Site Lead and employees with operations_leads eligibility under NU-OPS-010"
     access_scope: operations_leads
     site_scope: harbor_point
     purpose: Define a narrow, temporary after-hours access exception without changing other opening or closing controls.
@@ -187,7 +187,7 @@ documents:
     filename: NU-OPS-006-service-interruption-response.md
     intended_author: EMP-001
     type: procedure
-    audience: Site operations staff and operations leads
+    audience: "Site operations staff; site and central operations leads eligible for site_operations (EMP-001, EMP-002, EMP-003, EMP-006, EMP-007, EMP-008)"
     access_scope: site_operations
     site_scope: all_sites
     purpose: Coordinate non-clinical response and communications during facility or administrative service interruptions.
@@ -220,7 +220,7 @@ documents:
     filename: NU-OPS-007-site-contact-directory.md
     intended_author: EMP-007
     type: reference_directory
-    audience: Staff; site leads; operations leads
+    audience: "Site operations staff; site leads; operations leads"
     access_scope: site_operations
     site_scope: all_sites
     purpose: Provide fictional role-based internal routing destinations for operational issues.
@@ -268,7 +268,7 @@ documents:
     filename: NU-OPS-008-supply-request-receiving.md
     intended_author: EMP-002
     type: procedure_guide
-    audience: Site operations staff and site leads
+    audience: "Site operations staff; site leads"
     access_scope: site_operations
     site_scope: all_sites
     purpose: Describe routine non-clinical supply requests, receipt checks, discrepancy logging, and storage handoff.
@@ -307,7 +307,7 @@ documents:
     filename: NU-OPS-009-records-handling-misdelivery.md
     intended_author: EMP-005
     type: administrative_procedure
-    audience: Staff; site leads; records coordinator
+    audience: Records Coordinator; site leads; operations-lead-eligible staff
     access_scope: operations_leads
     site_scope: organization_wide
     purpose: Set administrative steps for routing, protecting, and reporting misdelivered organizational records without exposing personal data.
@@ -370,7 +370,7 @@ documents:
     filename: NU-OPS-011-workplace-incident-reporting.md
     intended_author: EMP-006
     type: administrative_procedure
-    audience: Staff; site leads; operations leads
+    audience: Employees eligible for site_operations in NU-OPS-010 (EMP-001, EMP-002, EMP-003, EMP-006, EMP-007, EMP-008)
     access_scope: site_operations
     site_scope: all_sites
     purpose: Explain administrative reporting and follow-up for non-clinical workplace incidents.
@@ -389,6 +389,9 @@ documents:
       - type: references
         document_id: NU-OPS-007
         scope: Fictional reporting destinations
+      - type: references
+        document_id: NU-OPS-009
+        scope: Administrative records handling boundary and route for out-of-scope record questions
       - type: governed_by
         document_id: NU-OPS-010
         scope: Corpus access labels and retrieval eligibility
@@ -402,7 +405,7 @@ documents:
     filename: NU-OPS-012-quality-huddle-notes-september.md
     intended_author: EMP-003
     type: meeting_notes
-    audience: Site leads and operations leads
+    audience: Employees eligible for operations_leads in NU-OPS-010 (EMP-001, EMP-003, EMP-005, EMP-006, EMP-007, EMP-008)
     access_scope: operations_leads
     site_scope: organization_wide
     purpose: Provide an informal working record with assigned follow-ups and a deliberately unresolved service desk item.
@@ -419,6 +422,15 @@ documents:
       - Explicit unknowns that should remain unanswered
     relationships:
       - type: references
+        document_id: NU-OPS-003
+        scope: Facilities issue record purpose when linked to an interruption
+      - type: references
+        document_id: NU-OPS-006
+        scope: Service interruption coordination record purpose
+      - type: references
+        document_id: NU-OPS-011
+        scope: Workplace incident record purpose when linked to an interruption
+      - type: references
         document_id: NU-OPS-020
         scope: Unresolved service desk item
       - type: references
@@ -434,7 +446,7 @@ documents:
     filename: NU-OPS-013-severe-weather-coordination.md
     intended_author: EMP-006
     type: quick_reference
-    audience: Site operations staff and operations leads
+    audience: "Employees eligible for site_operations in NU-OPS-010 (EMP-001, EMP-002, EMP-003, EMP-006, EMP-007, EMP-008)"
     access_scope: site_operations
     site_scope: all_sites
     purpose: Provide a compact non-clinical coordination checklist for site status, staff communications, and operational updates during severe weather.
@@ -470,7 +482,7 @@ documents:
     filename: NU-OPS-014-vendor-visit-sign-in.md
     intended_author: EMP-002
     type: checklist
-    audience: Site operations staff; site leads; visiting contractors
+    audience: Site operations staff; site leads
     access_scope: site_operations
     site_scope: all_sites
     purpose: Record and coordinate non-clinical facilities vendor visits at a site.
@@ -502,7 +514,7 @@ documents:
     filename: NU-OPS-015-document-revision-bulletin-24-03.md
     intended_author: EMP-001
     type: revision_bulletin
-    audience: Document owners; all staff
+    audience: "All staff; document owners"
     access_scope: all_staff
     site_scope: organization_wide
     purpose: Make a limited amendment to document routing and current-copy identification under NU-OPS-001.
@@ -532,7 +544,7 @@ documents:
     filename: NU-OPS-016-facilities-issue-routing-rev1.md
     intended_author: EMP-002
     type: historical_procedure
-    audience: Site operations staff and site leads
+    audience: "Site operations staff; site leads"
     access_scope: site_operations
     site_scope: all_sites
     purpose: Preserve the former facilities routing path for historical lookup and precedence testing.
@@ -589,7 +601,7 @@ documents:
     filename: NU-OPS-018-northgate-receiving-exception.md
     intended_author: EMP-008
     type: exception_notice
-    audience: Northgate Site Lead and operations-lead-eligible staff
+    audience: "Personnel eligible for operations_leads under NU-OPS-010; Northgate Site Lead owns local exception records"
     access_scope: operations_leads
     site_scope: northgate
     purpose: Define a narrowly scoped temporary receiving exception to routine supply handling.
@@ -618,7 +630,7 @@ documents:
     filename: NU-OPS-019-operations-metrics-definitions.md
     intended_author: EMP-006
     type: reference
-    audience: Site leads and operations leads
+    audience: "Operations-lead-eligible employees in NU-OPS-010 (EMP-001, EMP-003, EMP-005, EMP-006, EMP-007, EMP-008)"
     access_scope: operations_leads
     site_scope: organization_wide
     purpose: Define fictional administrative measures and their reporting ownership for the corpus period.
@@ -703,7 +715,7 @@ documents:
     relationships:
       - type: derived_from
         source_path: corpus/staff.yml
-        scope: Employee ID, name, role, department, and home_site fields
+        scope: Employee ID, name, role, department, home_site, and responsibilities registry fields
       - type: references
         document_id: NU-OPS-007
         scope: Role-based operational routing; this directory does not establish routes or authority

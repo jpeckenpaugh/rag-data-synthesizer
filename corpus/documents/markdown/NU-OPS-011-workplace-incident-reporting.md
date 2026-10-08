@@ -20,6 +20,9 @@ relationships:
   - type: references
     document_id: NU-OPS-007
     scope: Planned current role-based reporting directory after approval
+  - type: references
+    document_id: NU-OPS-009
+    scope: Administrative records handling boundary and route for out-of-scope record questions
   - type: governed_by
     document_id: NU-OPS-010
     scope: Corpus access labels and retrieval eligibility

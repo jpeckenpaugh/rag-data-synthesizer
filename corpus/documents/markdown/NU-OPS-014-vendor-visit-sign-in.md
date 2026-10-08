@@ -65,9 +65,10 @@ At arrival, the receiving site staff member compares the visit with the expected
 | Visitor work role | Role or crew function, without personal contact details |
 | Site host role | Site role accepting the visit |
 | Approved scope | Brief description of the work and general area confirmed for the visit |
-| Status | Expected, clarification pending, or not authorized to begin |
+| Visit-record status | Expected, arrived, or signed out; this records the visit stage only |
+| Work-scope status | Confirmation pending, not authorized to begin, or scope confirmed by the Facilities Coordinator and site lead as described below |
 
-The sign-in entry records the site’s check against the available notice; it is not proof of identity, contract status, or authorization beyond the listed work scope.
+The visit-record status describes whether the visit is expected, has arrived, or has been signed out. It does not verify identity, contract status, or permission to begin work. The separate work-scope status records whether the work reference and local scope have been confirmed; arrival, sign-in, or a prior visit alone does not authorize work. Work may begin only after the Facilities Coordinator confirms the work reference and the site lead confirms the local scope, with the confirming role, time, and reference recorded.
 
 ## Scope and work-area boundaries
 
@@ -80,7 +81,7 @@ This checklist does not establish access to clinical, patient, laboratory, recor
 If the vendor, work reference, date, scope, or receiving role does not match the available notice:
 
 1. Do not authorize work to begin in the disputed scope or area.
-2. Record the arrival, the mismatch, and the status **clarification pending**; avoid personal details.
+2. Keep the visit-record status **arrived** unless the visitor is later signed out; set the work-scope status to **confirmation pending** and record the mismatch. Avoid personal details.
 3. Contact the Facilities Coordinator through `facilities-desk@northstar-uc.example.invalid` and notify the site lead. Use NU-OPS-007 for the applicable fictional site route.
 4. Resume only after the Facilities Coordinator confirms the work reference and the site lead confirms the local scope. Record the confirming role, time, and reference.
 5. If the route is unavailable or the visit is outside the local handoff, use the unavailable-route instructions in NU-OPS-007: contact the Operations Desk Coordinator at `operations-desk@northstar-uc.example.invalid` and the relevant central route. Record the attempt; no response time or alternate authorization route is established.

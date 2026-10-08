@@ -102,6 +102,20 @@ Close the issue only when the assigned owner records the disposition and the sit
 
 If work remains, keep the entry open or mark it “monitoring” with a named role responsible for the next update. Do not infer completion from elapsed time or lack of a new report.
 
+### Illustrative issue lifecycle (fictional example)
+
+This example connects the intake, routing, status, and closure fields above. Its dates and event are fictional; timestamps illustrate record entries only and are not response-time targets or service promises.
+
+| Record point | Illustrative entry |
+| --- | --- |
+| Intake | `FAC-HP-2024-10-02-01`; Harbor Point, administrative work area; 2 October 2024, 08:10; a cabinet hinge is loose. Ongoing; no immediate operational effect observed. Reporter role: site operations staff. |
+| Priority and route | Routine, because no immediate operational effect is observed. Site lead sends the issue summary and log reference to the Facilities Coordinator at `facilities-desk@northstar-uc.example.invalid`; the route and time sent are recorded. |
+| Status update | At 08:25, the log records “awaiting confirmation,” the Facilities Coordinator as next update owner, and that no reply has yet established an action. This timestamp is illustrative only. |
+| Follow-up | On 3 October, the Facilities Coordinator records the assigned follow-up owner and status “monitoring.” The site lead records the observed condition and next owner in the local log. No repair approval or vendor authority is implied by this entry. |
+| Closure | On 4 October, the responsible owner records the disposition and confirming role; the site lead notes the observed condition after the action. The log is closed only after the disposition and remaining follow-up, if any, are recorded. |
+
+This illustrative record does not establish a priority rule beyond the categories already defined, a response deadline, or an authorization to perform work.
+
 ## 7. Escalation directory reference
 
 Use NU-OPS-007, *Site Contact and Escalation Directory*, as the planned current source of fictional role routes once that directory is approved. While it remains a draft, its routes are proposals. If a contact is absent, a route appears inconsistent, or a mailbox is unavailable, record that fact and request confirmation from the Operations Desk Coordinator. This procedure does not establish a telephone number, personal contact, alternate vendor route, or response guarantee.

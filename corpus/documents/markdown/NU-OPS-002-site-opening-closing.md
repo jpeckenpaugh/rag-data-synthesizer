@@ -75,6 +75,23 @@ Record the date, site, scheduled opening handoff time, and completing role in th
 
 **Proposed follow-up step — pending coordinator approval.** For a “Hold for site lead” entry, this draft assigns the local site lead to record the coordination outcome or assigned follow-up owner. A checklist entry records observed status; it is not approval to change a separate procedure.
 
+### Illustrative blank handoff entry
+
+The following blank example uses the fields described above. It is a recording aid only; it does not add an outcome label or required step.
+
+| Field | Entry |
+| --- | --- |
+| Date and site | `[date]` · `[Harbor Point / Alder Creek / Northgate]` |
+| Handoff | `[opening / closing]` · `[time]` |
+| Completing role | `[role]` |
+| Observed condition / check result | `[brief factual note]` |
+| Outcome, if the proposed convention is approved | `[Complete / Complete with open item / Hold for site lead]` |
+| Issue record ID, if applicable | `[ID or none]` |
+| Next owner | `[role / not yet confirmed]` |
+| Coordination outcome or follow-up | `[confirmed outcome / pending]` |
+
+**Illustrative blank only:** Bracketed prompts are not completed records. Use only the applicable fields and the approved local recording convention.
+
 ## During-day issue logging
 
 If a new facilities or workspace condition is noticed after opening, record the site, observation time, brief factual description, and issue record ID when available. Route the item under the applicable facilities procedure. For time-sensitive site impact, notify the local site lead and the central role specified in NU-OPS-007.

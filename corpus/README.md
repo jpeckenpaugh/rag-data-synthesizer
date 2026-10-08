@@ -165,6 +165,16 @@ not automatically insert document-specific visuals; place each image reference
 where it belongs in that document's Markdown. The shared logo is displayed in
 the letterhead when its brand configuration path is set.
 
+## Shared-fact approval ledger
+
+Use [`fact-ledger.yaml`](fact-ledger.yaml) as the approval register for
+cross-document claims and decisions. `proposed` entries are candidate fictional
+facts or conventions awaiting approval; `unresolved` entries are intentional
+unknowns that must not be inferred. The ledger points to affected source
+documents, but Markdown remains authoritative for each document's full content.
+A ledger decision does not approve a document: record document approval
+separately in its controlled revision record.
+
 ## Review outputs
 
 The JSON report is an inventory aid, not a visual approval. Inspect PDFs for

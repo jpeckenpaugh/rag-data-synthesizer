@@ -4,7 +4,7 @@
 
 **Scope:** Read-only consistency and RAG-content review of all 21 draft documents, the corpus inventory, staff registry, and cross-document relationships.
 
-**Result:** No high-severity factual contradiction was found. The corpus is suitable for targeted author revisions and then content approval; it is not yet approved.
+**Result:** The initial review found no high-severity factual contradiction. Bounded author revisions and corpus-plan reconciliation are now complete; the corpus remains in draft status and still requires content approval.
 
 ## Approval decisions
 
@@ -43,4 +43,10 @@ Any new IDs, dates, and event outcomes should be explicitly marked as fictional 
 
 ## Review method and limits
 
-Three independent read-only reviews covered policy/procedure consistency; dates, history, and exceptions; and roles/access/routing. A fourth reviewed records, handoffs, metrics, and retrieval specificity. Reviewers found no high-severity contradiction, confirmed staff author IDs and access classes match their source registries, and identified the scoped items above. No source content was changed during this review. `corpus/fact-ledger.yaml` is referenced by the project plan but is not present; restoring or creating it is recommended before final integration so accepted and deferred claims have a durable decision record.
+Three independent read-only reviews covered policy/procedure consistency; dates, history, and exceptions; and roles/access/routing. A fourth reviewed records, handoffs, metrics, and retrieval specificity. Reviewers found no high-severity contradiction, confirmed staff author IDs and access classes match their source registries, and identified the scoped items above. No source content was changed during the initial review pass. `corpus/fact-ledger.yaml` now records the approval-relevant proposed and unresolved shared claims without replacing Markdown or approving any document.
+
+## Revision pass completed
+
+The original staff profiles applied bounded changes to NU-OPS-002, 003, 008, 010, 011, 012, 014, 017, 018, 019, 020, and 021. The updates add concise blank/fictional examples, clarify visit-record versus work-scope status, distinguish retrieval access from physical receipt and exception ownership, resolve the NU-OPS-017 date label, track the handoff-record question, and make unresolved metric ownership explicit. The corpus inventory now matches all 21 Markdown audience fields and includes the revised NU-OPS-011/012 cross-reference relationships. The final independent read-only integration audit found no blockers; the NU-OPS-021 provenance scope was reconciled in both source and plan.
+
+All documents remain `status: draft`; the examples and candidate metric workflow are illustrative/proposed. Python 3.14 regenerated all 21 PDFs (67 pages) and the document index after the revisions. The render report's source/PDF SHA-256 hashes match current files, all 21 relative index links resolve, and revised-content pages in the affected outputs were visually inspected. Proposed fictional dates/precedence, NU-OPS-006 update cadence, NU-OPS-019 candidate role allocation, repository location, and purchase authority remain open for final approval or continued abstention and are listed in `corpus/fact-ledger.yaml`. No test suite was run.
