@@ -66,7 +66,7 @@ documents:
       - Which actions require a site lead
       - The boundary between this routine and the Harbor Point exception
     relationships:
-      - type: exception_to
+      - type: has_exception
         document_id: NU-OPS-004
         scope: After-hours access at Harbor Point during the stated exception window
     rag_coverage:
@@ -264,7 +264,7 @@ documents:
       - Receiving discrepancy record requirements
       - Which rules are changed only by NU-OPS-018
     relationships:
-      - type: exception_to
+      - type: has_exception
         document_id: NU-OPS-018
         scope: Northgate receiving during the stated exception window
       - type: references
@@ -554,7 +554,7 @@ documents:
     filename: NU-OPS-018-northgate-receiving-exception.md
     intended_author: EMP-008
     type: exception_notice
-    audience: Northgate site operations staff and operations leads
+    audience: Northgate Site Lead and operations-lead-eligible staff
     access_scope: operations_leads
     site_scope: northgate
     purpose: Define a narrowly scoped temporary receiving exception to routine supply handling.
