@@ -58,6 +58,7 @@ From the repository root:
 .venv/bin/python scripts/render_pdfs.py \
   --input-dir corpus/documents/markdown \
   --output-dir corpus/documents/pdf \
+  --corpus-yaml corpus/corpus.yml \
   --brand-yaml corpus/brand.yml \
   --illustrations-yaml corpus/illustrations.yml \
   --report reports/rendering.json
@@ -69,6 +70,11 @@ with YAML front matter and provide `document_id`, `title`, `status`, `version`,
 (for example, `NU-OPS-001.pdf`); duplicate or unsafe IDs and missing required
 metadata stop the run with an error. The output directory must be inside this
 repository. Existing PDF outputs with the same ID are overwritten.
+When `--corpus-yaml` is supplied, the renderer also writes
+`corpus/documents/README.md` from the inventory. The index lists each
+document's ID, title, access scope, audience, and purpose, with relative links
+such as `./pdf/NU-OPS-001.pdf`. It is a generated navigation aid, not an
+authored document or PDF ingestion input.
 
 To refresh only the provenance report after an external or manual PDF rebuild,
 use `--report-only` with the same paths. This inventories existing PDFs and
@@ -78,6 +84,7 @@ current source/asset hashes without rewriting PDF files:
 .venv/bin/python scripts/render_pdfs.py \
   --input-dir corpus/documents/markdown \
   --output-dir corpus/documents/pdf \
+  --corpus-yaml corpus/corpus.yml \
   --brand-yaml corpus/brand.yml \
   --illustrations-yaml corpus/illustrations.yml \
   --report reports/rendering.json \
@@ -167,5 +174,5 @@ no extractable text. Check the extracted text itself for the document ID,
 metadata, tables, and any facts conveyed by a diagram. Image-only policy or
 procedural facts are unsuitable for RAG ingestion.
 
-Do not put answer keys or evaluation material beneath `documents/pdf/`; the PDF
-directory is the ingestion boundary.
+Do not put answer keys, the Markdown document index, or evaluation material
+beneath `documents/pdf/`; the PDF directory is the ingestion boundary.

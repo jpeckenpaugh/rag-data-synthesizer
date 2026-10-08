@@ -87,6 +87,70 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
+def generate_document_index(corpus_path: Path, index_path: Path) -> None:
+    """Write a human-facing Markdown index from the scenario corpus inventory."""
+    if not corpus_path.is_file():
+        raise RenderError("corpus inventory not found: {}".format(corpus_path))
+    try:
+        corpus = yaml.safe_load(corpus_path.read_text(encoding="utf-8"))
+    except yaml.YAMLError as exc:
+        raise RenderError("corpus inventory has invalid YAML: {}".format(exc))
+    if not isinstance(corpus, dict) or not isinstance(corpus.get("documents"), list):
+        raise RenderError("corpus inventory must contain a documents list")
+    documents = corpus["documents"]
+    markdown_dir = index_path.parent / "markdown"
+    lines = [
+        "# Document Index",
+        "",
+        "This index is generated from `corpus/corpus.yml`. Markdown sources are in `./markdown/`;",
+        "the rendered PDFs are linked below from `./pdf/`.",
+        "",
+    ]
+    seen_ids = set()
+    for document in documents:
+        if not isinstance(document, dict):
+            raise RenderError("corpus inventory documents must be mappings")
+        doc_id = str(document.get("id", ""))
+        title = str(document.get("title", ""))
+        if not doc_id or not title:
+            raise RenderError("each corpus document needs an id and title for the index")
+        if doc_id in seen_ids:
+            raise RenderError("duplicate document id in corpus inventory: {}".format(doc_id))
+        if not re.match(r"^[A-Za-z0-9][A-Za-z0-9._-]*$", doc_id):
+            raise RenderError("unsafe document id in corpus inventory: {!r}".format(doc_id))
+        seen_ids.add(doc_id)
+        source_name = document.get("filename")
+        if not source_name:
+            raise RenderError("{} has no Markdown filename in corpus inventory".format(doc_id))
+        source_path = markdown_dir / str(source_name)
+        if not source_path.is_file():
+            raise RenderError("{} Markdown source not found: {}".format(doc_id, source_path))
+        source_metadata, _ = parse_front_matter(source_path.read_text(encoding="utf-8"), source_path)
+        pdf = "./pdf/{}.pdf".format(doc_id)
+        purpose = str(document.get("purpose", "")).strip()
+        audience = str(document.get("audience", "")).strip()
+        access_scope = str(document.get("access_scope", "")).strip()
+        lines.extend([
+            "## [{} — {}]({})".format(doc_id, title, pdf),
+            "",
+        ])
+        details = []
+        if access_scope:
+            details.append("**Access:** `{}`".format(access_scope))
+        if source_metadata.get("status"):
+            details.append("**Status:** {}".format(str(source_metadata["status"]).title()))
+        if audience:
+            details.append("**Audience:** {}".format(audience))
+        if details:
+            lines.append(" · ".join(details))
+            lines.append("")
+        if purpose:
+            lines.append(purpose)
+            lines.append("")
+    index_path.parent.mkdir(parents=True, exist_ok=True)
+    index_path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+
+
 def pango_version() -> Optional[str]:
     """Return the loaded host Pango version when its library is discoverable."""
     library = ctypes.util.find_library("pango-1.0")
@@ -466,6 +530,7 @@ def parse_args(argv: Optional[Iterable[str]] = None) -> argparse.Namespace:
     parser.add_argument("--brand-yaml", type=Path, default=None, help="Optional scenario brand configuration")
     parser.add_argument("--illustrations-yaml", type=Path, default=None, help="Optional local illustration asset registry")
     parser.add_argument("--report", type=Path, default=None, help="Optional JSON rendering report output")
+    parser.add_argument("--corpus-yaml", type=Path, default=None, help="Optional corpus inventory used to generate documents/README.md")
     parser.add_argument("--report-only", action="store_true", help="Refresh the report from existing PDFs without rendering or modifying them")
     parser.add_argument("--include-coordinator-notes", action="store_true", help="Include terminal Drafting note/basis sections intended for coordinator review")
     return parser.parse_args(argv)
@@ -515,6 +580,11 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
             results.append(result)
             action = "Inventoried" if args.report_only else "Rendered"
             print("{} {} -> {} ({} pages, {} extracted chars)".format(action, doc_id, result["pdf"], result["pages"], result["extracted_characters"]))
+        if args.corpus_yaml:
+            corpus_path = args.corpus_yaml.resolve()
+            index_path = output_dir.parent / "README.md"
+            generate_document_index(corpus_path, index_path)
+            print("Wrote document index {}".format(index_path.relative_to(repo_root)))
         report = {
             "renderer": "render_pdfs.py", "python": sys.version.split()[0], "mistune": mistune.__version__,
             "weasyprint": __import__("weasyprint").__version__, "pyyaml": yaml.__version__,
