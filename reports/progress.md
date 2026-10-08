@@ -18,7 +18,7 @@ This log tracks assignments, drafts, reviews, integration gates, and commits for
 - Stage 1 gate: passed after coordinator reconciliation and independent continuity/quality review.
 - Stage 1 drafts NU-OPS-001, NU-OPS-007, and NU-OPS-010 are accepted at the foundation gate. The fictional corpus snapshot is 2024-10-01. Independent continuity and quality/style reviews found no remaining high- or medium-severity blockers.
 - First-document checkpoint: all eight staff authors have at least one draft (NU-OPS-001, 002, 003, 005, 007, 010, 011, 018). Independent continuity and quality reviews found no high/medium blocker for this checkpoint. These remain draft artifacts; proposed facts require later corpus approval and ledger integration.
-- Last commit: `bcafe96` — Add Stage 1 fictional clinic foundation drafts.
+- Last content checkpoint: `e91f500` — Draft first clinic documents across staff profiles.
 
 ## Assignment and document status
 
