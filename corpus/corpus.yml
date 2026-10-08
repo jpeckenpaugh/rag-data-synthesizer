@@ -636,3 +636,90 @@ documents:
       - Unanswerable questions
       - Abstention and uncertainty handling
       - Distinguishing assigned follow-up from a confirmed answer
+
+drafting_workflow:
+  coordinator_role: primary-agent
+  coordinator_constraints:
+    - The primary-agent coordinates assignments, maintains the authoritative plan and fact ledger, integrates drafts, resolves continuity issues, and approves corpus gates.
+    - The primary-agent does not author the source documents; assigned fictional staff-member profiles or drafting sub-agents produce document drafts.
+    - Sub-agents receive bounded assignments and do not delegate further unless explicitly directed by the primary-agent.
+  handoff_requirements:
+    - Each assignment names the profile and fictional employee role, exact document IDs, scope, exclusions, approved context, dependencies, required metadata, and deliverable format.
+    - Each draft cites the version of the corpus plan and fact ledger it used and lists any assumptions or claims not directly established by that context.
+    - Authors do not silently alter shared facts or relationships; they flag missing context for the primary-agent to resolve.
+    - A changed source-of-truth fact triggers review of dependent drafts before approval.
+  review_gates:
+    - Review each stage's shared facts and dependencies before releasing the next stage's dependent assignments.
+    - Keep final corpus approval separate from document drafting; authors do not serve as the sole reviewers of their own work.
+    - Review findings identify document ID, claim or section, severity, evidence, and suggested disposition.
+    - Reconcile accidental conflicts while preserving only planned historical differences and explicitly scoped exceptions.
+
+  stages:
+    - stage: 1
+      name: Foundation
+      mode: parallel
+      documents:
+        - NU-OPS-001
+        - NU-OPS-007
+        - NU-OPS-010
+      rationale: These establish document governance, role-based routing, and corpus access labels. They can be drafted concurrently from the approved staff registry and plan, then reviewed together for shared facts.
+      gate: Reconcile role names, routing destinations, status labels, and access-scope definitions before stage 2 assignments.
+
+    - stage: 2
+      name: Core operational documents
+      mode: parallel_with_shared_foundation
+      documents:
+        - NU-OPS-002
+        - NU-OPS-003
+        - NU-OPS-005
+        - NU-OPS-006
+        - NU-OPS-008
+        - NU-OPS-009
+        - NU-OPS-011
+        - NU-OPS-013
+        - NU-OPS-014
+        - NU-OPS-016
+        - NU-OPS-017
+        - NU-OPS-019
+      prerequisites:
+        - Stage 1 review gate passed.
+        - Assignments include relevant approved foundation facts and known document relationships.
+      rationale: These establish the base procedures, references, and historical versions. Parallelize across bounded topics while avoiding conflicting authoritative facts.
+      gate: Reconcile cross-document terminology, dates, role routing, and planned historical precedence before drafting dependent exceptions and records.
+
+    - stage: 3
+      name: Exceptions and amendment
+      mode: parallel_after_prerequisites
+      documents:
+        - NU-OPS-004
+        - NU-OPS-015
+        - NU-OPS-018
+      prerequisites:
+        - NU-OPS-004 depends on approved NU-OPS-002.
+        - NU-OPS-015 depends on approved NU-OPS-001.
+        - NU-OPS-018 depends on approved NU-OPS-008.
+      rationale: Each document narrows or amends a specific approved source, so these can run concurrently once their respective source documents are stable.
+      gate: Verify each change is limited to its stated site, date, topic, and section scope and leaves unrelated base requirements intact.
+
+    - stage: 4
+      name: Working records
+      mode: after_core_stabilizes
+      documents:
+        - NU-OPS-012
+        - NU-OPS-020
+      prerequisites:
+        - Relevant procedures and role assignments are stable.
+        - The fictional corpus timeline and unresolved questions are approved.
+      rationale: Huddle notes and the unresolved-question log must reflect the established procedures while preserving explicit unknowns and pending status.
+      gate: Confirm completed, pending, and unanswered items are distinct and that no unresolved item is accidentally answered elsewhere.
+
+    - stage: 5
+      name: Independent review and integration
+      mode: independent_review
+      documents: all
+      review_profiles:
+        - domain-reviewer
+        - continuity-reviewer
+        - style-reviewer
+      rationale: Reviewers who did not author the affected documents check scope, internal consistency, intended voice variation, fiction boundaries, and planned RAG behavior.
+      gate: Primary-agent resolves findings, coordinates targeted revisions, confirms the ledger and relationships, then approves sources for rendering.
