@@ -1,5 +1,11 @@
 # Corpus authoring and PDF rendering
 
+This file is the tested runbook for the Northstar scenario. For reusable
+planning, agent coordination, dependency-aware drafting, review, and approval
+steps, see [the corpus generation workflow](../docs/corpus-generation-workflow.md).
+For another company, copy the scenario inputs and pass its paths to the
+scenario-neutral scripts; do not copy Northstar facts into the new corpus.
+
 Markdown files in `documents/markdown/` are the source of truth. PDFs under
 `documents/pdf/` are generated ingestion artifacts. Do not edit a PDF by hand;
 change its Markdown source and rerender it.
@@ -9,6 +15,11 @@ by passing that scenario's Markdown input directory and PDF output directory.
 The optional brand and illustration configuration files are presentation inputs;
 they must not be used to introduce facts that are absent from the source
 documents or their approved data.
+
+This repository has visual and PDF generation, but no automated prose generator
+or comprehensive corpus-wide validator. The JSON render report records output
+provenance and checksums; it is not the full RAG ingestion manifest. A separate
+evaluation dataset has not yet been created.
 
 ## Requirements
 
@@ -167,13 +178,20 @@ the letterhead when its brand configuration path is set.
 
 ## Shared-fact approval ledger
 
-Use [`fact-ledger.yaml`](fact-ledger.yaml) as the approval register for
-cross-document claims and decisions. `proposed` entries are candidate fictional
-facts or conventions awaiting approval; `unresolved` entries are intentional
-unknowns that must not be inferred. The ledger points to affected source
-documents, but Markdown remains authoritative for each document's full content.
-A ledger decision does not approve a document: record document approval
-separately in its controlled revision record.
+Use [`fact-ledger.yaml`](fact-ledger.yaml) as the register for cross-document
+claims and decisions:
+
+- `proposed` entries are candidate fictional facts or conventions awaiting a
+  coordinator decision.
+- `accepted` entries are approved fictional canon for the corpus snapshot.
+- `unresolved` entries are intentional unknowns that must not be inferred.
+
+The ledger points to affected source documents, but Markdown remains
+authoritative for each document's full content. A ledger decision does not
+approve a document: record document approval separately in its front matter and
+controlled revision record. Keep source and inventory lifecycle states aligned:
+`current`, `scheduled`, or `superseded` describe a document's state at the
+scenario snapshot; an approved scheduled document is not yet effective.
 
 ## Review outputs
 
@@ -183,6 +201,12 @@ renderer also opens each output with `pypdf` and fails if a PDF has no pages or
 no extractable text. Check the extracted text itself for the document ID,
 metadata, tables, and any facts conveyed by a diagram. Image-only policy or
 procedural facts are unsuitable for RAG ingestion.
+
+For the current Northstar release, the final approval and lifecycle listing are
+in [`../reports/content-approval.md`](../reports/content-approval.md), review
+findings are in [`../reports/content-review.md`](../reports/content-review.md),
+and run history is in [`../reports/progress.md`](../reports/progress.md). The
+generated report currently covers 21 source/PDF pairs (64 pages total).
 
 Do not put answer keys, the Markdown document index, or evaluation material
 beneath `documents/pdf/`; the PDF directory is the ingestion boundary.
