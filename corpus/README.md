@@ -18,8 +18,11 @@ documents or their approved data.
 
 This repository has visual and PDF generation, but no automated prose generator
 or comprehensive corpus-wide validator. The JSON render report records output
-provenance and checksums; it is not the full RAG ingestion manifest. A separate
-evaluation dataset has not yet been created.
+provenance and checksums; it is not the full RAG ingestion manifest. A proposed
+starter set of manually checked RAG queries is in
+[`evaluation/QUERY-EXAMPLES.md`](evaluation/QUERY-EXAMPLES.md). It is evaluation
+material, not ingestion content; a validated machine-readable evaluation set
+has not yet been created.
 
 ## Requirements
 

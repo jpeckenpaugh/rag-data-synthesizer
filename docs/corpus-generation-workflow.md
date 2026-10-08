@@ -78,6 +78,7 @@ At minimum, verify:
 - Representative first, middle, and final pages have readable typography, page breaks, tables, illustrations, captions, and headers/footers. Reinspect affected documents after a source or asset change.
 - Evidence-bearing visuals agree with text and cited sources; no image supplies unsupported data.
 - Intentional unknowns remain unanswered and any RAG evaluation answers, when created, stay outside the ingestion tree.
+- Keep proposed queries, expected answers, abstention examples, and source-page evidence in a separate evaluation area such as `corpus/evaluation/`; never place answer keys under the PDF ingestion directory. Verify each expected answer and citation against the rendered PDF pages after the final render.
 
 The renderer performs basic required-metadata and PDF extraction checks, but it is not a comprehensive corpus validator. Record manual checks and findings in the run report or progress log; do not describe unimplemented automated checks as complete.
 
@@ -93,12 +94,13 @@ Implemented in this repository:
 - A shared decision ledger and document-level approval records capture accepted decisions and deliberate unknowns.
 - Deterministic visual generation and scenario-configurable Markdown-to-PDF rendering are available.
 - The document index and a rendering provenance report are generated with the PDFs.
+- A proposed Northstar RAG query sample contains 10 answerable and 5 negative examples, manually checked against the rendered PDF snapshot and kept outside the ingestion directory; it is a starter, not a validated benchmark.
 - The Northstar scenario has 21 approved Markdown sources and PDFs for the 2024-10-01 fictional snapshot.
 
 Not yet implemented or demonstrated:
 
 - An automated content-authoring engine or comprehensive corpus-wide validator.
-- A full machine-readable RAG ingestion manifest and separate evaluation dataset.
+- A full machine-readable RAG ingestion manifest and validated, machine-readable evaluation dataset.
 - A second company scenario proving the process and tools generalize beyond Northstar.
 - Byte-for-byte PDF reproduction across different operating systems, Pango builds, and font installations.
 

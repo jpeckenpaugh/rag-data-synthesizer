@@ -10,7 +10,7 @@ All organizations, people, policies, events, and records are fictional. The coll
 
 The first scenario is the Northstar Urgent Care Cooperative, a fictional three-site clinic network. Its 21 Markdown documents are approved for the fictional 2024-10-01 snapshot. The repository includes the staff registry, corpus plan, shared-fact ledger, visual plan and assets, 21 rendered PDFs, a generated PDF index, and rendering provenance. The final PDFs total 64 pages.
 
-The Python tools are scenario-neutral enough to render another Markdown collection and generate configured local visuals. A second company scenario has not yet been used to validate the workflow. A full RAG ingestion manifest, evaluation question set, and automated corpus-wide validator are also future work. `reports/rendering.json` records rendering provenance and hashes; it is not the full RAG manifest.
+The Python tools are scenario-neutral enough to render another Markdown collection and generate configured local visuals. A second company scenario has not yet been used to validate the workflow. A proposed starter set of 10 answerable and 5 negative RAG query examples is available; a validated machine-readable evaluation set, full RAG ingestion manifest, and automated corpus-wide validator remain future work. `reports/rendering.json` records rendering provenance and hashes; it is not the full RAG manifest.
 
 ## Start here
 
@@ -23,6 +23,7 @@ The Python tools are scenario-neutral enough to render another Markdown collecti
 - [Shared-fact decision ledger](corpus/fact-ledger.yaml)
 - [Content approval record](reports/content-approval.md)
 - [Document index and PDF links](corpus/documents/README.md)
+- [Proposed RAG query examples and evidence](corpus/evaluation/QUERY-EXAMPLES.md)
 
 ## Project principles
 
@@ -41,4 +42,4 @@ The render command writes PDFs to `corpus/documents/pdf/`, regenerates `corpus/d
 
 ## Project boundaries and next steps
 
-Current repository outputs include fictional Markdown and PDF documents, scenario configuration, generated visual assets, a document index, progress/review/approval records, and PDF rendering provenance. The workflow does not yet generate or validate a complete RAG evaluation set or ingestion manifest. Before describing the process as proven reusable across organizations, run it once with a second fictional company and record any scenario-specific assumptions or code changes.
+Current repository outputs include fictional Markdown and PDF documents, scenario configuration, generated visual assets, a document index, progress/review/approval records, PDF rendering provenance, and a manually checked proposed query sample. The workflow does not yet generate or validate a complete RAG evaluation set or ingestion manifest. Before describing the process as proven reusable across organizations, run it once with a second fictional company and record any scenario-specific assumptions or code changes.
