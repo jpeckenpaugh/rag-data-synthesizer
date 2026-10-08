@@ -9,9 +9,10 @@ author: Ilan Rook
 author_employee_id: EMP-002
 intended_audience: Site operations staff; site leads
 access_scope: site_operations
-status: draft
-planned_status: current
-date_status: proposed
+status: current
+date_status: approved
+approval_date: 2024-09-23
+approved_by: Director of Operations
 version: 1.0
 issued_date: 2024-09-23
 effective_date: 2024-10-01
@@ -28,13 +29,11 @@ relationships:
 # NU-OPS-008 — Supply Request and Receiving Guide
 
 **Northstar Urgent Care Cooperative (NUCC)**  
-**Status:** Draft (planned status: current) · **Version:** 1.0  
-**Proposed effective date:** 1 October 2024, upon approval · **Review by:** 1 October 2025  
+**Status:** Current · **Version:** 1.0\
+**Effective date:** 1 October 2024 · **Review by:** 1 October 2025\
 **Applies to:** Harbor Point, Alder Creek, and Northgate · **Access scope:** `site_operations`
 
 > Fictional educational test material. This guide covers ordinary non-clinical office, facilities, and workspace supplies only. It excludes medical, clinical, laboratory, and patient-care materials, and does not provide clinical guidance.
-
-> **Draft notice:** The workflow below is proposed and pending approval by the Director of Operations. It does not become the current procedure unless and until that approval is recorded and the effective date is reached.
 
 ## 1. Scope and limits
 
@@ -63,7 +62,7 @@ The Facilities Coordinator coordinates routine supply requests and records their
 
 Do not treat any of these as approval: a request submission, a receipt acknowledgment, an availability check, an estimated delivery date, or the absence of an objection. If the applicable approver or approval path is not identified, leave the request pending and ask the Director of Operations at `operations-director@northstar-uc.example.invalid` to identify the governing route. Do not infer an approval from role title alone.
 
-Use the following proposed queue states:
+Use the following queue states:
 
 | State | Meaning |
 | --- | --- |
@@ -108,7 +107,7 @@ Use this blank example to connect the site request with the later receipt check.
 | On-site quantity, if known | `[quantity / not known]` |
 | Requested-by date and reason | `[date]` · `[reason]` |
 | Site lead review status | `[submitted / returned for clarification / forwarded]` |
-| Central request status | `[proposed queue state]` |
+| Central request status | `[queue state]` |
 | Approver and recorded decision | `[not identified / role and decision source, if established through an applicable process]` |
 
 | Receiving field | Entry |
@@ -139,22 +138,19 @@ Do not include unnecessary personal information in the general supply log. If th
 
 Keep the site request and receiving entries linked by a request ID or order reference. The central supply queue records the central status and next owner; the site log records the local need, handoff, and receipt. Updates should show the date, status, role making the update, and source of any confirmed delivery or approval information.
 
-For a request or discrepancy with no listed owner, an unavailable route, or an unresolved routing question, use the after-hours/unavailable-route instructions in NU-OPS-007. The planned route is the Operations Desk Coordinator at `operations-desk@northstar-uc.example.invalid` and the relevant central route. Record the attempted route and do not invent an alternate contact or delivery promise. No response-time commitment is established.
+For a request or discrepancy with no listed owner, an unavailable route, or an unresolved routing question, use the after-hours/unavailable-route instructions in NU-OPS-007. That directory lists the Operations Desk Coordinator at `operations-desk@northstar-uc.example.invalid` and the relevant central route. Record the attempted route and do not invent an alternate contact or delivery promise. No response-time commitment is established.
 
 ## 7. Local exception boundary
 
-NU-OPS-018 is planned as a time-bounded exception for Northgate receiving only. If approved, it will apply only at Northgate and only during the dates and conditions stated in that exception. It does not change routine request approval, receiving, discrepancy, or storage rules at Harbor Point or Alder Creek, or outside the approved exception window. Until NU-OPS-018 is approved and effective, use the approved current receiving process; this draft does not activate an exception.
+NU-OPS-018 is an approved time-bounded exception scheduled to apply to Northgate receiving from 10 October through 24 October 2024, inclusive, and only within the scope and conditions stated in that notice. Outside that effective window, this guide governs routine request, receiving, discrepancy, and storage handling.
 
 ## 8. Revision record
 
 | Version | Issued | Effective | Change | Approval |
 | --- | --- | --- | --- | --- |
-| 1.0 | 2024-09-23 (proposed) | 2024-10-01 (proposed; effective only upon approval) | Initial proposed network guide for non-clinical supply requests, receiving checks, discrepancies, and follow-up. | Content owner: Facilities Coordinator; required approver: Director of Operations (pending) |
+| 1.0 | 2024-09-23 | 2024-10-01 | Initial network guide for non-clinical supply requests, receiving checks, discrepancies, and follow-up. | Director of Operations; approved 2024-09-23 |
 
 **Content owner:** Facilities Coordinator, Northstar Urgent Care Cooperative.  
-**Required approver:** Director of Operations (approval pending).  
-**Planned review:** 1 October 2025.
+**Next review:** 1 October 2025.
 
 ---
-
-**Drafting note for coordinator:** Proposals requiring reconciliation: covered supply classes/exclusions; site and central logs; request fields and local review; queue states; who may approve and the explicit absence of a defined spending threshold; receipt checks and temporary-hold handling; discrepancy closure evidence; cross-reference ID practice; and proposed dates. Routes follow NU-OPS-007. NU-OPS-018 remains planned only and must supply its approved window before any exception is relied on.

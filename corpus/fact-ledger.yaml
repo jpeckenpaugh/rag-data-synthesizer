@@ -7,21 +7,21 @@ ledger:
     needed for approval coordination.
   status_values:
     proposed: A candidate fictional claim or convention awaiting approval; it is not operative.
+    accepted: Approved fictional canon for the corpus snapshot.
     unresolved: The corpus intentionally does not establish an answer or rule; do not infer one.
   document_state_note: >-
-    A decision recorded here does not by itself approve any document. All source
-    documents remain drafts until their document-level approval is recorded.
+    The corpus content is approved as fictional source material for the snapshot
+    dated 2024-10-01. Accepted entries record settled shared conventions;
+    unresolved entries preserve deliberate unknowns for retrieval testing.
   entries:
     - id: DEC-001
-      status: proposed
+      status: accepted
+      decision_date: 2026-10-08
+      decision: Ratified the issue, effective, review, working-record, supersession, precedence, and exception-window dates as fictional corpus history. NU-OPS-016 and NU-OPS-017 are superseded; NU-OPS-004 and NU-OPS-018 are approved and scheduled for their stated future effective dates.
       claim: Fictional timeline and precedence
       scope: >-
-        Ratify or retain as hypothetical the proposed issue/effective/review
-        dates, September 2024 working-record events, the 2024-09-21 handoffs
-        from NU-OPS-016 to NU-OPS-003 and NU-OPS-017 to NU-OPS-005, and the
-        stated precedence and exception windows. This decision does not approve
-        the documents themselves.
-      decision_needed: Decide whether approval establishes these dates and transitions as fictional history, or whether they remain hypothetical proposals.
+        Approved fictional issue/effective/review dates, September 2024 working-record events, the 2024-09-21 handoffs from NU-OPS-016 to NU-OPS-003 and NU-OPS-017 to NU-OPS-005, and the stated precedence and exception windows.
+      decision_needed: None; the dates and transitions are established as fictional corpus history.
       sources:
         - CLINIC_DETAILS.md
         - reports/content-review.md
@@ -70,10 +70,12 @@ ledger:
         - NU-OPS-021
 
     - id: DEC-002
-      status: proposed
+      status: accepted
+      decision_date: 2026-10-08
+      decision: Approved 60-minute updates during an active service interruption and faster updates on material change, with NU-OPS-006 status labels. NU-OPS-013 retains its distinct severe-weather triggers and material-change/shift-handoff convention without a fixed cadence.
       claim: NU-OPS-006 interruption update cadence and labels
-      scope: The draft proposes 60-minute updates during active service interruptions, plus material-change updates; its status labels are also explicitly proposed. NU-OPS-013 keeps its separate material-change and shift-handoff convention.
-      decision_needed: Accept or revise the fixed cadence and status vocabulary for NU-OPS-006, preserving NU-OPS-013's distinct severe-weather convention unless separately changed.
+      scope: NU-OPS-006 requires 60-minute updates during active service interruptions plus updates on material change. NU-OPS-013 keeps its separate severe-weather triggers and material-change/shift-handoff convention without a fixed cadence.
+      decision_needed: None; the cadence, status vocabulary, and distinction between the two procedures are approved.
       sources:
         - reports/content-review.md
         - NU-OPS-006
@@ -84,10 +86,12 @@ ledger:
         - NU-OPS-013
 
     - id: DEC-003
-      status: unresolved
+      status: accepted
+      decision_date: 2026-10-08
+      decision: Site leads submit site-level counts and supporting record IDs, or mark unavailable, by the fifth business day. Facilities Coordinator validates facilities and supply discrepancy record eligibility; Director of Operations confirms the service interruption record list; Quality and Continuity Analyst deduplicates and compiles submissions and flags missing or unconfirmed sources. No platform, actual values, or results are established.
       claim: NU-OPS-019 metric production and validation ownership
-      scope: The candidate workflow assigns possible site submissions, central role confirmations, and analyst compilation, but the source of record and responsibility for producing versus validating each count are not established.
-      decision_needed: Choose whether site leads prepare local counts for central validation, or central roles produce measure counts while site leads report local source availability; identify the approved source of record if the workflow is to be operationally complete.
+      scope: Site leads submit local counts and supporting IDs; designated central roles validate or confirm the specified measure records, and the analyst compiles and flags gaps. The source platform and repository remain unidentified.
+      decision_needed: None for role allocation. The repository/platform is intentionally unresolved and must not be inferred.
       sources:
         - reports/content-review.md
         - NU-OPS-019

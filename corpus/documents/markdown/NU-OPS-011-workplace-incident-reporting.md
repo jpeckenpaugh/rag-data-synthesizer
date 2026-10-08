@@ -9,9 +9,10 @@ author: Niko Fen
 author_employee_id: EMP-006
 intended_audience: Employees eligible for site_operations in NU-OPS-010 (EMP-001, EMP-002, EMP-003, EMP-006, EMP-007, EMP-008)
 access_scope: site_operations
-status: draft
-planned_status: current
-date_status: proposed
+status: current
+date_status: approved
+approval_date: 2024-10-01
+approved_by: Director of Operations
 version: 1.0
 issued_date: 2024-10-01
 effective_date: 2024-10-01
@@ -19,7 +20,7 @@ review_date: 2025-10-01
 relationships:
   - type: references
     document_id: NU-OPS-007
-    scope: Planned current role-based reporting directory after approval
+    scope: Role-based reporting destinations used by this guide
   - type: references
     document_id: NU-OPS-009
     scope: Administrative records handling boundary and route for out-of-scope record questions
@@ -30,9 +31,9 @@ relationships:
 
 # Workplace Incident Reporting Guide
 
-**NU-OPS-011 · Draft for corpus review**  
+**NU-OPS-011 · Current**\
 Northstar Urgent Care Cooperative (NUCC) · All sites  
-Version 1.0 · Effective 2024-10-01 (proposed) · Access scope: `site_operations`
+Version 1.0 · Effective 2024-10-01 · Access scope: `site_operations`
 
 > Fictional educational test material. This guide covers administrative reporting for non-clinical workplace incidents. It is not clinical, emergency-response, legal, or safety advice.
 
@@ -50,11 +51,11 @@ If the same event also meets NU-OPS-003’s definition of a facilities issue, cr
 - **Site lead:** receives notice for local coordination and confirms who will own any site-level administrative follow-up.
 - **Quality and Continuity Analyst:** receives the workplace incident report and coordinates the reporting process and follow-up record.
 
-Send the report to the Quality and Continuity Analyst at `quality-continuity@northstar-uc.example.invalid`. Notify the local site lead for local coordination. These are fictional role-based routes listed in the draft NU-OPS-007 directory, which is planned to be the current directory after approval. The directory does not promise a response time or identify a deputy. This guide does not create an additional after-hours or emergency route.
+Send the report to the Quality and Continuity Analyst at `quality-continuity@northstar-uc.example.invalid`. Notify the local site lead for local coordination. These are fictional role-based routes listed in NU-OPS-007. The directory does not promise a response time or identify a deputy. This guide does not create an additional after-hours or emergency route.
 
 ## 3. Minimum administrative incident record
 
-Record only information needed to identify the event and coordinate follow-up. The proposed minimum fields are:
+Record only information needed to identify the event and coordinate follow-up. The minimum fields are:
 
 | Field | What to record |
 | --- | --- |
@@ -94,11 +95,9 @@ Questions about immediate response, clinical reporting, or patient records are o
 
 | Version | Issued | Effective | Change | Approval |
 | --- | --- | --- | --- | --- |
-| 1.0 | Proposed: 2024-10-01 | Proposed: 2024-10-01 | Initial administrative reporting guide | Director of Operations (required approval pending) |
+| 1.0 | 2024-10-01 | 2024-10-01 | Initial administrative reporting guide | Director of Operations; approved 2024-10-01 |
 
-**Next review:** proposed 2025-10-01.  
+**Next review:** 2025-10-01.\
 **Owner:** Quality and Continuity Analyst, Northstar Urgent Care Cooperative.
 
 ---
-
-**Drafting basis:** Prepared for corpus plan `nucc-ops-v1`, using the Stage 1 routing directory NU-OPS-007 and access matrix NU-OPS-010. Proposed workflow details include the incident categories, minimum fields, designated-log convention, follow-up status handling, and proposed dates. The corpus plan does not establish a reporting platform, retention schedule, response deadline, or severity scale; this draft intentionally leaves those unresolved. This Stage 2 draft is not an approved operational procedure.

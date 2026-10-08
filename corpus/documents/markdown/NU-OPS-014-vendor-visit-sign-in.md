@@ -9,9 +9,10 @@ author: Ilan Rook
 author_employee_id: EMP-002
 intended_audience: Site operations staff; site leads
 access_scope: site_operations
-status: draft
-planned_status: current
-date_status: proposed
+status: current
+date_status: approved
+approval_date: 2024-09-15
+approved_by: Director of Operations
 version: 1.0
 issued_date: 2024-09-15
 effective_date: 2024-09-21
@@ -28,13 +29,11 @@ relationships:
 # NU-OPS-014 — Vendor Visit and Contractor Sign-In
 
 **Northstar Urgent Care Cooperative (NUCC)**  
-**Status:** Draft (planned status: current) · **Version:** 1.0  
-**Proposed effective date:** 21 September 2024, upon approval · **Review by:** 21 September 2025  
+**Status:** Current · **Version:** 1.0\
+**Effective date:** 21 September 2024 · **Review by:** 21 September 2025\
 **Applies to:** Harbor Point, Alder Creek, and Northgate · **Access scope:** `site_operations`
 
 > Fictional educational test material. This checklist concerns scheduled, non-clinical facilities work only. It does not authorize access to clinical, patient, laboratory, or restricted work areas and contains no clinical guidance.
-
-> **Draft notice:** This proposed cross-site workflow is pending approval by the Director of Operations. It does not become current unless approval is recorded and the effective date is reached.
 
 This is an internal operations reference for site operations staff and site leads. Staff may communicate the relevant sign-in and approved work-area instructions to a visitor as part of a scheduled visit; contractors are not users of this corpus or intended retrieval audience.
 
@@ -109,12 +108,9 @@ Store the sign-in and sign-out entry with or linked to the site facilities work 
 
 | Version | Issued | Effective | Change | Approval |
 | --- | --- | --- | --- | --- |
-| 1.0 | 2024-09-15 (proposed) | 2024-09-21 (proposed; effective only upon approval) | Initial proposed network checklist for non-clinical facilities visits, scope confirmation, and sign-in/sign-out records. | Content owner: Facilities Coordinator; required approver: Director of Operations (pending) |
+| 1.0 | 2024-09-15 | 2024-09-21 | Initial network checklist for non-clinical facilities visits, scope confirmation, and sign-in/sign-out records. | Director of Operations; approved 2024-09-15 |
 
 **Content owner:** Facilities Coordinator, Northstar Urgent Care Cooperative.  
-**Required approver:** Director of Operations (approval pending).  
-**Planned review:** 21 September 2025.
+**Next review:** 21 September 2025.
 
 ---
-
-**Drafting note for coordinator:** Proposed facts requiring reconciliation: pre-visit notice fields; Facilities Coordinator and site-lead confirmation responsibilities; sign-in/out fields and status values; work-area scope boundary; record location and retention convention; what to do when authorization is missing or mismatched; and proposed dates. Contact routes follow NU-OPS-007. This draft deliberately avoids vendor names, personal details, identity-verification claims, and approval of access beyond the recorded work scope.

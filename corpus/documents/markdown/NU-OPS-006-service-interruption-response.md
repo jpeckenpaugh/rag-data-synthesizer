@@ -9,13 +9,14 @@ author: Mara Venn
 author_employee_id: EMP-001
 intended_audience: Site operations staff; site and central operations leads eligible for site_operations (EMP-001, EMP-002, EMP-003, EMP-006, EMP-007, EMP-008)
 access_scope: site_operations
-status: draft
-planned_status: current
+status: current
 version: 1.0
 issued_date: 2024-09-21
+approval_date: 2024-09-21
+approved_by: Director of Operations
 effective_date: 2024-10-01
 review_date: 2025-10-01
-date_status: proposed
+date_status: approved
 relationships:
   - type: references
     document_id: NU-OPS-007
@@ -27,9 +28,9 @@ relationships:
 
 # Service Interruption Response
 
-**NU-OPS-006 · Draft for corpus review**  
+**NU-OPS-006 · Current**\
 Northstar Urgent Care Cooperative · All sites  
-Version 1.0 · Effective 2024-10-01 (proposed) · Access scope: `site_operations`
+Version 1.0 · Effective 2024-10-01 · Access scope: `site_operations`
 
 > Fictional educational test material. This procedure addresses non-clinical operational coordination for the fictional Northstar Urgent Care Cooperative (NUCC). It is not guidance for a real organization and does not define clinical response.
 
@@ -62,11 +63,11 @@ If a listed route is unavailable, follow the after-hours path in NU-OPS-007 and 
 
 ## Status and update convention
 
-**Proposed status labels — pending coordinator approval.** The labels below are suggested for consistent administrative updates. They are not an approved organization-wide status vocabulary until the coordinator accepts them.
+**Approved status labels.** The labels below are the approved vocabulary for general service-interruption updates under this procedure.
 
 These labels are for general service interruptions. For severe-weather site updates, use the status fields and labels in NU-OPS-013; do not substitute this table’s labels.
 
-| Proposed label | Meaning for the update |
+| Status label | Meaning for the update |
 | --- | --- |
 | Monitoring | A condition has been reported; current impact or next action is still being confirmed. |
 | Limited | A site or function remains available with a stated non-clinical limitation. Describe only the observed limitation. |
@@ -74,11 +75,11 @@ These labels are for general service interruptions. For severe-weather site upda
 | Restored, pending confirmation | A reporter has observed a return of the affected function, but the responsible owner has not yet confirmed closure of related work. |
 | Closed | The coordination owner has recorded the final status, outstanding follow-up owner if any, and closure time. |
 
-**Proposed update cadence — pending coordinator approval.** While an interruption remains active, the assigned update owner should provide a status update every 60 minutes, and sooner when a material status change occurs. If that interval cannot be met, record the reason and next expected update time. This proposed cadence is a coordination target only; it is not a response or restoration commitment.
+**Approved update cadence.** While an interruption remains active, the assigned update owner should provide a status update every 60 minutes, and sooner when a material status change occurs. If that interval cannot be met, record the reason and next expected update time. This cadence is a coordination target, not a response or restoration commitment.
 
-For severe-weather site updates, follow NU-OPS-013’s material-change and shift-handoff update convention. NU-OPS-013 establishes no fixed timed cadence, so the proposed 60-minute interval above does not apply to its site-status updates.
+For severe-weather site updates, follow NU-OPS-013’s material-change and shift-handoff update convention. NU-OPS-013 establishes no fixed timed cadence, so the 60-minute interval above does not apply to its site-status updates.
 
-Each update should state the affected site or function, status label (if approved), time last confirmed, known actions, unresolved limitation, next owner, and next update time. Separate confirmed observations from estimates or unverified reports. Do not state a cause, impact, or recovery time as fact unless confirmed by the responsible role.
+Each update should state the affected site or function, status label, time last confirmed, known actions, unresolved limitation, next owner, and next update time. Separate confirmed observations from estimates or unverified reports. Do not state a cause, impact, or recovery time as fact unless confirmed by the responsible role.
 
 ## Related records: facilities and workplace incidents
 
@@ -98,15 +99,16 @@ Do not treat “restored” as proof that every linked issue is closed. Keep unr
 
 ## Approval and revision record
 
-Under NU-OPS-001, this cross-site procedure requires approval by the Director of Operations before it becomes an approved instruction. Until approval is recorded in the controlled copy, the proposed labels, cadence, and process details in this draft are not operative requirements.
+The Director of Operations approved this cross-site procedure on 2024-09-21. It is effective 2024-10-01.
 
 | Version | Issue date | Effective date | Change | Approval |
 | --- | --- | --- | --- | --- |
-| 1.0 | 2024-09-21 (proposed) | 2024-10-01 (proposed) | Initial cross-site non-clinical interruption coordination procedure | Approval pending — Director of Operations |
+| 1.0 | 2024-09-21 | 2024-10-01 | Initial cross-site non-clinical interruption coordination procedure; establishes the general-interruption status vocabulary and 60-minute active update cadence. | Approved by Director of Operations on 2024-09-21 |
 
-**Next scheduled review:** 2025-10-01 (proposed).  
+**Next scheduled review:** 2025-10-01.
+
 **Owner:** Director of Operations, Northstar Urgent Care Cooperative.
 
 ---
 
-**Drafting basis:** Prepared for corpus plan `nucc-ops-v1` using the accepted foundation drafts and NU-OPS-013 as a bounded draft reference. Dates are proposed for the fictional 2024-10-01 corpus snapshot. The example interruption categories, status labels, 60-minute update interval, ownership handoffs, and closure convention are author proposals for coordinator approval. NU-OPS-007 and NU-OPS-013 remain drafts during corpus review. No clinical response, emergency number, service-level commitment, forecast, or restoration promise is established here.
+This procedure establishes no clinical response, emergency number, service-level commitment, forecast, or restoration promise.

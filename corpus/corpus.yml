@@ -2,9 +2,11 @@ corpus_id: nucc-ops-v1
 organization: Northstar Urgent Care Cooperative
 setting: Three-site fictional urgent care network in Westmere
 purpose: Source documents for building and testing a retrieval-augmented generation integration.
-outline_status: proposed
+outline_status: approved
+corpus_approval_state: approved
+corpus_snapshot_date: 2024-10-01
 staff_registry: staff.yml
-outline_note: High-level section headers and coverage for review before drafting. All organization, people, dates, events, contact details, and procedures are fictional. Content is limited to non-clinical operations.
+outline_note: Approved high-level section headers and coverage for the fictional corpus. All organization, people, dates, events, contact details, and procedures are fictional. Content is limited to non-clinical operations.
 site_ids:
   - harbor_point
   - alder_creek
@@ -15,6 +17,7 @@ access_scopes:
   - operations_leads
 documents:
   - id: NU-OPS-001
+    status: current
     title: Operations Governance and Document Control
     filename: NU-OPS-001-operations-governance.md
     type: policy
@@ -45,6 +48,7 @@ documents:
       - Access-scope metadata
 
   - id: NU-OPS-002
+    status: current
     title: Site Opening and Closing Checklist
     filename: NU-OPS-002-site-opening-closing.md
     intended_author: EMP-003
@@ -84,6 +88,7 @@ documents:
       - Distinguishing access exception from other checklist steps
 
   - id: NU-OPS-003
+    status: current
     title: Facilities Issue Intake and Escalation
     filename: NU-OPS-003-facilities-issue-intake.md
     intended_author: EMP-002
@@ -120,6 +125,7 @@ documents:
       - Citation to priority definitions
 
   - id: NU-OPS-004
+    status: scheduled
     title: Harbor Point After-Hours Access Exception
     filename: NU-OPS-004-harbor-point-access-exception.md
     intended_author: EMP-003
@@ -150,6 +156,7 @@ documents:
       - Avoiding overgeneralization to other sites
 
   - id: NU-OPS-005
+    status: current
     title: Staff Schedule Change Notice
     filename: NU-OPS-005-staff-schedule-change-notice.md
     intended_author: EMP-004
@@ -183,6 +190,7 @@ documents:
       - Unsupported edge case where authority is not specified
 
   - id: NU-OPS-006
+    status: current
     title: Service Interruption Response
     filename: NU-OPS-006-service-interruption-response.md
     intended_author: EMP-001
@@ -216,6 +224,7 @@ documents:
       - Unsupported service restoration estimates
 
   - id: NU-OPS-007
+    status: current
     title: Site Contact and Escalation Directory
     filename: NU-OPS-007-site-contact-directory.md
     intended_author: EMP-007
@@ -264,6 +273,7 @@ documents:
       - Unanswerable missing-contact questions
 
   - id: NU-OPS-008
+    status: current
     title: Supply Request and Receiving Guide
     filename: NU-OPS-008-supply-request-receiving.md
     intended_author: EMP-002
@@ -303,6 +313,7 @@ documents:
       - Distinguishing request approval from receiving acknowledgment
 
   - id: NU-OPS-009
+    status: current
     title: Records Handling and Misdelivery Procedure
     filename: NU-OPS-009-records-handling-misdelivery.md
     intended_author: EMP-005
@@ -336,6 +347,7 @@ documents:
       - Safe refusal of requests for invented personal records
 
   - id: NU-OPS-010
+    status: current
     title: Internal Information Access Matrix
     filename: NU-OPS-010-information-access-matrix.md
     intended_author: EMP-005
@@ -366,6 +378,7 @@ documents:
       - Scope-limited document retrieval
 
   - id: NU-OPS-011
+    status: current
     title: Workplace Incident Reporting Guide
     filename: NU-OPS-011-workplace-incident-reporting.md
     intended_author: EMP-006
@@ -401,6 +414,7 @@ documents:
       - Domain-boundary and unsupported-question behavior
 
   - id: NU-OPS-012
+    status: current
     title: Quality Huddle Notes, September
     filename: NU-OPS-012-quality-huddle-notes-september.md
     intended_author: EMP-003
@@ -442,6 +456,7 @@ documents:
       - Abstaining on unresolved follow-up
 
   - id: NU-OPS-013
+    status: current
     title: Severe Weather Site Coordination Card
     filename: NU-OPS-013-severe-weather-coordination.md
     intended_author: EMP-006
@@ -478,6 +493,7 @@ documents:
       - Unsupported reopening-time question
 
   - id: NU-OPS-014
+    status: current
     title: Vendor Visit and Contractor Sign-In
     filename: NU-OPS-014-vendor-visit-sign-in.md
     intended_author: EMP-002
@@ -510,6 +526,7 @@ documents:
       - Cross-document role resolution
 
   - id: NU-OPS-015
+    status: current
     title: Document Revision Bulletin 24-03
     filename: NU-OPS-015-document-revision-bulletin-24-03.md
     intended_author: EMP-001
@@ -540,6 +557,7 @@ documents:
       - Multi-document synthesis
 
   - id: NU-OPS-016
+    status: superseded
     title: Facilities Issue Routing, Revision 1
     filename: NU-OPS-016-facilities-issue-routing-rev1.md
     intended_author: EMP-002
@@ -569,6 +587,7 @@ documents:
       - Avoiding stale instructions
 
   - id: NU-OPS-017
+    status: superseded
     title: Staff Schedule Change Notice, Prior Edition
     filename: NU-OPS-017-staff-schedule-change-prior.md
     intended_author: EMP-004
@@ -597,6 +616,7 @@ documents:
       - Avoiding stale approval claims
 
   - id: NU-OPS-018
+    status: scheduled
     title: Northgate Supply Receiving Exception
     filename: NU-OPS-018-northgate-receiving-exception.md
     intended_author: EMP-008
@@ -626,6 +646,7 @@ documents:
       - Avoiding application to other sites or periods
 
   - id: NU-OPS-019
+    status: current
     title: Monthly Operations Metrics Definitions
     filename: NU-OPS-019-operations-metrics-definitions.md
     intended_author: EMP-006
@@ -659,6 +680,7 @@ documents:
       - Unsupported numeric result abstention
 
   - id: NU-OPS-020
+    status: current
     title: Unresolved Service Desk Questions Log
     filename: NU-OPS-020-unresolved-service-desk-questions.md
     intended_author: EMP-007
@@ -694,6 +716,7 @@ documents:
       - Distinguishing assigned follow-up from a confirmed answer
 
   - id: NU-OPS-021
+    status: current
     title: Staff and Site Directory
     filename: NU-OPS-021-staff-site-directory.md
     intended_author: EMP-004

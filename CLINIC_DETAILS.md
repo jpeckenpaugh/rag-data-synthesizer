@@ -170,3 +170,11 @@ Markdown files are authoritative; PDFs are generated outputs. Implement a repeat
 - The manifest maps each source and PDF and records checksums for the rendered files.
 
 These choices replace the earlier delegation of organization, inventory, metadata, relationships, evaluation design, folder layout, and renderer implementation to later planning.
+
+## Content approval and snapshot
+
+The corpus content was approved by the primary coordinator on 2026-10-08 as fictional source material for the fixed 2024-10-01 snapshot. Approval ratifies the stated dates, document relationships, and workflows in the source documents; it does not turn them into real-world clinical, legal, financial, or professional guidance.
+
+Lifecycle status at the 2024-10-01 snapshot is recorded in `corpus/corpus.yml` and each document's front matter: NU-OPS-001–003, 005–017 except 016/017, and 019–021 are current; NU-OPS-004 and NU-OPS-018 are approved but scheduled for their stated future effective dates; NU-OPS-016 and NU-OPS-017 are superseded. The approval record is in `reports/content-approval.md`.
+
+The controlled-document repository location, purchase authorization role and threshold, site handoff-record locations and retention periods, vendor visit-log retention period, and Alder Creek Site Lead backup remain intentionally unspecified. NU-OPS-019 defines an approved counting and review workflow but supplies no actual results, source platform, or repository. These absences are deliberate retrieval and abstention cases, not approval blockers.

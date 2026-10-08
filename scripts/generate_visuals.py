@@ -47,7 +47,7 @@ SVG_TEXT_STYLES = {
     "count": (18, 700, "#18324B", None),
     "note": (15, 700, "#18324B", None),
     "small": (14, 400, "#52636B", None),
-    "draft": (13, 700, "#8A422F", None),
+    "current": (13, 700, "#3E6748", None),
     "step": (16, 700, "#18324B", None),
     "decision": (15, 700, "#18324B", "middle"),
     "branch": (12, 700, "#52636B", None),
@@ -264,8 +264,8 @@ def flow_svg(flow: Dict[str, Any]) -> str:
     decision_lines = textwrap.wrap(decision, width=19, break_long_words=False, break_on_hyphens=False)
     body = ['''  <rect x="0" y="0" width="100%" height="100%" fill="#FFFDF8"/>
   <text x="40" y="48" class="title">{}</text>
-  <rect x="40" y="68" width="300" height="30" rx="15" fill="#FFF1E9"/>
-  <text x="55" y="89" class="draft">DRAFT · PROPOSED · APPROVAL PENDING</text>'''.format(escape(title))]
+  <rect x="40" y="68" width="300" height="30" rx="15" fill="#E8F3EA"/>
+  <text x="55" y="89" class="current">CURRENT · EFFECTIVE 2024-09-21</text>'''.format(escape(title))]
 
     def card(x: int, y: int, w: int, h: int, item: Dict[str, Any], fill: str,
              title_class: str = "step", dashed: bool = False) -> None:
@@ -311,7 +311,7 @@ def flow_svg(flow: Dict[str, Any]) -> str:
     body.append('''  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#18324B"/></marker></defs>
   <style>
     .title { font: 700 26px sans-serif; fill: #18324B; }
-    .draft { font: 700 13px sans-serif; fill: #8A422F; }
+    .current { font: 700 13px sans-serif; fill: #3E6748; }
     .step { font: 700 16px sans-serif; fill: #18324B; }
     .decision { font: 700 15px sans-serif; fill: #18324B; text-anchor: middle; }
     .branch { font: 700 12px sans-serif; fill: #52636B; }
@@ -320,7 +320,7 @@ def flow_svg(flow: Dict[str, Any]) -> str:
     .exception { font: 700 13px sans-serif; fill: #6D382D; }
   </style>''')
     return inline_svg_text_styles(xml_svg(width, height, "\n".join(body), title,
-                   "Draft opening handoff with a decision branch: the routine handoff can proceed with an open item, or a blocking condition is held and routed. The closing record is shown separately. Harbor Point after-hours exception remains conditional on NU-OPS-004.")
+                   "Current opening handoff with a decision branch: the routine handoff can proceed with an open item, or a blocking condition is held and routed. The closing record is shown separately. NU-OPS-004 is approved but scheduled for its stated Harbor Point window.")
                    )
 
 

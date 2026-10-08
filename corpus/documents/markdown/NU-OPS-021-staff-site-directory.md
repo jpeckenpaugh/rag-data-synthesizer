@@ -9,13 +9,14 @@ author: Ren Solis
 author_employee_id: EMP-004
 intended_audience: All staff
 access_scope: all_staff
-status: draft
-planned_status: current
-date_status: proposed
+status: current
+date_status: approved
 version: 1.0
 issued_date: 2024-10-01
 effective_date: 2024-10-01
 review_date: 2025-10-01
+approval_date: 2024-10-01
+approved_by: Director of Operations
 relationships:
   - type: derived_from
     source_path: corpus/staff.yml
@@ -29,15 +30,14 @@ relationships:
 
 **Northstar Urgent Care Cooperative (NUCC)**
 
-**Document ID:** NU-OPS-021 · **Status:** Draft (planned status: current) · **Version:** 1.0
+**Document ID:** NU-OPS-021 · **Status:** Current · **Version:** 1.0
 
-**Proposed issue and effective date:** 1 October 2024, subject to approval · **Proposed review date:** 1 October 2025
+**Issue and effective date:** 1 October 2024 · **Review date:** 1 October 2025
+**Approved by:** Director of Operations on 1 October 2024
 
 **Scope:** Organization-wide · **Access label:** `all_staff`
 
 > All names, roles, employee IDs, and organization details in this directory are fictional and created for an educational RAG test corpus. This is administrative reference material, not a clinical directory.
-
-> **Draft notice:** This directory is proposed for review. The proposed effective date does not make it an approved or current directory. Use only after the required approval is recorded.
 
 ## How to read this directory
 
@@ -94,10 +94,6 @@ The staff registry names Tessa Quill as Harbor Point Site Lead and Lio Marr as N
 
 ## Updates and limits
 
-This directory reflects the staff registry used for the proposed 1 October 2024 corpus snapshot. The registry is the source for these identity and home-site fields. A proposed correction should be made to the registry first and then reconciled here; this draft does not independently establish a personnel change.
+This directory reflects the staff registry used for the 1 October 2024 corpus snapshot. The registry is the source for these identity and home-site fields. A proposed correction should be made to the registry first and then reconciled here; this directory does not independently establish a personnel change.
 
 This document does not define employment status, schedule, reporting lines, backup coverage, contact routes, or responsibilities beyond the role-focus summary sourced from the registry. For role routing, consult NU-OPS-007. For corpus access labels, consult NU-OPS-010.
-
----
-
-**Drafting basis:** Drafted by Ren Solis (EMP-004), People Operations Coordinator, solely from the fictional employee ID, name, role, department, `home_site`, and responsibilities fields in `corpus/staff.yml`. The 1 October 2024 dates are proposed scenario metadata consistent with the planned corpus snapshot and require coordinator confirmation. The home-site counts are simple counts of those registry values, not a separate staffing dataset. No contact details, reporting lines, shift information, employment status, or other personnel facts were inferred. The portrait illustrations are decorative visual identifiers, not likenesses; the chart visualizes only the adjacent registry count table.

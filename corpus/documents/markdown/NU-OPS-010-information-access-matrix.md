@@ -9,13 +9,14 @@ author: Dev Arlen
 author_employee_id: EMP-005
 intended_audience: All staff; operations leads; RAG integration evaluators
 access_scope: all_staff
-status: draft
-planned_status: current
+status: current
 version: 1.0
 issued_date: 2023-12-18
 effective_date: 2024-01-01
 review_date: 2025-01-01
-date_status: proposed
+date_status: approved
+approval_date: 2023-12-18
+approved_by: Director of Operations
 relationships:
   - type: governs_access_for
     document_id: all_documents
@@ -25,8 +26,8 @@ relationships:
 # Internal Information Access Matrix
 
 **Northstar Urgent Care Cooperative (NUCC)**  
-**Document ID:** NU-OPS-010 · **Status:** Draft (planned status: current) · **Version:** 1.0  
-**Proposed effective date:** 2024-01-01 · **Owner:** Records Coordinator  
+**Document ID:** NU-OPS-010 · **Status:** Current · **Version:** 1.0\
+**Effective date:** 2024-01-01 · **Owner:** Records Coordinator\
 **Corpus access scope:** `all_staff`
 
 **Fictional corpus snapshot:** 2024-10-01
@@ -94,9 +95,9 @@ This behavior is for testing retrieval logic only. It is not a substitute for an
 
 The fictional Records Coordinator maintains this matrix for the corpus. Report a mismatch between this reference and document metadata to the primary-agent coordinating the corpus; until resolved, use the narrower applicable filter and mark the result for review.
 
-| Version | Proposed issued | Proposed effective | Change |
-| --- | --- | --- | --- |
-| 1.0 | Proposed: 2023-12-18 | Proposed: 2024-01-01 | Initial corpus scope labels, role mapping, and unknown-authorization handling. |
+| Version | Issued | Effective | Change | Approval |
+| --- | --- | --- | --- | --- |
+| 1.0 | 2023-12-18 | 2024-01-01 | Initial corpus scope labels, role mapping, and unknown-authorization handling. | Director of Operations; approved 2023-12-18 |
 
-**Proposed fixture dates:** issued 2023-12-18; effective 2024-01-01; next review 2025-01-01. Its planned status is current, but it is a draft and is not operative until approval is recorded. If approved on the proposed dates, it would take effect before NU-OPS-001's proposed 2024-01-15 effective date and would be current at the 2024-10-01 corpus snapshot.  
+**Fixture dates:** issued 2023-12-18; effective 2024-01-01; next review 2025-01-01. The matrix was in effect before NU-OPS-001's 2024-01-15 effective date and is current at the 2024-10-01 corpus snapshot.\
 **Related corpus document:** NU-OPS-007 Site Contact and Escalation Directory defines fictional role-based routing; it does not establish authorization beyond the scope metadata described here.

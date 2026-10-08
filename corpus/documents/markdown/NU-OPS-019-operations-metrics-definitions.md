@@ -9,13 +9,14 @@ author: Niko Fen
 author_employee_id: EMP-006
 intended_audience: Operations-lead-eligible employees in NU-OPS-010 (EMP-001, EMP-003, EMP-005, EMP-006, EMP-007, EMP-008)
 access_scope: operations_leads
-status: draft
-planned_status: current
-date_status: proposed
+status: current
+date_status: approved
 version: 1.0
 issued_date: 2024-09-30
 effective_date: 2024-10-01
 review_date: 2025-10-01
+approval_date: 2024-09-30
+approved_by: Director of Operations
 relationships:
   - type: references
     document_id: NU-OPS-012
@@ -24,25 +25,25 @@ relationships:
 
 # Monthly Operations Metrics Definitions
 
-**NU-OPS-019 · Draft for corpus review**  
+**NU-OPS-019 · Current**\
 Northstar Urgent Care Cooperative (NUCC) · Organization-wide  
-Version 1.0 · Effective 2024-10-01 (proposed) · Access scope: `operations_leads`
+Version 1.0 · Effective 2024-10-01 · Access scope: `operations_leads`
 
-> Fictional educational test material. The definitions and reporting rules below are proposed administrative conventions for this corpus. They are not clinical, financial, or professional quality measures.
+> Fictional educational test material. The definitions and reporting rules below are administrative conventions for this corpus. They are not clinical, financial, or professional quality measures.
 
 ## Purpose and reporting period
 
-This reference proposes a consistent way to count selected administrative operations records across Harbor Point, Alder Creek, and Northgate. It defines measures only; it does not report actual monthly results. No source data or numerical totals are supplied in this document.
+This reference defines a consistent way to count selected administrative operations records across Harbor Point, Alder Creek, and Northgate. It defines measures only; it does not report actual monthly results. No source data or numerical totals are supplied in this document.
 
-The proposed reporting period is a calendar month, based on the date the underlying event occurred. If that date is unknown, exclude the record from the monthly event count and list it separately as undated. A record entered late is assigned to the event month when that date is known; any late entry should be identified in the reporting notes.
+The reporting period is a calendar month, based on the date the underlying event occurred. If that date is unknown, exclude the record from the monthly event count and list it separately as undated. A record entered late is assigned to the event month when that date is known; any late entry should be identified in the reporting notes.
 
-All definitions, exclusions, submission rules, and review practices in this draft are pending approval by the Director of Operations. A later meeting record, including NU-OPS-012, may cite these definitions or record a proposed change, but does not amend them. A change requires an approved revision to this reference.
+These definitions, exclusions, submission rules, and review practices are in effect for the corpus as of 1 October 2024. A later meeting record, including NU-OPS-012, may cite these definitions or record a proposed change, but does not amend them. A change requires an approved revision to this reference.
 
-## Proposed measures
+## Measures
 
 Count distinct administrative record IDs, not messages, updates, people, or estimated events. If one underlying event has separate records in different categories, it may appear in each applicable measure; the measures are independent and must not be added together as a total event count.
 
-| Measure | Proposed definition | Include | Exclude |
+| Measure | Definition | Include | Exclude |
 | --- | --- | --- | --- |
 | Facilities issue records | Number of distinct facilities issue records with an event date in the reporting month. | New administrative records for a facilities condition or repair request. Count one record once, even if it has multiple updates. | Duplicate entries for the same record; status updates without a new record; supply receiving discrepancies counted under the separate supply measure. |
 | Supply receiving discrepancy records | Number of distinct administrative discrepancy records for a supply delivery received in the reporting month. | A record identifying a mismatch, damage, or other receiving discrepancy for a delivery. | Routine receipts with no discrepancy; repeated messages or updates for the same discrepancy record. |
@@ -51,17 +52,17 @@ Count distinct administrative record IDs, not messages, updates, people, or esti
 
 These are record counts, not rates. No denominator, target, severity weighting, cause attribution, financial impact, or performance judgment is defined. A count must not be interpreted as evidence that one site is safer, more efficient, or better performing than another.
 
-## Candidate submission and review allocation
+## Submission and review ownership
 
-The following role allocation is a candidate for review and remains pending approval. It is not an approved operational workflow, and it does not settle the source of record or which role produces or validates each count:
+The approved reporting workflow is:
 
-- **Site leads** would check their site’s relevant administrative records and send a monthly count or an explicit “not available” status to the Quality and Continuity Analyst by the fifth business day of the following month.
-- **Facilities Coordinator** would confirm the facilities issue and supply receiving discrepancy counts from the designated administrative records.
-- **Director of Operations** would confirm the service interruption record list used for the monthly count.
-- **Quality and Continuity Analyst** would compile the site and central submissions, check for duplicate record IDs and missing site returns, and label the summary as incomplete when a source or date is not confirmed.
-- **Director of Operations** would review and approve the definitions and any proposed revision. This draft does not establish an approval of actual numerical results or an external reporting requirement.
+- **Site leads** submit site-level counts with the supporting record IDs, or an explicit “not available” status, to the Quality and Continuity Analyst by the fifth business day of the following month.
+- **Facilities Coordinator** validates the record IDs and eligibility of facilities issue and supply receiving discrepancy entries against available records. This role validates individual record inclusion; it does not re-create or independently confirm duplicate aggregate counts.
+- **Director of Operations** confirms the service interruption record list used for the monthly count.
+- **Quality and Continuity Analyst** deduplicates the submitted record IDs and compiles the site and central inputs. The Analyst flags missing site returns and marks a summary incomplete when a source, date, or item is not confirmed.
+- **Director of Operations** reviews and approves definitions and proposed revisions. This reference does not establish approval of actual numerical results or an external reporting requirement.
 
-The handoff between site submissions and central role confirmations remains unresolved in the available corpus. The candidate allocation above does not approve whether site leads prepare counts for all measure types and central roles validate them, or whether central roles produce their measure counts while site leads report local availability. No source of record, count-production responsibility, or validation responsibility is approved. Do not treat this candidate allocation as an operational requirement until the reporting handoff is confirmed and approved.
+Site leads provide site-level counts and supporting record IDs. The Facilities Coordinator validates eligibility for the facilities and supply measures, and the Director of Operations confirms the service interruption record list. The Quality and Continuity Analyst deduplicates and compiles submissions. These assigned steps do not identify a software platform or a single underlying record repository.
 
 The corpus does not identify the software platform, underlying record repository, or a monthly results dataset. Do not infer that a measure has a value when no source records or approved summary are available.
 
@@ -80,11 +81,7 @@ This reference is labeled `operations_leads`. NU-OPS-010 defines the fictional e
 
 | Version | Issued | Effective | Change | Approval |
 | --- | --- | --- | --- | --- |
-| 1.0 | Proposed: 2024-09-30 | Proposed: 2024-10-01 | Initial proposed administrative measure definitions and reporting rules | Director of Operations (approval pending) |
+| 1.0 | 2024-09-30 | 2024-10-01 | Initial administrative measure definitions and reporting rules | Approved — Director of Operations |
 
-**Next review:** proposed 2025-10-01.  
+**Next review:** 2025-10-01.\
 **Owner:** Quality and Continuity Analyst, Northstar Urgent Care Cooperative.
-
----
-
-**Drafting basis:** Prepared for corpus plan `nucc-ops-v1` as a proposed reference for the October 2024 corpus snapshot. The measures, event-date assignment, inclusion/exclusion rules, fifth-business-day submission deadline, source-owner assignments, compilation checks, and approval flow are assumptions pending Director of Operations approval. No actual metric values, underlying records, reporting platform, or denominators are established. NU-OPS-012 may cite these definitions but cannot change them by itself. This Stage 2 draft is not an approved reporting standard.

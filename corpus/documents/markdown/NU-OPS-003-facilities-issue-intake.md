@@ -9,11 +9,12 @@ author: Ilan Rook
 author_employee_id: EMP-002
 intended_audience: Site operations staff; site leads
 access_scope: site_operations
-status: draft
-planned_status: current
-date_status: proposed
+status: current
+date_status: approved
 version: 2.0
 issued_date: 2024-09-15
+approval_date: 2024-09-15
+approved_by: Director of Operations
 effective_date: 2024-09-21
 review_date: 2025-09-21
 relationships:
@@ -28,8 +29,8 @@ relationships:
 # NU-OPS-003 — Facilities Issue Intake and Escalation
 
 **Northstar Urgent Care Cooperative (NUCC)**  
-**Status:** Draft (planned status: current) · **Version:** 2.0  
-**Proposed issue date:** 15 September 2024 · **Proposed effective date:** 21 September 2024, upon approval · **Review by:** 21 September 2025  
+**Status:** Current · **Version:** 2.0\
+**Issue date:** 15 September 2024 · **Effective date:** 21 September 2024 · **Review by:** 21 September 2025\
 **Applies to:** Harbor Point, Alder Creek, and Northgate · **Access scope:** `site_operations`
 
 > Fictional educational test material. This procedure covers non-clinical facilities and workspace issues only. It does not provide clinical, emergency-response, or patient-care guidance.
@@ -40,7 +41,7 @@ Use this procedure to record and route a condition involving the building, fixtu
 
 This procedure does not determine whether a site may continue any clinical activity, establish a clinical response, or replace a separate incident-reporting process. If the same event meets both the facilities-issue definition here and the workplace-incident definition in NU-OPS-011, create both applicable records. Cross-reference only the non-sensitive facilities ticket ID and incident ID; do not copy sensitive incident details into the facilities log.
 
-**Approval status:** The planned replacement of NU-OPS-016 is pending approval. Until approval is recorded and this version becomes effective, NU-OPS-016 remains the approved current source for facilities issue routing, if applicable. This draft does not change the current controlled copy.
+**Approval and precedence:** Approved by the Director of Operations on 15 September 2024 and effective 21 September 2024, this procedure supersedes NU-OPS-016 for facilities issue intake, routing, escalation, and follow-up. NU-OPS-016 remains available for historical questions about its prior period.
 
 ## 2. Open a facilities issue record
 
@@ -69,12 +70,12 @@ Select the category based on the observed operational effect. The category sets 
 | **Priority follow-up** | A facilities issue needs central action or tracking, but no immediate site-wide coordination need is identified | Send the issue record summary to the Facilities Coordinator and notify the site lead. The Facilities Coordinator assigns the follow-up owner. |
 | **Routine** | A repair, inspection, or workspace request can be placed in the normal queue without an observed immediate operational effect | Send the request to the Facilities Coordinator and retain the entry in the site log. The Facilities Coordinator records the queue status or requests missing information. |
 
-These categories are administrative routing labels proposed for this corpus. Do not use them to assess health, safety, or clinical risk. If a condition requires a separate emergency or clinical response, this procedure does not specify that response; follow the applicable separate process and do not delay it to complete a facilities ticket.
+These categories are the approved administrative routing labels for this corpus. Do not use them to assess health, safety, or clinical risk. If a condition requires a separate emergency or clinical response, this procedure does not specify that response; follow the applicable separate process and do not delay it to complete a facilities ticket.
 
 ## 4. Routine routing path
 
 1. The reporter gives the site lead the location and factual description, if the reporter is not entering the issue directly in the site log.
-2. The site lead or reporter records the minimum intake fields and selects a proposed priority category with its basis.
+2. The site lead or reporter records the minimum intake fields and selects a priority category with its basis.
 3. Route the issue to the **Facilities Coordinator** at `facilities-desk@northstar-uc.example.invalid`. Include the site, issue-log reference, priority and basis, observed status, and next requested action.
 4. For a time-sensitive site impact, copy the site’s role mailbox listed in NU-OPS-007. For an issue affecting multiple sites or requiring organization-wide coordination, also notify the **Director of Operations** at `operations-director@northstar-uc.example.invalid`.
 5. The Facilities Coordinator acknowledges the routing in the issue record, assigns or records the next owner when known, and requests clarification if required fields are missing.
@@ -118,17 +119,13 @@ This illustrative record does not establish a priority rule beyond the categorie
 
 ## 7. Escalation directory reference
 
-Use NU-OPS-007, *Site Contact and Escalation Directory*, as the planned current source of fictional role routes once that directory is approved. While it remains a draft, its routes are proposals. If a contact is absent, a route appears inconsistent, or a mailbox is unavailable, record that fact and request confirmation from the Operations Desk Coordinator. This procedure does not establish a telephone number, personal contact, alternate vendor route, or response guarantee.
+Use NU-OPS-007, *Site Contact and Escalation Directory*, as the current source of fictional role routes. If a contact is absent, a route appears inconsistent, or a mailbox is unavailable, record that fact and request confirmation from the Operations Desk Coordinator. This procedure does not establish a telephone number, personal contact, alternate vendor route, or response guarantee.
 
 ## 8. Revision record
 
 | Version | Issued | Effective | Change | Approval |
 | --- | --- | --- | --- | --- |
-| 2.0 | 2024-09-15 (proposed) | 2024-09-21 (proposed; effective only upon approval) | Proposed replacement for the prior facilities issue routing procedure; adds defined intake fields, priority categories, and role-based escalation through NU-OPS-007. | Director of Operations approval pending |
+| 2.0 | 2024-09-15 | 2024-09-21 | Replaces the prior facilities issue routing procedure; adds defined intake fields, priority categories, and role-based escalation through NU-OPS-007. | Approved by Director of Operations on 2024-09-15 |
 
 **Owner:** Facilities Coordinator, Northstar Urgent Care Cooperative.  
-**Planned review:** 21 September 2025.
-
----
-
-**Drafting note for coordinator:** New proposed facts requiring review: the three priority labels and their definitions; who opens and maintains the issue log; minimum intake fields; the Facilities Coordinator acknowledgment/assignment role; “open,” “awaiting confirmation,” and “monitoring” status conventions; closure evidence; and the proposed dates/version. Route addresses and role names follow the accepted NU-OPS-007 draft. If approved, the proposed handoff from NU-OPS-016 is effective 21 September 2024; confirm the matching historical end date and approvals before treating either status as final.
+**Next review:** 21 September 2025.

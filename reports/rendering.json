@@ -13,9 +13,9 @@
     {
       "document_id": "NU-OPS-001",
       "source": "corpus/documents/markdown/NU-OPS-001-operations-governance.md",
-      "source_sha256": "4a087bb2c1944a70ef982cea43e234cb0476670cc12a895428feeb82dc145b2e",
+      "source_sha256": "b037de895befff31834af59fdcc49d10153bf5f85a471c27cb6200d504c37c2b",
       "pdf": "corpus/documents/pdf/NU-OPS-001.pdf",
-      "pdf_sha256": "285e07bc5a3d9d80c90277a5776ca0a10c90e21669d0922882a210305707b1e4",
+      "pdf_sha256": "a68508347421dc05029c06a31d42f840058fd48e616ae8ca1f0ec380ee045217",
       "visual_assets": [
         {
           "path": "corpus/assets/generated/nucc-logo.svg",
@@ -23,15 +23,15 @@
         }
       ],
       "pages": 3,
-      "extracted_characters": 6173,
-      "coordinator_note_excluded": true
+      "extracted_characters": 6122,
+      "coordinator_note_excluded": false
     },
     {
       "document_id": "NU-OPS-002",
       "source": "corpus/documents/markdown/NU-OPS-002-site-opening-closing.md",
-      "source_sha256": "e73f7f3aee5690bdd02b694769db057ddb30cea4e06e6389561411016fc0aa3a",
+      "source_sha256": "c11972779d559e6609a54d218c78509520dd64a6eec0deba534946280a124b85",
       "pdf": "corpus/documents/pdf/NU-OPS-002.pdf",
-      "pdf_sha256": "6d2357e3a984048377768448290d0785558e084aad818ae473fdbc0be2ef0516",
+      "pdf_sha256": "a4e7359ded61ad123b33edcae356b5fb52b7d20f410befc89d8d532024e216fd",
       "visual_assets": [
         {
           "path": "corpus/assets/generated/nucc-logo.svg",
@@ -39,19 +39,19 @@
         },
         {
           "path": "corpus/assets/generated/opening-closing-check-flow.svg",
-          "sha256": "efcf62f16b552ff2cb3e5e433ccebbe6e4618767e16871ade5ca1fd59e4f7e2b"
+          "sha256": "7dafcc668f959ec7c16ee5017363fa975fd9e8fff930336ef518d9d712cb85a8"
         }
       ],
       "pages": 4,
-      "extracted_characters": 9125,
-      "coordinator_note_excluded": true
+      "extracted_characters": 8769,
+      "coordinator_note_excluded": false
     },
     {
       "document_id": "NU-OPS-003",
       "source": "corpus/documents/markdown/NU-OPS-003-facilities-issue-intake.md",
-      "source_sha256": "f567b471fa1c876e9ded7cd7dd9d4c8b0634801571277cacebfc98a777fbdeab",
+      "source_sha256": "e615d72e4284fda96a153a64d11c2c86ec5fba77cc355e8958acf13372877dd6",
       "pdf": "corpus/documents/pdf/NU-OPS-003.pdf",
-      "pdf_sha256": "2d38d7df284c2fa6c318a63c89d98c9e9c58c6f2262e1487ccc60c819490971f",
+      "pdf_sha256": "12abfb2b71f463b2dd0d35ba19461360d63a3a6061966294efe4aedcb56308c1",
       "visual_assets": [
         {
           "path": "corpus/assets/generated/nucc-logo.svg",
@@ -59,15 +59,15 @@
         }
       ],
       "pages": 4,
-      "extracted_characters": 10729,
-      "coordinator_note_excluded": true
+      "extracted_characters": 10526,
+      "coordinator_note_excluded": false
     },
     {
       "document_id": "NU-OPS-004",
       "source": "corpus/documents/markdown/NU-OPS-004-harbor-point-access-exception.md",
-      "source_sha256": "c404562142b1e16a54375fe82f87e0eba9ad25a93a9df79f733b6705ee41f8e9",
+      "source_sha256": "29a7fffeadcd429f3e02f403953397aa532f4c2f0ce0e7d3f5f54ccad9a8edac",
       "pdf": "corpus/documents/pdf/NU-OPS-004.pdf",
-      "pdf_sha256": "5704b9f75bc5c63f6649b9d3973c57ac931dc8f15055d7b0dfdfc014f027c31e",
+      "pdf_sha256": "36418551e2cf83b7d76a7a8d79514a1a1334b58cb1bfe587f1fafd9c0eb6ae37",
       "visual_assets": [
         {
           "path": "corpus/assets/generated/nucc-logo.svg",
@@ -75,15 +75,15 @@
         }
       ],
       "pages": 2,
-      "extracted_characters": 4581,
-      "coordinator_note_excluded": true
+      "extracted_characters": 4588,
+      "coordinator_note_excluded": false
     },
     {
       "document_id": "NU-OPS-005",
       "source": "corpus/documents/markdown/NU-OPS-005-staff-schedule-change-notice.md",
-      "source_sha256": "8f13809c1a83b338326d3fb1f3708fb866c78112473c7a53dd7194c24d0122f1",
+      "source_sha256": "bed616b2e804710cf47d96879e93a8b5af0a02cef29840710ceab09fc491be7c",
       "pdf": "corpus/documents/pdf/NU-OPS-005.pdf",
-      "pdf_sha256": "27815b114796d03dd317feb175c759b93c480ccc6ba4a43b086367bf7069a0a8",
+      "pdf_sha256": "04a55941aa477b30f538810ba9ff7d0381dec0cc7386755484278672dae4952c",
       "visual_assets": [
         {
           "path": "corpus/assets/generated/nucc-logo.svg",
@@ -91,15 +91,15 @@
         }
       ],
       "pages": 3,
-      "extracted_characters": 6536,
-      "coordinator_note_excluded": true
+      "extracted_characters": 5675,
+      "coordinator_note_excluded": false
     },
     {
       "document_id": "NU-OPS-006",
       "source": "corpus/documents/markdown/NU-OPS-006-service-interruption-response.md",
-      "source_sha256": "720d0df3e163cb3107b22af1907ffec03510327225d5398b1606a4818c6491fb",
+      "source_sha256": "405a4284d5b630944ec444a0afba672bdc97e11cc5588b2d4adc7d0bdaf84459",
       "pdf": "corpus/documents/pdf/NU-OPS-006.pdf",
-      "pdf_sha256": "a2d69d4ca631742482d2d1184b0f0a8f8a33dcc3dc257d6502b225ed5d041aea",
+      "pdf_sha256": "955c8845b91fb0669347c77d966f6b10a07ec7612c31bcaa24e76abd7a3b3bb9",
       "visual_assets": [
         {
           "path": "corpus/assets/generated/nucc-logo.svg",
@@ -107,15 +107,15 @@
         }
       ],
       "pages": 3,
-      "extracted_characters": 7991,
-      "coordinator_note_excluded": true
+      "extracted_characters": 7817,
+      "coordinator_note_excluded": false
     },
     {
       "document_id": "NU-OPS-007",
       "source": "corpus/documents/markdown/NU-OPS-007-site-contact-directory.md",
-      "source_sha256": "dd5ed89f7b661da30611db87192d9d77f60f26fb9ca07cc9b02adb72e347c28a",
+      "source_sha256": "5b1cb04254f29bec8228b13a95e3f8c585299ebdd89a529b75b71bac1f456ffd",
       "pdf": "corpus/documents/pdf/NU-OPS-007.pdf",
-      "pdf_sha256": "8402d970cc83e07643e44d6399e0d22b9f984d1c70f0eecf9ca6a6cd0d64d9c7",
+      "pdf_sha256": "e5521474086bfd1fab4679ff29ca1aeee1082851ab501d77a0906c66bad05a72",
       "visual_assets": [
         {
           "path": "corpus/assets/generated/nucc-logo.svg",
@@ -123,31 +123,15 @@
         }
       ],
       "pages": 3,
-      "extracted_characters": 6925,
-      "coordinator_note_excluded": true
+      "extracted_characters": 7108,
+      "coordinator_note_excluded": false
     },
     {
       "document_id": "NU-OPS-008",
       "source": "corpus/documents/markdown/NU-OPS-008-supply-request-receiving.md",
-      "source_sha256": "672b08ce63a7ee3a3fa688355d4063316d501b12929d75344a8d8f7b0f082825",
+      "source_sha256": "9e15fdf54387f414b8d6afce1e34f55d59e191d2c0446a867b35a1bbded19428",
       "pdf": "corpus/documents/pdf/NU-OPS-008.pdf",
-      "pdf_sha256": "20b52c8e56d1cd95f5738219a021ce2247b1f81e1f657fa5b5df58b11ba15e71",
-      "visual_assets": [
-        {
-          "path": "corpus/assets/generated/nucc-logo.svg",
-          "sha256": "6438dd497812d69e48ab07db0ad85d919abbb11546e10e927aaeaa15cf01a21c"
-        }
-      ],
-      "pages": 5,
-      "extracted_characters": 10151,
-      "coordinator_note_excluded": true
-    },
-    {
-      "document_id": "NU-OPS-009",
-      "source": "corpus/documents/markdown/NU-OPS-009-records-handling-misdelivery.md",
-      "source_sha256": "93b18df832ba4162fda5a9a9d4639bf0ccf744c7730e1bdb9913d2c8896afbc7",
-      "pdf": "corpus/documents/pdf/NU-OPS-009.pdf",
-      "pdf_sha256": "5a87ef3810bcd8a37bd2cbeaf47d363eabddfae583f1dff0eb3227cdf28eed66",
+      "pdf_sha256": "64d4dd074fa87599481260d56779b2c4a66be6c8e0598d6429e6438ef6d3a995",
       "visual_assets": [
         {
           "path": "corpus/assets/generated/nucc-logo.svg",
@@ -155,15 +139,15 @@
         }
       ],
       "pages": 4,
-      "extracted_characters": 8519,
-      "coordinator_note_excluded": true
+      "extracted_characters": 9460,
+      "coordinator_note_excluded": false
     },
     {
-      "document_id": "NU-OPS-010",
-      "source": "corpus/documents/markdown/NU-OPS-010-information-access-matrix.md",
-      "source_sha256": "34f3ccde590b873743aa2d6278732147315211e76d3ee849ba3ce7e9b5f0b7ba",
-      "pdf": "corpus/documents/pdf/NU-OPS-010.pdf",
-      "pdf_sha256": "c8ca7122c9c60d6b4ded27ac0fa58152cde8ec03a8f3b78c053bfde49a7f4209",
+      "document_id": "NU-OPS-009",
+      "source": "corpus/documents/markdown/NU-OPS-009-records-handling-misdelivery.md",
+      "source_sha256": "a14f0550a9d436c90ed932594ec1f4a25c52e5585437050c38c2dc395dfe4daf",
+      "pdf": "corpus/documents/pdf/NU-OPS-009.pdf",
+      "pdf_sha256": "8e9a2065f442c951edbbb6aeeb6ab37be494cb3cf0f14910ac3ade40fb4dc444",
       "visual_assets": [
         {
           "path": "corpus/assets/generated/nucc-logo.svg",
@@ -171,15 +155,31 @@
         }
       ],
       "pages": 3,
-      "extracted_characters": 8030,
+      "extracted_characters": 7865,
+      "coordinator_note_excluded": false
+    },
+    {
+      "document_id": "NU-OPS-010",
+      "source": "corpus/documents/markdown/NU-OPS-010-information-access-matrix.md",
+      "source_sha256": "cb7385d8b99aefa0c9daa3555c659bdf3cbee7f9f24b9d34c02522679e57ce8e",
+      "pdf": "corpus/documents/pdf/NU-OPS-010.pdf",
+      "pdf_sha256": "a20afcda4e36720dea7108019ab0c222ee546a277e218c521d8f7fdfb56dfa97",
+      "visual_assets": [
+        {
+          "path": "corpus/assets/generated/nucc-logo.svg",
+          "sha256": "6438dd497812d69e48ab07db0ad85d919abbb11546e10e927aaeaa15cf01a21c"
+        }
+      ],
+      "pages": 3,
+      "extracted_characters": 7860,
       "coordinator_note_excluded": false
     },
     {
       "document_id": "NU-OPS-011",
       "source": "corpus/documents/markdown/NU-OPS-011-workplace-incident-reporting.md",
-      "source_sha256": "19907848150fc4b835af3d2087867141b732a5e85144c449ea8ac3484f6d8939",
+      "source_sha256": "57c1c31e0b28d7f7d4b3150b8db2fafc85174ce005e97ea411aaa8382c34ffa1",
       "pdf": "corpus/documents/pdf/NU-OPS-011.pdf",
-      "pdf_sha256": "fc11e7491736b0cefbc341c66ee4ea112387d679e3f1a8e956b2cd0b98f24af5",
+      "pdf_sha256": "3f5b9e296935d1491c11b2e7807239438d077dc4bc655cdecd25a02db0397aff",
       "visual_assets": [
         {
           "path": "corpus/assets/generated/nucc-logo.svg",
@@ -187,15 +187,15 @@
         }
       ],
       "pages": 3,
-      "extracted_characters": 7007,
-      "coordinator_note_excluded": true
+      "extracted_characters": 6856,
+      "coordinator_note_excluded": false
     },
     {
       "document_id": "NU-OPS-012",
       "source": "corpus/documents/markdown/NU-OPS-012-quality-huddle-notes-september.md",
-      "source_sha256": "56411cb1298648e4edb6e49ad5d34b7980a8913363070760a0ab481d14444149",
+      "source_sha256": "89d1c45f47cf0f5cd35e69c18eafa11af5d4ed9f6f629375e4ebc752ff842403",
       "pdf": "corpus/documents/pdf/NU-OPS-012.pdf",
-      "pdf_sha256": "d94c43f57eec8dc2863e99a29b67cb1eb5076503c465eeed2d28821717f14869",
+      "pdf_sha256": "377f897f0d2072caaade18377694db9c52172e0d091b9187ab43cc44180ea8a5",
       "visual_assets": [
         {
           "path": "corpus/assets/generated/nucc-logo.svg",
@@ -203,15 +203,15 @@
         }
       ],
       "pages": 3,
-      "extracted_characters": 5543,
-      "coordinator_note_excluded": true
+      "extracted_characters": 5630,
+      "coordinator_note_excluded": false
     },
     {
       "document_id": "NU-OPS-013",
       "source": "corpus/documents/markdown/NU-OPS-013-severe-weather-coordination.md",
-      "source_sha256": "ce529bcbafde9d2cf7ad38ddaa7c679ae2fae2a4cebe6afc6dd01cdccf292e17",
+      "source_sha256": "8771cc32bbfc10d78b235ee3666637cf3aaf0493802e39ff9c9f367b700e4688",
       "pdf": "corpus/documents/pdf/NU-OPS-013.pdf",
-      "pdf_sha256": "c9fa922f44158c5d4677746091bf0085be9893e46c27ff444e18887ee52a6ed2",
+      "pdf_sha256": "3ab371e9f94cb1981dfcdda92df5339149befd8158772b6624a64a05699da29d",
       "visual_assets": [
         {
           "path": "corpus/assets/generated/nucc-logo.svg",
@@ -219,15 +219,15 @@
         }
       ],
       "pages": 3,
-      "extracted_characters": 5626,
-      "coordinator_note_excluded": true
+      "extracted_characters": 5517,
+      "coordinator_note_excluded": false
     },
     {
       "document_id": "NU-OPS-014",
       "source": "corpus/documents/markdown/NU-OPS-014-vendor-visit-sign-in.md",
-      "source_sha256": "7f3ed3dba4d85e805e9e0df21df0a20d8e11e9a6e842c410256e8557d881c9ed",
+      "source_sha256": "ffe05bca6dfe25b340061099d1149c999eabadc8bca7e6b123faea2d8f242511",
       "pdf": "corpus/documents/pdf/NU-OPS-014.pdf",
-      "pdf_sha256": "5dafc9beb8eb5e5bb4c142211fdd502c5f6205d85b4d4608aa47a4d4673d0892",
+      "pdf_sha256": "785dcf722b1a9feca25d24af7f0d297de8ae4246abb76fe641e7b2926351e44f",
       "visual_assets": [
         {
           "path": "corpus/assets/generated/nucc-logo.svg",
@@ -235,15 +235,15 @@
         }
       ],
       "pages": 3,
-      "extracted_characters": 7686,
-      "coordinator_note_excluded": true
+      "extracted_characters": 7278,
+      "coordinator_note_excluded": false
     },
     {
       "document_id": "NU-OPS-015",
       "source": "corpus/documents/markdown/NU-OPS-015-document-revision-bulletin-24-03.md",
-      "source_sha256": "0b236712bebd466d07c17cab8e98b34046caf625d8f85a4d3278310becf56e5f",
+      "source_sha256": "4a18c957ecd7829ed999b00a2c66e07387ef788ba0f0d7881b3bf4443dc3b948",
       "pdf": "corpus/documents/pdf/NU-OPS-015.pdf",
-      "pdf_sha256": "378415ca1eb6167dc60eb42f2cb1dd9068dc7328fcea2f899bdc41317e1b419d",
+      "pdf_sha256": "1e5a488d8b23073fa047c4af90f2b08580ebd18ef58ced551e1ea9758b703f25",
       "visual_assets": [
         {
           "path": "corpus/assets/generated/nucc-logo.svg",
@@ -251,15 +251,15 @@
         }
       ],
       "pages": 3,
-      "extracted_characters": 6760,
-      "coordinator_note_excluded": true
+      "extracted_characters": 6325,
+      "coordinator_note_excluded": false
     },
     {
       "document_id": "NU-OPS-016",
       "source": "corpus/documents/markdown/NU-OPS-016-facilities-issue-routing-rev1.md",
-      "source_sha256": "acecf6f615f1c4a23fcb996484984bee24e598d617929bc5ffbf1cf04da17adc",
+      "source_sha256": "0ca45b250f0bfabbea498347bad86b0f7b39fcad3dbd3bac41ee38f75a1eae3c",
       "pdf": "corpus/documents/pdf/NU-OPS-016.pdf",
-      "pdf_sha256": "88ad8bfb93b6e581212a449de81220e05d24ead2e3027f640f54c5dd9ee99683",
+      "pdf_sha256": "73757316c14f341cc09e0e239b0381e41d547b7c411677eea40b64a78d1cc77a",
       "visual_assets": [
         {
           "path": "corpus/assets/generated/nucc-logo.svg",
@@ -267,15 +267,15 @@
         }
       ],
       "pages": 2,
-      "extracted_characters": 5017,
-      "coordinator_note_excluded": true
+      "extracted_characters": 4047,
+      "coordinator_note_excluded": false
     },
     {
       "document_id": "NU-OPS-017",
       "source": "corpus/documents/markdown/NU-OPS-017-staff-schedule-change-prior.md",
-      "source_sha256": "fa39f410c10121c38df732d644be194a7c84e55ddbbf1221ddd8747fa9bbd5c4",
+      "source_sha256": "4eb63180fd2fd5c383cfe1c083968436e86218cd432f8fc2667d05354e7f3898",
       "pdf": "corpus/documents/pdf/NU-OPS-017.pdf",
-      "pdf_sha256": "4d4ec4ba387c6113c27a85b25ecde3713d9ec141c092f3aa05d7419d2336af13",
+      "pdf_sha256": "8edc4ac5bd445966160d721bfdb073c36b24f0f038e8c93f2da41df78bcaa20e",
       "visual_assets": [
         {
           "path": "corpus/assets/generated/nucc-logo.svg",
@@ -283,15 +283,15 @@
         }
       ],
       "pages": 2,
-      "extracted_characters": 4974,
-      "coordinator_note_excluded": true
+      "extracted_characters": 3734,
+      "coordinator_note_excluded": false
     },
     {
       "document_id": "NU-OPS-018",
       "source": "corpus/documents/markdown/NU-OPS-018-northgate-receiving-exception.md",
-      "source_sha256": "faada0e2c950a461630300b1cfe0bb45ec8ba86f2f838563bb248110da1f7ca1",
+      "source_sha256": "2dfb6b87c23a926a5ef986c64788f649fd81276f63ef2343cf9422bd5fc2f41b",
       "pdf": "corpus/documents/pdf/NU-OPS-018.pdf",
-      "pdf_sha256": "77af2311376519fece4d1f8cdde18eba7101e3e1b854a4611528c5d7e1e83802",
+      "pdf_sha256": "c9ec20e37c5b8fc63ef377e222937e9901fe8c2517f47793ea0998285bbfe287",
       "visual_assets": [
         {
           "path": "corpus/assets/generated/nucc-logo.svg",
@@ -299,15 +299,15 @@
         }
       ],
       "pages": 3,
-      "extracted_characters": 6680,
-      "coordinator_note_excluded": true
+      "extracted_characters": 6562,
+      "coordinator_note_excluded": false
     },
     {
       "document_id": "NU-OPS-019",
       "source": "corpus/documents/markdown/NU-OPS-019-operations-metrics-definitions.md",
-      "source_sha256": "8474574f49d6b1335df8f4e0b3d7741851935a7e77a1ec8920730a93a7ac470c",
+      "source_sha256": "aa3a7e589f249abb98b3a2ed41f1f2b8c8a4ef82aca724a383d9937066c86ff9",
       "pdf": "corpus/documents/pdf/NU-OPS-019.pdf",
-      "pdf_sha256": "356d88454e10300470506ddfada0975d3af08c261492dd958186f1fde202b241",
+      "pdf_sha256": "82e9222a830f4c345be93a07446f2295a1be980b256576761228cc6628118c92",
       "visual_assets": [
         {
           "path": "corpus/assets/generated/nucc-logo.svg",
@@ -315,15 +315,15 @@
         }
       ],
       "pages": 3,
-      "extracted_characters": 7121,
-      "coordinator_note_excluded": true
+      "extracted_characters": 6742,
+      "coordinator_note_excluded": false
     },
     {
       "document_id": "NU-OPS-020",
       "source": "corpus/documents/markdown/NU-OPS-020-unresolved-service-desk-questions.md",
-      "source_sha256": "700a1b37a6ef2f16e168c83dd8c031610055f4c7f22a25ddb44204f199d9e206",
+      "source_sha256": "4b897829911e31faf8e3253611b3e4209d84325a70271003db4d032e4833a0b4",
       "pdf": "corpus/documents/pdf/NU-OPS-020.pdf",
-      "pdf_sha256": "088215b6c908ceae2285ad6ea95416ef51c237947115416d62646f432339ac76",
+      "pdf_sha256": "31003527b36ed6d7f086fd75099a3b46a45dd56e8afb6cb08cf4fc4e273c1aba",
       "visual_assets": [
         {
           "path": "corpus/assets/generated/nucc-logo.svg",
@@ -331,15 +331,15 @@
         }
       ],
       "pages": 3,
-      "extracted_characters": 5988,
-      "coordinator_note_excluded": true
+      "extracted_characters": 5858,
+      "coordinator_note_excluded": false
     },
     {
       "document_id": "NU-OPS-021",
       "source": "corpus/documents/markdown/NU-OPS-021-staff-site-directory.md",
-      "source_sha256": "3975b85c6f073358a48f57ac09b8d1fbb8b9a591d9cbf8443418d5004e041351",
+      "source_sha256": "7ecf40b468e17cccaa50f878f3ac7e1bdf9bc17cd61fa2cecbbeb4f831ecc92c",
       "pdf": "corpus/documents/pdf/NU-OPS-021.pdf",
-      "pdf_sha256": "92f859f483031d9ab7975f9af4af204a8f85dd4dee4f17014e48e18d5e2e737e",
+      "pdf_sha256": "3910cd77179eeb61a77910cd8642cb80467e56a7e4e928e0f01056f84c6700a6",
       "visual_assets": [
         {
           "path": "corpus/assets/generated/nucc-logo.svg",
@@ -382,9 +382,9 @@
           "sha256": "f293e734783d758b10463d9e608e3f3914f1ce7ce823c7106283e5562e7cf026"
         }
       ],
-      "pages": 5,
-      "extracted_characters": 7166,
-      "coordinator_note_excluded": true
+      "pages": 4,
+      "extracted_characters": 7019,
+      "coordinator_note_excluded": false
     }
   ]
 }

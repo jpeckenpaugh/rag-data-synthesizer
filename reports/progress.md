@@ -11,41 +11,37 @@ This log tracks assignments, drafts, reviews, integration gates, and commits for
 
 ## Current snapshot
 
-- Corpus plan: `corpus/corpus.yml` defines 21 documents and the staged workflow.
-- Fictional staff registry: `corpus/staff.yml` defines eight author profiles.
-- Current stage: all 21 Markdown sources and current PDFs are present. After the content revision pass, Python 3.14 regenerated all 21 PDFs (67 pages); `reports/rendering.json` source/PDF hashes match, and all 21 document-index links resolve. Revised example/status/directory pages received visual review. Corpus content approval remains pending.
-- Full-corpus read-only review, bounded author revision pass, final integration audit, and PDF regeneration are complete; no high-severity factual contradictions were found. Twelve Markdown sources were revised for grounded examples, status/date/access clarity, and cross-references; all 21 plan audiences now match source metadata. Content approval remains pending. See `reports/content-review.md` and `corpus/fact-ledger.yaml`.
-- Stage 1 assignments: NU-OPS-001, NU-OPS-007, NU-OPS-010 (complete).
-- Stage 1 gate: passed after coordinator reconciliation and independent continuity/quality review.
-- Stage 1 drafting and review gate passed. Subsequent full-corpus review identified draft-status/date wording in NU-OPS-007 and NU-OPS-010; authors have corrected those drafts. All source documents remain drafts pending final corpus approval.
-- First-document checkpoint: all eight staff authors have at least one draft (NU-OPS-001, 002, 003, 005, 007, 010, 011, 018). Independent continuity and quality reviews found no high/medium blocker for this checkpoint. These remain draft artifacts; proposed facts require later corpus approval and ledger integration.
-- Last content checkpoint: `e91f500` — Draft first clinic documents across staff profiles.
+- Corpus plan: `corpus/corpus.yml` defines the approved 21-document corpus and its 2024-10-01 fictional snapshot; `corpus/staff.yml` defines eight fictional author profiles.
+- Current gate: content is approved. All 21 Markdown sources have document-level approval records; 004 and 018 are approved/scheduled, 016 and 017 are superseded, and the rest are current.
+- Final Python 3.14 render produced 21 PDFs (64 pages) and refreshed `corpus/documents/README.md` plus `reports/rendering.json`. Final source/PDF hashes match, all 21 index links resolve, searchable text contains no stale draft banner or literal HTML line break, and representative pages were visually inspected.
+- Four independent read-only reviews and the bounded author revision/approval passes are complete. No high-severity contradictions were found. Deliberate unanswered questions are recorded in `corpus/fact-ledger.yaml` and `reports/content-approval.md`.
+- The primary-agent coordinates, integrates, and approves corpus content; staff-author subagents draft and maintain the source documents.
 
 ## Assignment and document status
 
-| Document | Intended author | Status | Stage / dependency | Draft / review notes |
-| --- | --- | --- | --- | --- |
-| NU-OPS-001 | EMP-001 Mara Venn | complete | Stage 1 foundation | Draft accepted at foundation gate; 2024-01-15 effective, annual review, Director/site-lead approval boundaries; representative PDF visually inspected |
-| NU-OPS-002 | EMP-003 Tessa Quill | in progress | Stage 2; Stage 1 gate passed | First draft for Tessa; independent factual findings resolved; opening/closing flow asset reference is in place; representative PDF visually inspected after layout fixes; content approval remains pending |
-| NU-OPS-003 | EMP-002 Ilan Rook | in progress | Stage 2; foundation accepted | Proposed issue/effective dates aligned to 2024-09-21 handoff; updated draft review pending |
-| NU-OPS-004 | EMP-003 Tessa Quill | in progress | Stage 3; depends on NU-OPS-002 | Re-review clear; task performer limited to Harbor Point Site Lead; expiration structured; conditional draft |
-| NU-OPS-005 | EMP-004 Ren Solis | in progress | Stage 2; Stage 1 gate passed | First draft for Ren; independent review clear; proposal reconciled with historical NU-OPS-017 draft |
-| NU-OPS-006 | EMP-001 Mara Venn | in progress | Stage 2; bounded NU-OPS-013 context available | Draft reviewed; audience now exact `site_operations` set; proposed interruption mechanics under review |
-| NU-OPS-007 | EMP-007 Oren Pike | in progress | Stage 1 foundation; final status review | Draft dates/routes now explicitly proposed pending Director approval; role routes and Alder Creek role-only mailbox retained |
-| NU-OPS-008 | EMP-002 Ilan Rook | in progress | Stage 2; Stage 1 gate passed | Draft reviewed; Director of Operations is required approver; conditional base for NU-OPS-018 |
-| NU-OPS-009 | EMP-005 Dev Arlen | in progress | Stage 2; foundation accepted | Draft reviewed with no blocker; administrative records only, patient/clinical records excluded |
-| NU-OPS-010 | EMP-005 Dev Arlen | in progress | Stage 1 foundation; final status review | Exact scope mapping retained; dates explicitly labeled proposed fixture dates pending approval; representative PDF visually inspected and extracted text has no coordinator drafting-note leakage |
-| NU-OPS-011 | EMP-006 Niko Fen | in progress | Stage 2; Stage 1 gate passed | First draft for Niko; independent review clear; administrative reporting rules await corpus integration |
-| NU-OPS-012 | EMP-003 Tessa Quill | in progress | Stage 4; core references drafted | Draft received; independent review underway; no metric totals or unresolved answers invented |
-| NU-OPS-013 | EMP-006 Niko Fen | in progress | Stage 2; foundation accepted | Draft reviewed; audience and site-lead ownership match exact scope; bounded context for NU-OPS-006 |
-| NU-OPS-014 | EMP-002 Ilan Rook | in progress | Stage 2; foundation accepted | Draft reviewed; audience narrowed to site operations staff/site leads; contractors excluded from retrieval |
-| NU-OPS-015 | EMP-001 Mara Venn | in progress | Stage 3; depends on NU-OPS-001 | Draft received; limited amendment pending Director approval; independent review underway |
-| NU-OPS-016 | EMP-002 Ilan Rook | in progress | Stage 2; depends on NU-OPS-003 | Draft reviewed; proposed period ends 2024-09-20, NU-OPS-003 begins 2024-09-21 |
-| NU-OPS-017 | EMP-004 Ren Solis | in progress | Stage 2; Stage 1 gate passed | Draft reviewed; historical rule differs intentionally from NU-OPS-005 proposal; conditional status clear |
-| NU-OPS-018 | EMP-008 Lio Marr | in progress | Stage 3 draft; NU-OPS-008 is draft-only prerequisite | First draft for Lio; independent re-review clear; location must be designated before use; conditional on both approvals |
-| NU-OPS-019 | EMP-006 Niko Fen | in progress | Stage 2; NU-OPS-013 complete | Definitions draft received; NU-OPS-012 references it without establishing results or approving definitions |
-| NU-OPS-020 | EMP-007 Oren Pike | in progress | Stage 4; depends on NU-OPS-012 and core references | Draft received; both open unknowns supported by cited drafts; plan graph synchronized, full final gate pending |
-| NU-OPS-021 | EMP-004 Ren Solis | in progress | Stage 5 review/integration; derived from staff registry and references NU-OPS-007 | Draft received; author references for portraits and registry-count visual are in place; independent factual findings resolved; representative PDF visually inspected after layout fixes; content approval remains pending |
+| Document | Intended author | Workflow status | Lifecycle at 2024-10-01 |
+| --- | --- | --- | --- |
+| NU-OPS-001 | EMP-001 Mara Venn | complete | current |
+| NU-OPS-002 | EMP-003 Tessa Quill | complete | current |
+| NU-OPS-003 | EMP-002 Ilan Rook | complete | current |
+| NU-OPS-004 | EMP-003 Tessa Quill | complete | scheduled |
+| NU-OPS-005 | EMP-004 Ren Solis | complete | current |
+| NU-OPS-006 | EMP-001 Mara Venn | complete | current |
+| NU-OPS-007 | EMP-007 Oren Pike | complete | current |
+| NU-OPS-008 | EMP-002 Ilan Rook | complete | current |
+| NU-OPS-009 | EMP-005 Dev Arlen | complete | current |
+| NU-OPS-010 | EMP-005 Dev Arlen | complete | current |
+| NU-OPS-011 | EMP-006 Niko Fen | complete | current |
+| NU-OPS-012 | EMP-003 Tessa Quill | complete | current |
+| NU-OPS-013 | EMP-006 Niko Fen | complete | current |
+| NU-OPS-014 | EMP-002 Ilan Rook | complete | current |
+| NU-OPS-015 | EMP-001 Mara Venn | complete | current |
+| NU-OPS-016 | EMP-002 Ilan Rook | complete | superseded |
+| NU-OPS-017 | EMP-004 Ren Solis | complete | superseded |
+| NU-OPS-018 | EMP-008 Lio Marr | complete | scheduled |
+| NU-OPS-019 | EMP-006 Niko Fen | complete | current |
+| NU-OPS-020 | EMP-007 Oren Pike | complete | current |
+| NU-OPS-021 | EMP-004 Ren Solis | complete | current |
 
 ## Event log
 
@@ -71,7 +67,16 @@ This log tracks assignments, drafts, reviews, integration gates, and commits for
 - No Markdown-to-PDF renderer, dependency declaration, or run instructions are present yet. Once source review and plan reconciliation pass, the next phase is to establish a reproducible PDF rendering process, render the 20 files, visually inspect output and text extraction, then build the manifest and evaluation materials.
 - Added NU-OPS-021 Staff and Site Directory to the authoritative inventory as the 21st document. It is an all-staff, organization-wide directory derived from `corpus/staff.yml`; it references NU-OPS-007 for role routing without changing that document's `site_operations` scope. NU-OPS-021 is assigned to Stage 5 independent review/integration and has no dependency on operational drafting stages. The collection remains approximately 20 documents. Directory and visual-plan review remain pending.
 - Began the visual/PDF reproducibility phase. Eleven assets are generated: the fictional logo, the NU-OPS-002 opening/closing flow, eight staff portraits, and the NU-OPS-021 home-site count graphic. Asset references in NU-OPS-002 and NU-OPS-021 are complete, and independent factual-review findings for those references have been resolved. Root Python 3.14 `.venv` and pinned requirements files are in place; virtual-environment creation succeeded, but dependency installation is blocked by DNS and native Pango is unavailable in the environment. No PDFs have been rendered. Visual inspection, PDF text-extraction review, and the render gate remain pending; no rendering or integration tests are claimed complete.
-- Resolved the rendering environment issue and completed the Python 3.14.7 render of all 21 Markdown sources to 21 PDFs (64 pages total). Applied layout fixes before final inspection. Representative PDFs NU-OPS-001, NU-OPS-002, NU-OPS-010, and NU-OPS-021 were visually inspected; document IDs and searchable text were confirmed in the PDF inventory/extraction results. No coordinator drafting-note content leaked into the PDFs; NU-OPS-010 has no removable drafting note, so its report flag is false while its extracted coordinator references are ordinary document content. `reports/rendering.json` records per-source, per-PDF, and per-visual-asset SHA-256 values plus Python, dependency, platform, and Pango provenance. The PDF rendering/review phase is closed; corpus content approval and integration gates remain pending. No tests are claimed complete.
-- After PDF render QA, reran `scripts/generate_visuals.py` canonically with `.venv` Python 3.14.7, PyYAML 6.0.3, and Pillow 12.3.0. All 11 generated asset SHA-256 values remained byte-identical to those recorded in `reports/rendering.json`. This confirms asset regeneration reproducibility; it does not change the render gate or imply test completion.
+- Resolved the rendering environment issue and completed the Python 3.14.7 render of all 21 Markdown sources to 21 PDFs (64 pages total). Applied layout fixes before final inspection. Representative PDFs NU-OPS-001, NU-OPS-002, NU-OPS-010, and NU-OPS-021 were visually inspected; document IDs and searchable text were confirmed in the PDF inventory/extraction results. No coordinator drafting-note content leaked into the PDFs; NU-OPS-010 has no removable drafting note, so its report flag is false while its extracted coordinator references are ordinary document content. `reports/rendering.json` records per-source, per-PDF, and per-visual-asset SHA-256 values plus Python, dependency, platform, and Pango provenance. The PDF rendering/review phase is closed; corpus content approval and integration gates were pending at that earlier checkpoint. No tests are claimed complete.
+- After PDF render QA, reran `scripts/generate_visuals.py` canonically with `.venv` Python 3.14.7, PyYAML 6.0.3, and Pillow 12.3.0. All 11 generated asset SHA-256 values remained byte-identical to those recorded in `reports/rendering.json`. This confirms asset regeneration reproducibility; it does not change the content approval gate or imply test completion.
 - 2026-10-08: Dispatched four independent read-only reviewers for policy/procedure consistency, chronology/exceptions, roles/access/routing, and records/RAG detail. No high-severity contradiction was found. Consolidated targeted fixes and bounded enrichment opportunities in `reports/content-review.md`; source documents were not edited. Content approval remains pending decisions on the proposed 60-minute interruption update cadence, metric ownership, ratification of proposed history, and whether currently unspecified policy areas stay open. The planned `corpus/fact-ledger.yaml` is absent and should be restored or created before final integration.
 - 2026-10-08: Completed a bounded author revision pass across NU-OPS-002/003/008/010/011/012/014/017/018/019/020/021 and reconciled all 21 audience strings plus selected relationships in `corpus/corpus.yml`. Added a blank handoff template, a clearly fictional facilities issue lifecycle, a blank supply request/receipt example, role-focus summaries based on the staff registry, and retrieval/scope/date clarifications. Kept all documents in draft status, policy unknowns unresolved, and the NU-OPS-019 role allocation explicitly candidate-only. Final integration audit found no blockers; the NU-OPS-021 provenance scope now includes responsibilities in both source and plan. Created `corpus/fact-ledger.yaml` to track eight approval-relevant proposed/unresolved claims without resolving them. Regenerated 21 PDFs (67 pages) and the document index; source/PDF hashes and all 21 links were verified, and changed-content pages were visually reviewed. No tests run.
+
+### 2026-10-08 — Corpus content approval and finalization
+
+- Approved the 21-document fictional corpus as source material for RAG ingestion against the 2024-10-01 snapshot, exercising the primary coordinator's explicit discretion to approve. Three staff-author subagents finalized approval metadata and reader-facing lifecycle language in their assigned ranges; the primary coordinator reconciled the machine-readable inventory and fact ledger.
+- Lifecycle states: current NU-OPS-001–003, 005–015, 019–021; approved/scheduled NU-OPS-004 and NU-OPS-018; superseded NU-OPS-016 and NU-OPS-017. The two current working records remain explicitly incomplete where appropriate.
+- Ratified fictional dates and precedence, NU-OPS-006 update cadence/status labels, and NU-OPS-019 reporting role allocation. Preserved repository location, purchase authority, retention periods, Alder Creek backup, and metrics source/platform/results as deliberate unknowns.
+- Durable approval decision: `reports/content-approval.md`; shared accepted/unresolved claims: `corpus/fact-ledger.yaml`. PDFs and rendered metadata have been regenerated and checked after approval (21 PDFs, 64 pages).
+
+- Final approval QA complete: corrected stale flow-diagram draft labeling, replaced raw HTML hard breaks that appeared literally in PDFs, synchronized NU-OPS-018 scheduled lifecycle metadata, and updated its reference in NU-OPS-008. Regenerated all PDFs and confirmed source/PDF hashes, lifecycle values, index links, searchable text, and visual layout. `git diff --check` passes; no test suite was run.

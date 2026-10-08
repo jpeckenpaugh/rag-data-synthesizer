@@ -9,10 +9,11 @@ author: Mara Venn
 author_employee_id: EMP-001
 intended_audience: All staff; document owners; site leads
 access_scope: all_staff
-status: draft
-planned_status: current
+status: current
 version: 1.0
 issued_date: 2024-01-08
+approval_date: 2024-01-08
+approved_by: Director of Operations
 effective_date: 2024-01-15
 review_date: 2025-01-15
 relationships:
@@ -23,9 +24,9 @@ relationships:
 
 # Operations Governance and Document Control
 
-**NU-OPS-001 · Draft for corpus review**  
+**NU-OPS-001 · Current**\
 Northstar Urgent Care Cooperative · Organization-wide  
-Version 1.0 · Effective 2024-01-15 (proposed) · Access scope: `all_staff`
+Version 1.0 · Effective 2024-01-15 · Access scope: `all_staff`
 
 > Fictional educational test material. This document describes administrative governance for the fictional Northstar Urgent Care Cooperative (NUCC). It is not operational guidance for a real organization.
 
@@ -85,11 +86,8 @@ Do not add personal contact details or unnecessary personal information to contr
 
 | Version | Issue date | Effective date | Change | Approval |
 | --- | --- | --- | --- | --- |
-| 1.0 | 2024-01-08 (proposed) | 2024-01-15 (proposed) | Initial governance and document-control policy | Director of Operations (approval pending) |
+| 1.0 | 2024-01-08 | 2024-01-15 | Initial governance and document-control policy | Approved by Director of Operations on 2024-01-08 |
 
-**Next scheduled review:** 2025-01-15 (proposed).  
+**Next scheduled review:** 2025-01-15.
+
 **Owner:** Director of Operations, Northstar Urgent Care Cooperative.
-
----
-
-**Drafting basis:** Prepared for corpus plan `nucc-ops-v1`; the plan was an outline and no approved fact ledger was available. Dates and process details marked proposed are author assumptions for coordinator review. This Stage 1 draft is not an approved operational policy.

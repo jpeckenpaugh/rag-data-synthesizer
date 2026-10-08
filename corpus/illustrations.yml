@@ -52,8 +52,8 @@ visuals:
     category: evidence_bearing
     purpose: Show the checklist handoff sequence and distinguish routine steps from the Harbor Point-only exception reference.
     placement: After the opening/closing workflow overview, before detailed checklist steps.
-    caption: Proposed opening decision flow distinguishes a routine handoff with a follow-up from a blocking condition that is held and routed; the closing record and Harbor Point exception are shown separately.
-    alt_text: "Draft flow branches on whether routine opening handoff can proceed. A handoff may proceed with a proposed Complete with open item outcome; a blocking condition uses the proposed Hold for site lead outcome and routes the facilities issue through NU-OPS-007. A separate closing record lists site, time, follow-up, and next owner; Harbor Point after-hours access remains conditional on NU-OPS-004 and both documents being approved/effective."
+    caption: Approved opening decision flow distinguishes a routine handoff with a follow-up from a blocking condition that is held and routed; the closing record and Harbor Point exception are shown separately.
+    alt_text: "Approved flow branches on whether routine opening handoff can proceed. A handoff may proceed with a Complete with open item outcome; a blocking condition uses Hold for site lead and routes the facilities issue through NU-OPS-007. A separate closing record lists site, time, follow-up, and next owner; Harbor Point after-hours access applies only during NU-OPS-004 approved dates and within its approved scope."
     asset_path: assets/generated/opening-closing-check-flow.svg
     sources:
       - document_id: NU-OPS-002
@@ -61,17 +61,17 @@ visuals:
         claim_supported: Routine handoff includes checks, issue logging, site-lead coordination, and closeout; after-hours access is separately governed.
       - document_id: NU-OPS-004
         locator: {kind: document_metadata, value: "site_scope, effective_date, expiration_date; exception scope"}
-        claim_supported: The exception applies only at Harbor Point for its stated administrative-storage work and proposed date window.
+        claim_supported: The exception applies only at Harbor Point for its stated administrative-storage work and approved 2024-10-07 through 2024-10-11 window.
     generation:
       approach: Deterministic SVG flow generated from a declarative step/exception-note YAML file and checked against cited sections.
       input: corpus/data/visuals/opening-flow.yml
       seed: null
       tool: scripts/generate_visuals.py
       tool_version: "0.1.0; Python 3.14.7; PyYAML 6.0.3"
-      prompt_or_config: Do not add an emergency, clinical, or unlisted alternate route; visually label all details as draft/proposed.
+      prompt_or_config: Do not add an emergency, clinical, or unlisted alternate route; show the approved handoff labels and dated exception boundary.
       preserve_output: true
-    review_notes: ["Do not draw approval as complete while source remains draft.", "Visual checked against cited source/brand facts; PDF layout and extracted text checked."]
-    status: reviewed
+    review_notes: ["Visual checked against approved source/brand facts; PDF layout and extracted text checked."]
+    status: approved
   - id: facilities-routing-flow
     target_document_id: NU-OPS-003
     kind: diagram
